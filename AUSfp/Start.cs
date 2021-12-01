@@ -27,5 +27,10 @@ namespace AUSfp
         {
 
         }
+
+        private void SearchIcon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
