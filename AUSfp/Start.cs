@@ -12,6 +12,9 @@ namespace AUSfp
 {
     public partial class Start : Form
     {
+        bool userIsLoggedIN = false;
+
+
         public Start()
         {
             InitializeComponent();
@@ -29,7 +32,21 @@ namespace AUSfp
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             Login myForm = new Login();
-            myForm.ShowDialog();
+            DialogResult dialogResult = myForm.ShowDialog();
+
+            if (dialogResult == DialogResult.OK)
+            {
+                userIsLoggedIN = true;
+            }
+
+
+        }
+
+
+
+        private void ItemGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

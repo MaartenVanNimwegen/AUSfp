@@ -46,24 +46,26 @@ namespace AUSfp
         /// <param name="e"></param>
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from users where username = '" + usernameInput.Text + "' AND password = '" + passwordInput.Text + "'", con);
+            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("select * from users where username = '" + usernameInput.Text + "' AND password = '" + passwordInput.Text + "'", connection);
             MySqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                userIsLogedIn = true;
+                DialogResult = DialogResult.OK;
                 Close();
             }
             else
             {
+                DialogResult = DialogResult.Cancel;
+
                 MessageBox.Show("Gebruikersnaam en wachtwoord komen niet overeen!", "Er is een fout opgetreden", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             usernameInput.Text = string.Empty;
             passwordInput.Text = string.Empty;
             reader.Close();
             cmd.Dispose();
-            con.Close();        
+            connection.Close();        
         }
     }
 }
