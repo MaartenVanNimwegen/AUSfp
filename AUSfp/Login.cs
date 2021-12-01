@@ -15,6 +15,8 @@ namespace AUSfp
     {
 
         bool userIsLogedIn = false;
+        public static string naam = "";
+        public static string welkomNaam = "";
 
         public Login()
         {
@@ -48,7 +50,8 @@ namespace AUSfp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void loginBtn_Click(object sender, EventArgs e)
+        
+        public void loginBtn_Click(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
             connection.Open();
@@ -58,15 +61,14 @@ namespace AUSfp
             {
                 DialogResult = DialogResult.OK;
                 Close();
+                naam = (string)reader["voornaam"];
+                welkomNaam = "Welkom, " + naam;
             }
             else
             {
                 DialogResult = DialogResult.Cancel;
-
                 MessageBox.Show("Gebruikersnaam en wachtwoord komen niet overeen!", "Er is een fout opgetreden", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            usernameInput.Text = string.Empty;
-            passwordInput.Text = string.Empty;
             reader.Close();
             cmd.Dispose();
             connection.Close();        

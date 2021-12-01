@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace AUSfp
 {
@@ -50,6 +51,11 @@ namespace AUSfp
         {
             userIsLoggedIn = false;
             showHeaderItems(userIsLoggedIn);
+        }
+
+        private void NameLabel_VisibleChanged(object sender, EventArgs e)
+        {
+            NameLabel.Text = Login.welkomNaam;
         }
     }
 }

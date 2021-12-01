@@ -70,13 +70,14 @@ namespace AUSfp
             // 
             this.NameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(630, 45);
+            this.NameLabel.Location = new System.Drawing.Point(1124, 37);
             this.NameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(208, 18);
             this.NameLabel.TabIndex = 1;
-            this.NameLabel.Text = "Welkom, Jesper Minks";
+            this.NameLabel.Text = "Welkom, ";
             this.NameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NameLabel.VisibleChanged += new System.EventHandler(this.NameLabel_VisibleChanged);
             // 
             // panel1
             // 
@@ -86,7 +87,7 @@ namespace AUSfp
             this.panel1.Location = new System.Drawing.Point(16, 80);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 2);
+            this.panel1.Size = new System.Drawing.Size(1407, 2);
             this.panel1.TabIndex = 2;
             // 
             // SearchBar
@@ -135,10 +136,10 @@ namespace AUSfp
             this.LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginBtn.BackgroundImage")));
             this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginBtn.Location = new System.Drawing.Point(881, 40);
+            this.LoginBtn.Location = new System.Drawing.Point(1386, 31);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(2);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(35, 29);
+            this.LoginBtn.Size = new System.Drawing.Size(37, 32);
             this.LoginBtn.TabIndex = 37;
             this.LoginBtn.TabStop = false;
             this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
@@ -150,10 +151,10 @@ namespace AUSfp
             this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
             this.LogoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoutBtn.Location = new System.Drawing.Point(881, 40);
+            this.LogoutBtn.Location = new System.Drawing.Point(1386, 31);
             this.LogoutBtn.Margin = new System.Windows.Forms.Padding(2);
             this.LogoutBtn.Name = "LogoutBtn";
-            this.LogoutBtn.Size = new System.Drawing.Size(35, 29);
+            this.LogoutBtn.Size = new System.Drawing.Size(37, 32);
             this.LogoutBtn.TabIndex = 38;
             this.LogoutBtn.TabStop = false;
             this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
@@ -165,10 +166,10 @@ namespace AUSfp
             this.ManageItemsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ManageItemsBtn.BackgroundImage")));
             this.ManageItemsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ManageItemsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ManageItemsBtn.Location = new System.Drawing.Point(842, 40);
+            this.ManageItemsBtn.Location = new System.Drawing.Point(1336, 31);
             this.ManageItemsBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ManageItemsBtn.Name = "ManageItemsBtn";
-            this.ManageItemsBtn.Size = new System.Drawing.Size(35, 29);
+            this.ManageItemsBtn.Size = new System.Drawing.Size(37, 32);
             this.ManageItemsBtn.TabIndex = 39;
             this.ManageItemsBtn.TabStop = false;
             // 
@@ -185,7 +186,7 @@ namespace AUSfp
             this.ItemGrid.Name = "ItemGrid";
             this.ItemGrid.RowHeadersWidth = 72;
             this.ItemGrid.RowTemplate.Height = 31;
-            this.ItemGrid.Size = new System.Drawing.Size(289, 618);
+            this.ItemGrid.Size = new System.Drawing.Size(796, 984);
             this.ItemGrid.TabIndex = 40;
             // 
             // ItemDetailsPanel
@@ -200,10 +201,10 @@ namespace AUSfp
             this.ItemDetailsPanel.Controls.Add(this.ItemDescription);
             this.ItemDetailsPanel.Controls.Add(this.ItemName);
             this.ItemDetailsPanel.Controls.Add(this.ItemImage);
-            this.ItemDetailsPanel.Location = new System.Drawing.Point(314, 104);
+            this.ItemDetailsPanel.Location = new System.Drawing.Point(821, 104);
             this.ItemDetailsPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ItemDetailsPanel.Name = "ItemDetailsPanel";
-            this.ItemDetailsPanel.Size = new System.Drawing.Size(602, 618);
+            this.ItemDetailsPanel.Size = new System.Drawing.Size(602, 984);
             this.ItemDetailsPanel.TabIndex = 3;
             // 
             // pictureBox3
@@ -373,7 +374,7 @@ namespace AUSfp
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(935, 571);
+            this.ClientSize = new System.Drawing.Size(1442, 937);
             this.Controls.Add(this.ItemDetailsPanel);
             this.Controls.Add(this.ItemGrid);
             this.Controls.Add(this.ManageItemsBtn);
