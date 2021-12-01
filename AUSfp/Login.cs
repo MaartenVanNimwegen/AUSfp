@@ -28,16 +28,20 @@ namespace AUSfp
         /// <param name="e"></param>
         private void usernameInput_Click(object sender, EventArgs e)
         {
-            usernameInput.Text = "";
+            if (usernameInput.Text == "Gebruikersnaam")
+            {
+                usernameInput.Text = "";
+            }
         }
         /// <summary>
         /// passwordfield wordt leeg gemaakt wanneer er op word geklikt.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void passwordInput_Click(object sender, EventArgs e)
+        private void passwordInput_Enter(object sender, EventArgs e)
         {
             passwordInput.Text = "";
+            passwordInput.PasswordChar = '*';
         }
         /// <summary>
         /// Wanneer de loginBtn word geklikt word er ingelogd.

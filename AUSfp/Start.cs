@@ -12,21 +12,12 @@ namespace AUSfp
 {
     public partial class Start : Form
     {
-        bool userIsLoggedIN = false;
-
+        bool userIsLoggedIn = false;
 
         public Start()
         {
             InitializeComponent();
-        }
-        private void Start_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SearchIcon_Click(object sender, EventArgs e)
-        {
-
+            showHeaderItems(false);
         }
         /// <summary>
         /// bij klik van de login knop word gekeken of de gebruiker correct is ingelogd. Als er goed is ingelogd is DialogResult OK en anders niet. Als deze OK is word UserIsLoggedIn true.
@@ -40,18 +31,25 @@ namespace AUSfp
 
             if (dialogResult == DialogResult.OK)
             {
-                userIsLoggedIN = true;
+                userIsLoggedIn = true;
+                showHeaderItems(userIsLoggedIn);
             }
         }
-        private void showHeaderItems(bool showHeaderItems)
+        /// <summary>
+        /// Wanneer bool showHeaderItems true is geeft het de dingen weer die je moet zien wanneer je bent ingelogd en wanneer je niet bent ingelogd laat hij de andere dingen zien.
+        /// </summary>
+        /// <param name="weergeven"></param>
+        public void showHeaderItems(bool weergeven)
         {
-           
+            ManageItemsBtn.Visible = weergeven;
+            LoginBtn.Visible = !weergeven;
+            LogoutBtn.Visible = weergeven;
+            NameLabel.Visible = weergeven;
         }
-
-
-        private void ItemGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void LogoutBtn_Click(object sender, EventArgs e)
         {
-
+            userIsLoggedIn = false;
+            showHeaderItems(userIsLoggedIn);
         }
     }
 }
