@@ -29,20 +29,102 @@ namespace AUSfp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.LoginBg = new System.Windows.Forms.PictureBox();
+            this.usernameInput = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.passwordInput = new System.Windows.Forms.TextBox();
+            this.loginBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginBg)).BeginInit();
             this.SuspendLayout();
+            // 
+            // LoginBg
+            // 
+            this.LoginBg.Image = ((System.Drawing.Image)(resources.GetObject("LoginBg.Image")));
+            this.LoginBg.InitialImage = ((System.Drawing.Image)(resources.GetObject("LoginBg.InitialImage")));
+            this.LoginBg.Location = new System.Drawing.Point(-20, -60);
+            this.LoginBg.Name = "LoginBg";
+            this.LoginBg.Size = new System.Drawing.Size(740, 743);
+            this.LoginBg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LoginBg.TabIndex = 0;
+            this.LoginBg.TabStop = false;
+            // 
+            // usernameInput
+            // 
+            this.usernameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.usernameInput.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameInput.Location = new System.Drawing.Point(818, 268);
+            this.usernameInput.Name = "usernameInput";
+            this.usernameInput.Size = new System.Drawing.Size(212, 29);
+            this.usernameInput.TabIndex = 2;
+            this.usernameInput.Text = "Gebruikersnaam";
+            this.usernameInput.Click += new System.EventHandler(this.usernameInput_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(810, 214);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 48);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Login:";
+            // 
+            // passwordInput
+            // 
+            this.passwordInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.passwordInput.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordInput.Location = new System.Drawing.Point(818, 303);
+            this.passwordInput.Name = "passwordInput";
+            this.passwordInput.Size = new System.Drawing.Size(212, 29);
+            this.passwordInput.TabIndex = 5;
+            this.passwordInput.Text = "Wachtwoord";
+            this.passwordInput.Click += new System.EventHandler(this.passwordInput_Click);
+            // 
+            // loginBtn
+            // 
+            this.loginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.loginBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.Location = new System.Drawing.Point(818, 338);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(111, 42);
+            this.loginBtn.TabIndex = 6;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1147, 609);
+            this.Controls.Add(this.loginBtn);
+            this.Controls.Add(this.passwordInput);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.usernameInput);
+            this.Controls.Add(this.LoginBg);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.LoginBg)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox LoginBg;
+        private System.Windows.Forms.TextBox usernameInput;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox passwordInput;
+        private System.Windows.Forms.Button loginBtn;
     }
 }
