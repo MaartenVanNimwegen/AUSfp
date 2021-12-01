@@ -22,5 +22,10 @@ namespace AUSfp
             Login myForm = new Login();
             myForm.ShowDialog();
         }
+
+        private void Start_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
