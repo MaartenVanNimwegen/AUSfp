@@ -28,7 +28,11 @@ namespace AUSfp
         {
 
         }
-
+        /// <summary>
+        /// bij klik van de login knop word gekeken of de gebruiker correct is ingelogd. Als er goed is ingelogd is DialogResult OK en anders niet. Als deze OK is word UserIsLoggedIn true.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             Login myForm = new Login();
@@ -38,10 +42,11 @@ namespace AUSfp
             {
                 userIsLoggedIN = true;
             }
-
-
         }
-
+        private void showHeaderItems(bool showHeaderItems)
+        {
+           
+        }
 
 
         private void ItemGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
