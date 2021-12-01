@@ -16,13 +16,6 @@ namespace AUSfp
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Login myForm = new Login();
-            myForm.ShowDialog();
-        }
-
         private void Start_Load(object sender, EventArgs e)
         {
 
@@ -31,6 +24,12 @@ namespace AUSfp
         private void SearchIcon_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            Login myForm = new Login();
+            myForm.ShowDialog();
         }
     }
 }

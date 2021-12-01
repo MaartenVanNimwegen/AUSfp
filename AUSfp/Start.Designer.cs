@@ -114,12 +114,14 @@ namespace AUSfp
             this.LoginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginBtn.BackgroundImage")));
             this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginBtn.Location = new System.Drawing.Point(1444, 39);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(4);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(89, 77);
             this.LoginBtn.TabIndex = 37;
             this.LoginBtn.TabStop = false;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // LogoutBtn
             // 
@@ -127,6 +129,7 @@ namespace AUSfp
             this.LogoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
             this.LogoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoutBtn.Location = new System.Drawing.Point(1544, 39);
             this.LogoutBtn.Margin = new System.Windows.Forms.Padding(4);
             this.LogoutBtn.Name = "LogoutBtn";
@@ -140,6 +143,7 @@ namespace AUSfp
             this.ManageStockBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ManageStockBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ManageStockBtn.BackgroundImage")));
             this.ManageStockBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ManageStockBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ManageStockBtn.Location = new System.Drawing.Point(1322, 39);
             this.ManageStockBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ManageStockBtn.Name = "ManageStockBtn";
