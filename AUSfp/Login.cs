@@ -13,6 +13,9 @@ namespace AUSfp
 {
     public partial class Login : Form
     {
+
+        bool userIsLogedIn = false;
+
         public Login()
         {
             InitializeComponent();
@@ -49,7 +52,8 @@ namespace AUSfp
             MySqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                
+                userIsLogedIn = true;
+                Close();
             }
             else
             {
