@@ -50,8 +50,6 @@ namespace AUSfp
             wijzigIcon.Visible = weergeven;
             inleverUitleenIcon.Visible = weergeven;
             naamLenerLabel.Visible = weergeven;
-            dataGridViewIngelogd.Visible = weergeven;
-            dataGridViewNietIngelogd.Visible = !weergeven;
         }
         private void LogoutBtn_Click(object sender, EventArgs e)
         {
@@ -62,6 +60,11 @@ namespace AUSfp
         private void NameLabel_VisibleChanged(object sender, EventArgs e)
         {
             NameLabel.Text = Login.welkomNaam;
+        }
+
+        private void dataGridViewIngelogd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
