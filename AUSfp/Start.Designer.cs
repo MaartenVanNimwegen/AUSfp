@@ -51,7 +51,7 @@ namespace AUSfp
             this.ItemDescription = new System.Windows.Forms.Label();
             this.ItemName = new System.Windows.Forms.Label();
             this.ItemImage = new System.Windows.Forms.PictureBox();
-            this.dataGridViewNietIngelogd = new System.Windows.Forms.DataGridView();
+            this.DataGrid = new System.Windows.Forms.DataGridView();
             this.nummerArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naamArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caregorieArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +68,7 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNietIngelogd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -357,26 +357,28 @@ namespace AUSfp
             this.ItemImage.TabIndex = 41;
             this.ItemImage.TabStop = false;
             // 
-            // dataGridViewNietIngelogd
+            // DataGrid
             // 
-            this.dataGridViewNietIngelogd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.DataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewNietIngelogd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.dataGridViewNietIngelogd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewNietIngelogd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNietIngelogd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nummerArtikel,
             this.naamArtikel,
             this.caregorieArtikel,
             this.statusArtikel,
             this.inleverdatumArtikel});
-            this.dataGridViewNietIngelogd.Location = new System.Drawing.Point(29, 192);
-            this.dataGridViewNietIngelogd.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridViewNietIngelogd.Name = "dataGridViewNietIngelogd";
-            this.dataGridViewNietIngelogd.RowHeadersWidth = 51;
-            this.dataGridViewNietIngelogd.RowTemplate.Height = 24;
-            this.dataGridViewNietIngelogd.Size = new System.Drawing.Size(1400, 1181);
-            this.dataGridViewNietIngelogd.TabIndex = 42;
+            this.DataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.DataGrid.Location = new System.Drawing.Point(29, 192);
+            this.DataGrid.Margin = new System.Windows.Forms.Padding(4);
+            this.DataGrid.Name = "DataGrid";
+            this.DataGrid.RowHeadersWidth = 51;
+            this.DataGrid.RowTemplate.Height = 30;
+            this.DataGrid.Size = new System.Drawing.Size(1400, 1181);
+            this.DataGrid.TabIndex = 42;
             // 
             // nummerArtikel
             // 
@@ -419,7 +421,7 @@ namespace AUSfp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(2564, 1404);
-            this.Controls.Add(this.dataGridViewNietIngelogd);
+            this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.ItemDetailsPanel);
             this.Controls.Add(this.ManageItemsBtn);
             this.Controls.Add(this.LogoutBtn);
@@ -446,7 +448,7 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNietIngelogd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,7 +476,7 @@ namespace AUSfp
         private System.Windows.Forms.PictureBox wijzigIcon;
         private System.Windows.Forms.PictureBox deleteIcon;
         private System.Windows.Forms.PictureBox inleverUitleenIcon;
-        private System.Windows.Forms.DataGridView dataGridViewNietIngelogd;
+        private System.Windows.Forms.DataGridView DataGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn nummerArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn naamArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn caregorieArtikel;
