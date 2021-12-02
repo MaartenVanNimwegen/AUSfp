@@ -50,6 +50,8 @@ namespace AUSfp
             wijzigIcon.Visible = weergeven;
             inleverUitleenIcon.Visible = weergeven;
             naamLenerLabel.Visible = weergeven;
+            dataGridViewIngelogd.Visible = weergeven;
+            dataGridViewNietIngelogd.Visible = !weergeven;
         }
         private void LogoutBtn_Click(object sender, EventArgs e)
         {

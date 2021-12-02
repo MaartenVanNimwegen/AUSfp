@@ -52,6 +52,22 @@ namespace AUSfp
             this.ItemDescription = new System.Windows.Forms.Label();
             this.ItemName = new System.Windows.Forms.Label();
             this.ItemImage = new System.Windows.Forms.PictureBox();
+            this.dataGridViewNietIngelogd = new System.Windows.Forms.DataGridView();
+            this.dataGridViewIngelogd = new System.Windows.Forms.DataGridView();
+            this.naamArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nummerArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caregorieArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inleverdatumArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beschrijvingArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RocLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBtn)).BeginInit();
@@ -64,6 +80,8 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNietIngelogd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIngelogd)).BeginInit();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -361,12 +379,148 @@ namespace AUSfp
             this.ItemImage.TabIndex = 41;
             this.ItemImage.TabStop = false;
             // 
+            // dataGridViewNietIngelogd
+            // 
+            this.dataGridViewNietIngelogd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNietIngelogd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.naamArtikel,
+            this.nummerArtikel,
+            this.caregorieArtikel,
+            this.inleverdatumArtikel,
+            this.statusArtikel,
+            this.beschrijvingArtikel});
+            this.dataGridViewNietIngelogd.Location = new System.Drawing.Point(21, 128);
+            this.dataGridViewNietIngelogd.Name = "dataGridViewNietIngelogd";
+            this.dataGridViewNietIngelogd.RowHeadersWidth = 51;
+            this.dataGridViewNietIngelogd.RowTemplate.Height = 24;
+            this.dataGridViewNietIngelogd.Size = new System.Drawing.Size(1190, 735);
+            this.dataGridViewNietIngelogd.TabIndex = 42;
+            // 
+            // dataGridViewIngelogd
+            // 
+            this.dataGridViewIngelogd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewIngelogd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.dataGridViewIngelogd.Location = new System.Drawing.Point(21, 128);
+            this.dataGridViewIngelogd.Name = "dataGridViewIngelogd";
+            this.dataGridViewIngelogd.RowHeadersWidth = 51;
+            this.dataGridViewIngelogd.RowTemplate.Height = 24;
+            this.dataGridViewIngelogd.Size = new System.Drawing.Size(1190, 735);
+            this.dataGridViewIngelogd.TabIndex = 43;
+            // 
+            // naamArtikel
+            // 
+            this.naamArtikel.HeaderText = "Naam artikel";
+            this.naamArtikel.MinimumWidth = 6;
+            this.naamArtikel.Name = "naamArtikel";
+            this.naamArtikel.Width = 125;
+            // 
+            // nummerArtikel
+            // 
+            this.nummerArtikel.HeaderText = "Artikel nummer";
+            this.nummerArtikel.MinimumWidth = 6;
+            this.nummerArtikel.Name = "nummerArtikel";
+            this.nummerArtikel.Width = 125;
+            // 
+            // caregorieArtikel
+            // 
+            this.caregorieArtikel.HeaderText = "Categorie";
+            this.caregorieArtikel.MinimumWidth = 6;
+            this.caregorieArtikel.Name = "caregorieArtikel";
+            this.caregorieArtikel.Width = 125;
+            // 
+            // inleverdatumArtikel
+            // 
+            this.inleverdatumArtikel.HeaderText = "Inleverdatum";
+            this.inleverdatumArtikel.MinimumWidth = 6;
+            this.inleverdatumArtikel.Name = "inleverdatumArtikel";
+            this.inleverdatumArtikel.Width = 125;
+            // 
+            // statusArtikel
+            // 
+            this.statusArtikel.HeaderText = "Status";
+            this.statusArtikel.MinimumWidth = 6;
+            this.statusArtikel.Name = "statusArtikel";
+            this.statusArtikel.Width = 125;
+            // 
+            // beschrijvingArtikel
+            // 
+            this.beschrijvingArtikel.HeaderText = "Beschrijving";
+            this.beschrijvingArtikel.MinimumWidth = 6;
+            this.beschrijvingArtikel.Name = "beschrijvingArtikel";
+            this.beschrijvingArtikel.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Naam artikel";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Artikel nummer";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Categorie";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Lener";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 115;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Inleverdatum";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Leerlingnummer";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 90;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Beschrijving";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1923, 1055);
+            this.Controls.Add(this.dataGridViewIngelogd);
+            this.Controls.Add(this.dataGridViewNietIngelogd);
             this.Controls.Add(this.ItemDetailsPanel);
             this.Controls.Add(this.ItemGrid);
             this.Controls.Add(this.ManageItemsBtn);
@@ -379,6 +533,7 @@ namespace AUSfp
             this.Controls.Add(this.NameLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Start";
             this.Text = "AUSfp";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -394,6 +549,8 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNietIngelogd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIngelogd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,6 +579,22 @@ namespace AUSfp
         private System.Windows.Forms.PictureBox wijzigIcon;
         private System.Windows.Forms.PictureBox deleteIcon;
         private System.Windows.Forms.PictureBox inleverUitleenIcon;
+        private System.Windows.Forms.DataGridView dataGridViewNietIngelogd;
+        private System.Windows.Forms.DataGridView dataGridViewIngelogd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn naamArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nummerArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caregorieArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inleverdatumArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn beschrijvingArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }
 
