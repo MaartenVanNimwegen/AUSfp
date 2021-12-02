@@ -393,7 +393,7 @@ namespace AUSfp
             this.dataGridViewNietIngelogd.Name = "dataGridViewNietIngelogd";
             this.dataGridViewNietIngelogd.RowHeadersWidth = 51;
             this.dataGridViewNietIngelogd.RowTemplate.Height = 24;
-            this.dataGridViewNietIngelogd.Size = new System.Drawing.Size(1190, 735);
+            this.dataGridViewNietIngelogd.Size = new System.Drawing.Size(1181, 828);
             this.dataGridViewNietIngelogd.TabIndex = 42;
             // 
             // dataGridViewIngelogd
@@ -412,7 +412,7 @@ namespace AUSfp
             this.dataGridViewIngelogd.Name = "dataGridViewIngelogd";
             this.dataGridViewIngelogd.RowHeadersWidth = 51;
             this.dataGridViewIngelogd.RowTemplate.Height = 24;
-            this.dataGridViewIngelogd.Size = new System.Drawing.Size(1190, 735);
+            this.dataGridViewIngelogd.Size = new System.Drawing.Size(1181, 828);
             this.dataGridViewIngelogd.TabIndex = 43;
             // 
             // naamArtikel
