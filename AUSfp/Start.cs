@@ -14,11 +14,14 @@ namespace AUSfp
     public partial class Start : Form
     {
         bool userIsLoggedIn = false;
+        public List<string> Items { get; set;  }
 
         public Start()
         {
             InitializeComponent();
             showHeaderItems(false);
+
+            RefreshDataGrid();
         }
         /// <summary>
         /// bij klik van de login knop word gekeken of de gebruiker correct is ingelogd. Als er goed is ingelogd is DialogResult OK en anders niet. Als deze OK is word UserIsLoggedIn true.
@@ -65,6 +68,55 @@ namespace AUSfp
         private void dataGridViewIngelogd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+
+        /// <summary>
+        /// Deze functie converteerd een SQL ding naar een list
+        /// </summary>
+        /// <param name="sqllist"></param>
+        private List<string> SQL2List(string SQLList)
+        {
+            List<string> List = new List<string>();
+
+            string query = "SELECT * FROM '" + SQLList + "'";
+
+            using (MySqlConnection connection = new MySqlConnection())
+            {
+                connection.ConnectionString = "Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            List.Add(reader.GetString(1));
+                        }
+                    }
+                    reader.Close();
+
+                }
+            }
+
+            return List;
+        }
+
+        private void RefreshDataGrid()
+        {
+            Items = SQL2List("artikelen");
+
+            foreach (var ItemData in Items)
+            {
+                DataGrid.Rows.Add(ItemData);
+            }
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            RefreshDataGrid();
         }
     }
 }

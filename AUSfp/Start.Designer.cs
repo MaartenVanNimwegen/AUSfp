@@ -57,6 +57,7 @@ namespace AUSfp
             this.caregorieArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inleverdatumArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefreshBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RocLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBtn)).BeginInit();
@@ -69,6 +70,7 @@ namespace AUSfp
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -99,7 +101,7 @@ namespace AUSfp
             // 
             this.SearchBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.SearchBar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBar.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.SearchBar.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.SearchBar.Location = new System.Drawing.Point(297, 48);
@@ -144,7 +146,7 @@ namespace AUSfp
             this.LoginBtn.Location = new System.Drawing.Point(2466, 59);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(67, 58);
+            this.LoginBtn.Size = new System.Drawing.Size(62, 58);
             this.LoginBtn.TabIndex = 37;
             this.LoginBtn.TabStop = false;
             this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
@@ -364,7 +366,7 @@ namespace AUSfp
             this.DataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGrid.ColumnHeadersHeight = 40;
             this.DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nummerArtikel,
             this.naamArtikel,
@@ -415,12 +417,27 @@ namespace AUSfp
             this.inleverdatumArtikel.Name = "inleverdatumArtikel";
             this.inleverdatumArtikel.Width = 150;
             // 
+            // RefreshBtn
+            // 
+            this.RefreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.RefreshBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RefreshBtn.BackgroundImage")));
+            this.RefreshBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RefreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RefreshBtn.Location = new System.Drawing.Point(961, 50);
+            this.RefreshBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.Size = new System.Drawing.Size(69, 67);
+            this.RefreshBtn.TabIndex = 43;
+            this.RefreshBtn.TabStop = false;
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(2564, 1404);
+            this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.ItemDetailsPanel);
             this.Controls.Add(this.ManageItemsBtn);
@@ -449,6 +466,7 @@ namespace AUSfp
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,6 +500,7 @@ namespace AUSfp
         private System.Windows.Forms.DataGridViewTextBoxColumn caregorieArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn inleverdatumArtikel;
+        private System.Windows.Forms.PictureBox RefreshBtn;
     }
 }
 
