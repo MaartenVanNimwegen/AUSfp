@@ -46,6 +46,10 @@ namespace AUSfp
             LoginBtn.Visible = !weergeven;
             LogoutBtn.Visible = weergeven;
             NameLabel.Visible = weergeven;
+            deleteIcon.Visible = weergeven;
+            wijzigIcon.Visible = weergeven;
+            inleverUitleenIcon.Visible = weergeven;
+            naamLenerLabel.Visible = weergeven;
         }
         private void LogoutBtn_Click(object sender, EventArgs e)
         {
