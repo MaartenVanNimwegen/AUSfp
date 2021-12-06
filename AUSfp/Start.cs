@@ -79,7 +79,7 @@ namespace AUSfp
         {
             List<string> List = new List<string>();
 
-            string query = "SELECT * FROM '" + SQLList + "'";
+            string query = "SELECT * FROM artikelen";
 
             using (MySqlConnection connection = new MySqlConnection())
             {
@@ -117,6 +117,16 @@ namespace AUSfp
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
             RefreshDataGrid();
+        }
+        /// <summary>
+        /// wanneer er een rij word geselecteerd word de informatie in het rechter deel van het scherm veranderd naar de info uit het rechter deel van het scherm.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string naamArtikel = "";
+            naamArtikel = DataGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString();
         }
     }
 }
