@@ -59,18 +59,15 @@ namespace AUSfp
             userIsLoggedIn = false;
             showHeaderItems(userIsLoggedIn);
         }
-
+        /// <summary>
+        /// update naam wanneer label weergave word geupdate
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NameLabel_VisibleChanged(object sender, EventArgs e)
         {
             NameLabel.Text = Login.welkomNaam;
         }
-
-        private void dataGridViewIngelogd_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
         /// <summary>
         /// Deze functie converteerd een SQL ding naar een list
         /// </summary>
