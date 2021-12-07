@@ -89,6 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItemClass.cs" />
     <Compile Include="Start.cs">
       <SubType>Form</SubType>
     </Compile>

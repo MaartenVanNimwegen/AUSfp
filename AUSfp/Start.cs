@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,18 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 
 namespace AUSfp
 {
     public partial class Start : Form
     {
         bool userIsLoggedIn = false;
-        public List<string> Items { get; set;  }
-
+        Dictionary<int, string> Items = new Dictionary<int, string>(){
+            {0, "itemnaam, categorie, lener, inleverdatum, status, leerlingnummer, beschrijving, toevoeger, toevoegdatum"}
+        };
         public Start()
         {
             InitializeComponent();
+
             showHeaderItems(false);
 
             RefreshDataGrid();
@@ -70,16 +73,10 @@ namespace AUSfp
 
         }
 
-
-        /// <summary>
-        /// Deze functie converteerd een SQL ding naar een list
-        /// </summary>
-        /// <param name="sqllist"></param>
-        private List<string> SQL2List(string SQLList)
+        private void RefreshItemListWithSQL()
         {
-            List<string> List = new List<string>();
 
-            string query = "SELECT * FROM '" + SQLList + "'";
+            string query = "SELECT * FROM artikelen";
 
             using (MySqlConnection connection = new MySqlConnection())
             {
@@ -93,7 +90,21 @@ namespace AUSfp
                     {
                         while (reader.Read())
                         {
-                            List.Add(reader.GetString(1));
+                            string Props =
+                                reader.GetString(1).ToString() + "," +
+                                reader.GetString(2).ToString() + "," +
+                                reader.GetString(3).ToString() + "," +
+                                reader.GetString(4).ToString() + "," +
+                                reader.GetInt32(5) + "," +
+                                reader.GetInt32(6) + "," +
+                                reader.GetString(7).ToString() + "," +
+                                reader.GetString(8).ToString() + "," +
+                                reader.GetString(9).ToString();
+
+                            Items.Add( reader.GetInt32(0), Props );
+
+
+                            
                         }
                     }
                     reader.Close();
@@ -101,12 +112,11 @@ namespace AUSfp
                 }
             }
 
-            return List;
         }
 
         private void RefreshDataGrid()
         {
-            Items = SQL2List("artikelen");
+            RefreshItemListWithSQL();
 
             foreach (var ItemData in Items)
             {

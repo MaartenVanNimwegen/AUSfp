@@ -13,8 +13,6 @@ namespace AUSfp
 {
     public partial class Login : Form
     {
-
-        bool userIsLogedIn = false;
         public static string naam = "";
         public static string welkomNaam = "";
 
