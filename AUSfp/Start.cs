@@ -96,7 +96,7 @@ namespace AUSfp
         /// Deze functie converteerd een SQL ding naar een list
         /// </summary>
         /// <param name="sqllist"></param>
-        private void SQL2List()
+        private void ArtikelenList()
         {
             List<Artikel> artikelen = new List<Artikel>();
 
@@ -115,26 +115,17 @@ namespace AUSfp
                     {
                         while (reader.Read())
                         {
-                            /* string StrProps =
-                                 reader.GetString(1) + "$" +
-                                 reader.GetString(2) + "$" +
-                                 reader.GetString(3) + "$" +
-                                 reader.GetString(4) + "$" +
-                                 reader.GetInt32(5) + "$" +
-                                 reader.GetInt32(6) + "$" +
-                                 reader.GetString(7) + "$" +
-                                 reader.GetString(8) + "$" +
-                                 reader.GetString(9);
-
-                             var Props = StrList2CSList(StrProps);
-
-                             Items.Add( reader.GetInt32(0), Props );*/
-
                             Artikel myArtikel = new Artikel();
                             myArtikel.Id = reader.GetInt32(0);
                             myArtikel.Naam = reader.GetString(1);
-                            myArtikel.Omschrijving = "Omschrijving van het product";
-                            myArtikel.Inleverdatum = null;
+                            myArtikel.Categorie = reader.GetString(2);
+                            myArtikel.Lener = reader.GetString(3);
+                            myArtikel.Inleverdatum = reader.GetDateTime(4);
+                            myArtikel.Status = reader.GetInt32(1);
+                            myArtikel.Leerlingnummer = reader.GetInt32(1);
+                            myArtikel.Beschrijving = reader.GetString(9);
+                            myArtikel.Toevoeger= reader.GetString(1);
+                            myArtikel.ToegevoegdOp = reader.GetDateTime(1);
 
                             artikelen.Add(myArtikel);
 
@@ -160,7 +151,7 @@ namespace AUSfp
 
         private void RefreshDataGrid()
         {
-            SQL2List();
+            ArtikelenList();
             
             foreach (var ItemData in Items)
             {

@@ -8,13 +8,27 @@ namespace AUSfp
 {
     public class Artikel
     {
-        public string Naam { get; set; }
-
         public int Id { get; set; }
 
-        public string Omschrijving { get; set; }
+        public string Naam { get; set; }
+
+        public string Categorie { get; set; }
+
+        public string Lener { get; set; }
 
         public DateTime? Inleverdatum { get; set; }
+        
+        public int Status { get; set; }
+        
+        public int? Leerlingnummer { get; set; }
+        
+        public string Beschrijving { get; set; }
+        
+        public string Toevoeger { get; set; }
+
+        public DateTime? ToegevoegdOp { get; set; }
+
+
 
     }
 }
