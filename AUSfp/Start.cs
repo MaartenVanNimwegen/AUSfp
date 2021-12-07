@@ -62,7 +62,11 @@ namespace AUSfp
             userIsLoggedIn = false;
             showHeaderItems(userIsLoggedIn);
         }
-
+        /// <summary>
+        /// update naam wanneer label weergave word geupdate
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NameLabel_VisibleChanged(object sender, EventArgs e)
         {
             NameLabel.Text = Login.welkomNaam;
@@ -73,7 +77,12 @@ namespace AUSfp
 
         }
 
-        private void RefreshItemListWithSQL()
+
+        /// <summary>
+        /// Deze functie converteerd een SQL ding naar een list
+        /// </summary>
+        /// <param name="sqllist"></param>
+        private List<string> SQL2List(string SQLList)
         {
 
             string query = "SELECT * FROM artikelen";
@@ -127,6 +136,16 @@ namespace AUSfp
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
             RefreshDataGrid();
+        }
+        /// <summary>
+        /// wanneer er een rij word geselecteerd word de informatie in het rechter deel van het scherm veranderd naar de info uit het rechter deel van het scherm.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string naamArtikel = "";
+            naamArtikel = DataGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString();
         }
     }
 }

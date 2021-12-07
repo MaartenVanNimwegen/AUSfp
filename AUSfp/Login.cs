@@ -44,11 +44,10 @@ namespace AUSfp
             passwordInput.PasswordChar = '*';
         }
         /// <summary>
-        /// Wanneer de loginBtn word geklikt word er ingelogd.
+        /// Wanneer de loginBtn word geklikt word er ingelogd en word de naam van de ingelogde persoon aan een label gegeven voor de welkom naam label.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        
         public void loginBtn_Click(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
