@@ -58,7 +58,6 @@ namespace AUSfp
             this.statusArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inleverdatumArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefreshBtn = new System.Windows.Forms.PictureBox();
-            this.DebugLog = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RocLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBtn)).BeginInit();
@@ -432,25 +431,12 @@ namespace AUSfp
             this.RefreshBtn.TabStop = false;
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
-            // DebugLog
-            // 
-            this.DebugLog.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.DebugLog.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DebugLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.DebugLog.Location = new System.Drawing.Point(49, 517);
-            this.DebugLog.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.DebugLog.Name = "DebugLog";
-            this.DebugLog.Size = new System.Drawing.Size(1335, 813);
-            this.DebugLog.TabIndex = 50;
-            this.DebugLog.Text = "...";
-            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(2564, 1404);
-            this.Controls.Add(this.DebugLog);
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.ItemDetailsPanel);
@@ -515,7 +501,6 @@ namespace AUSfp
         private System.Windows.Forms.DataGridViewTextBoxColumn statusArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn inleverdatumArtikel;
         private System.Windows.Forms.PictureBox RefreshBtn;
-        private System.Windows.Forms.Label DebugLog;
     }
 }
 

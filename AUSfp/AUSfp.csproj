@@ -89,12 +89,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArtikelToevoegen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArtikelToevoegen.Designer.cs">
+      <DependentUpon>ArtikelToevoegen.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategorieBeheer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CategorieBeheer.Designer.cs">
       <DependentUpon>CategorieBeheer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Artikel.cs" />
     <Compile Include="Start.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +116,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ArtikelToevoegen.resx">
+      <DependentUpon>ArtikelToevoegen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategorieBeheer.resx">
       <DependentUpon>CategorieBeheer.cs</DependentUpon>
     </EmbeddedResource>

@@ -98,6 +98,7 @@ namespace AUSfp
         /// <param name="sqllist"></param>
         private void SQL2List()
         {
+            List<Artikel> artikelen = new List<Artikel>();
 
             string query = "SELECT * FROM artikelen";
 
@@ -106,6 +107,7 @@ namespace AUSfp
                 connection.ConnectionString = "Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
+
                     connection.Open();
                     MySqlDataReader reader = command.ExecuteReader();
 
@@ -113,22 +115,30 @@ namespace AUSfp
                     {
                         while (reader.Read())
                         {
-                            string StrProps =
-                                reader.GetString(1) + "$" +
-                                reader.GetString(2) + "$" +
-                                reader.GetString(3) + "$" +
-                                reader.GetString(4) + "$" +
-                                reader.GetInt32(5) + "$" +
-                                reader.GetInt32(6) + "$" +
-                                reader.GetString(7) + "$" +
-                                reader.GetString(8) + "$" +
-                                reader.GetString(9);
+                            /* string StrProps =
+                                 reader.GetString(1) + "$" +
+                                 reader.GetString(2) + "$" +
+                                 reader.GetString(3) + "$" +
+                                 reader.GetString(4) + "$" +
+                                 reader.GetInt32(5) + "$" +
+                                 reader.GetInt32(6) + "$" +
+                                 reader.GetString(7) + "$" +
+                                 reader.GetString(8) + "$" +
+                                 reader.GetString(9);
 
-                            var Props = StrList2CSList(StrProps);
+                             var Props = StrList2CSList(StrProps);
 
-                            Items.Add( reader.GetInt32(0), Props );
+                             Items.Add( reader.GetInt32(0), Props );*/
 
+                            Artikel myArtikel = new Artikel();
+                            myArtikel.Id = reader.GetInt32(0);
+                            myArtikel.Naam = reader.GetString(1);
+                            myArtikel.Omschrijving = "Omschrijving van het product";
+                            myArtikel.Inleverdatum = null;
 
+                            artikelen.Add(myArtikel);
+
+                           
                             
                         }
                     }
@@ -169,6 +179,31 @@ namespace AUSfp
         {
             string naamArtikel = "";
             naamArtikel = DataGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+        }
+
+        private void testsbtntnt_Click(object sender, EventArgs e)
+        {
+            CategorieBeheer myForm = new CategorieBeheer();
+            DialogResult dialogResult = myForm.ShowDialog();
+
+            if (dialogResult == DialogResult.OK)
+            {
+                userIsLoggedIn = true;
+                showHeaderItems(userIsLoggedIn);
+            }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ArtikelToevoegen myForm = new ArtikelToevoegen();
+            DialogResult dialogResult = myForm.ShowDialog();
+
+            if (dialogResult == DialogResult.OK)
+            {
+                userIsLoggedIn = true;
+                showHeaderItems(userIsLoggedIn);
+            }
         }
     }
 }

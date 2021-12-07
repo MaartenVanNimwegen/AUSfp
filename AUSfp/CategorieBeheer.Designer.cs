@@ -30,7 +30,7 @@ namespace AUSfp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategorieBeheer));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CtaegorieDropdown = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CategoryName = new System.Windows.Forms.TextBox();
             this.DeleteBtn = new System.Windows.Forms.PictureBox();
@@ -39,14 +39,17 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // CtaegorieDropdown
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(440, 46);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(339, 32);
-            this.comboBox1.TabIndex = 45;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.CtaegorieDropdown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CtaegorieDropdown.FormattingEnabled = true;
+            this.CtaegorieDropdown.Items.AddRange(new object[] {
+            "Categorie..."});
+            this.CtaegorieDropdown.Location = new System.Drawing.Point(440, 46);
+            this.CtaegorieDropdown.Name = "CtaegorieDropdown";
+            this.CtaegorieDropdown.Size = new System.Drawing.Size(339, 32);
+            this.CtaegorieDropdown.TabIndex = 45;
+            this.CtaegorieDropdown.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -78,7 +81,7 @@ namespace AUSfp
             // 
             // DeleteBtn
             // 
-            this.DeleteBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.DeleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.DeleteBtn.BackColor = System.Drawing.SystemColors.Control;
             this.DeleteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.BackgroundImage")));
             this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -92,7 +95,7 @@ namespace AUSfp
             // 
             // AddBtn
             // 
-            this.AddBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.AddBtn.BackColor = System.Drawing.SystemColors.Control;
             this.AddBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddBtn.BackgroundImage")));
             this.AddBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -113,9 +116,10 @@ namespace AUSfp
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.CategoryName);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CtaegorieDropdown);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CategorieBeheer";
-            this.Text = "CategorieBeheer";
+            this.Text = "Categorie Beheer";
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).EndInit();
             this.ResumeLayout(false);
@@ -124,7 +128,7 @@ namespace AUSfp
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CtaegorieDropdown;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox CategoryName;
         private System.Windows.Forms.PictureBox DeleteBtn;
