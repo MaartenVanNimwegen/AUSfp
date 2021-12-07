@@ -9,6 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+     Om bij een artikel en zijn properties te komen doe je dit:
+
+            ArtikelDataList = Items[artikelnr - 1]
+
+        artikelnr - 1 is er omdat de list start met positie 0, niet 1
+
+
+
+    Om bij een artikel zijn naam te komen doe je dit:
+
+            ArtikelNaam = Items[artikelnr - 1][0]
+
+        De laatste [0] is omdat je positie 0 van de list met properties selecteert. Als je de categorie wilt hebben doe je dus [1]
+*/
 
 namespace AUSfp
 {
@@ -121,7 +136,6 @@ namespace AUSfp
 
                 }
             }
-
         }
 
         private List<string> StrList2CSList(string StrList)
@@ -135,6 +149,7 @@ namespace AUSfp
         private void RefreshDataGrid()
         {
             SQL2List();
+            
 
             foreach (var ItemData in Items)
             {
