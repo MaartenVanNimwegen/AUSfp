@@ -82,7 +82,7 @@ namespace AUSfp
         /// Deze functie converteerd een SQL ding naar een list
         /// </summary>
         /// <param name="sqllist"></param>
-        private List<string> SQL2List(string SQLList)
+        private void SQL2List()
         {
 
             string query = "SELECT * FROM artikelen";
@@ -125,7 +125,7 @@ namespace AUSfp
 
         private void RefreshDataGrid()
         {
-            RefreshItemListWithSQL();
+            SQL2List();
 
             foreach (var ItemData in Items)
             {
