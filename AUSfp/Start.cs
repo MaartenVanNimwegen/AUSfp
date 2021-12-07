@@ -15,9 +15,8 @@ namespace AUSfp
     public partial class Start : Form
     {
         bool userIsLoggedIn = false;
-        Dictionary<int, string> Items = new Dictionary<int, string>(){
-            {0, "itemnaam, categorie, lener, inleverdatum, status, leerlingnummer, beschrijving, toevoeger, toevoegdatum"}
-        };
+        Dictionary<int, List<string>> Items = new Dictionary<int, List<string>>() { };
+
         public Start()
         {
             InitializeComponent();
@@ -99,16 +98,18 @@ namespace AUSfp
                     {
                         while (reader.Read())
                         {
-                            string Props =
-                                reader.GetString(1).ToString() + "," +
-                                reader.GetString(2).ToString() + "," +
-                                reader.GetString(3).ToString() + "," +
-                                reader.GetString(4).ToString() + "," +
-                                reader.GetInt32(5) + "," +
-                                reader.GetInt32(6) + "," +
-                                reader.GetString(7).ToString() + "," +
-                                reader.GetString(8).ToString() + "," +
-                                reader.GetString(9).ToString();
+                            string StrProps =
+                                reader.GetString(1) + "$" +
+                                reader.GetString(2) + "$" +
+                                reader.GetString(3) + "$" +
+                                reader.GetString(4) + "$" +
+                                reader.GetInt32(5) + "$" +
+                                reader.GetInt32(6) + "$" +
+                                reader.GetString(7) + "$" +
+                                reader.GetString(8) + "$" +
+                                reader.GetString(9);
+
+                            var Props = StrList2CSList(StrProps);
 
                             Items.Add( reader.GetInt32(0), Props );
 
@@ -121,6 +122,14 @@ namespace AUSfp
                 }
             }
 
+        }
+
+        private List<string> StrList2CSList(string StrList)
+        {
+            List<string> list = new List<string>();
+            list = StrList.Split('$').ToList();
+
+            return list;
         }
 
         private void RefreshDataGrid()
