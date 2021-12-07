@@ -40,7 +40,7 @@ namespace AUSfp
             this.ManageItemsBtn = new System.Windows.Forms.PictureBox();
             this.ItemDetailsPanel = new System.Windows.Forms.Panel();
             this.wijzigIcon = new System.Windows.Forms.PictureBox();
-            this.deleteIcon = new System.Windows.Forms.PictureBox();
+            this.DeleteBtn = new System.Windows.Forms.PictureBox();
             this.inleverUitleenIcon = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.ManageItemsBtn)).BeginInit();
             this.ItemDetailsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wijzigIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deleteIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
@@ -186,7 +186,7 @@ namespace AUSfp
             this.ItemDetailsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ItemDetailsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.ItemDetailsPanel.Controls.Add(this.wijzigIcon);
-            this.ItemDetailsPanel.Controls.Add(this.deleteIcon);
+            this.ItemDetailsPanel.Controls.Add(this.DeleteBtn);
             this.ItemDetailsPanel.Controls.Add(this.inleverUitleenIcon);
             this.ItemDetailsPanel.Controls.Add(this.panel2);
             this.ItemDetailsPanel.Controls.Add(this.ItemDescription);
@@ -212,19 +212,19 @@ namespace AUSfp
             this.wijzigIcon.TabIndex = 49;
             this.wijzigIcon.TabStop = false;
             // 
-            // deleteIcon
+            // DeleteBtn
             // 
-            this.deleteIcon.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.deleteIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.deleteIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteIcon.BackgroundImage")));
-            this.deleteIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.deleteIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deleteIcon.Location = new System.Drawing.Point(669, 957);
-            this.deleteIcon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.deleteIcon.Name = "deleteIcon";
-            this.deleteIcon.Size = new System.Drawing.Size(153, 146);
-            this.deleteIcon.TabIndex = 48;
-            this.deleteIcon.TabStop = false;
+            this.DeleteBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.DeleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.DeleteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.BackgroundImage")));
+            this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteBtn.Location = new System.Drawing.Point(669, 957);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(153, 146);
+            this.DeleteBtn.TabIndex = 48;
+            this.DeleteBtn.TabStop = false;
             // 
             // inleverUitleenIcon
             // 
@@ -475,7 +475,7 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.ManageItemsBtn)).EndInit();
             this.ItemDetailsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.wijzigIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deleteIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
@@ -506,7 +506,7 @@ namespace AUSfp
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox wijzigIcon;
-        private System.Windows.Forms.PictureBox deleteIcon;
+        private System.Windows.Forms.PictureBox DeleteBtn;
         private System.Windows.Forms.PictureBox inleverUitleenIcon;
         private System.Windows.Forms.DataGridView DataGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn nummerArtikel;
