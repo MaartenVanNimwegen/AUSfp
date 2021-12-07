@@ -168,8 +168,15 @@ namespace AUSfp
         /// <param name="e"></param>
         private void DataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string naamArtikel = "";
-            naamArtikel = DataGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+            int ArtikelNr = 2 - 1;
+
+            string Naam = Items[ArtikelNr][0];
+            string categorie = Items[ArtikelNr][1];
+            string lener = Items[ArtikelNr][2];
+            string inleverdatum = Items[ArtikelNr][3];
+            int status = Int32.Parse(Items[ArtikelNr][4]);
+            int leerlingnr = Int32.Parse(Items[ArtikelNr][5]);
+
         }
     }
 }
