@@ -66,7 +66,7 @@ namespace AUSfp
             LoginBtn.Visible = !weergeven;
             LogoutBtn.Visible = weergeven;
             NameLabel.Visible = weergeven;
-            deleteIcon.Visible = weergeven;
+            DeleteBtn.Visible = weergeven;
             wijzigIcon.Visible = weergeven;
             inleverUitleenIcon.Visible = weergeven;
             naamLenerLabel.Visible = weergeven;
@@ -150,7 +150,6 @@ namespace AUSfp
         {
             SQL2List();
             
-
             foreach (var ItemData in Items)
             {
                 DataGrid.Rows.Add(ItemData);

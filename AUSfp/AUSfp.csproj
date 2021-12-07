@@ -89,7 +89,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ItemClass.cs" />
+    <Compile Include="CategorieBeheer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategorieBeheer.Designer.cs">
+      <DependentUpon>CategorieBeheer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Start.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +109,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CategorieBeheer.resx">
+      <DependentUpon>CategorieBeheer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
