@@ -149,11 +149,6 @@ namespace AUSfp
                 }
             }
         }
-
-        private void RefreshBtn_Click(object sender, EventArgs e)
-        {
-            RefreshDataGrid();
-        }
         /// <summary>
         /// wanneer er een rij word geselecteerd word de informatie in het rechter deel van het scherm veranderd naar de info uit het rechter deel van het scherm.
         /// </summary>
@@ -171,7 +166,7 @@ namespace AUSfp
             }
 
         }
-
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ArtikelToevoegen myForm = new ArtikelToevoegen();
@@ -183,9 +178,20 @@ namespace AUSfp
                 showHeaderItems(userIsLoggedIn);
             }
         }
-        private void DataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        /// <summary>
+        /// geeft rowIndex de waarde van de geselcteerde row
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void DataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("ggg");
+
+            if(DataGrid.CurrentCell != null)
+            { 
+                string rowIndex = DataGrid.SelectedCells[0].Value.ToString();
+            }
+            
+
         }
     }
 }
