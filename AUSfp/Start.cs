@@ -128,15 +128,9 @@ namespace AUSfp
                             myArtikel.ToegevoegdOp = reader.GetDateTime(9);
 
                             Items.Add(myArtikel);
-
-
-
-                           
-                            
                         }
                     }
                     reader.Close();
-
                 }
             }
         }
@@ -165,11 +159,6 @@ namespace AUSfp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void DataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void testsbtntnt_Click(object sender, EventArgs e)
         {
             CategorieBeheer myForm = new CategorieBeheer();
@@ -193,6 +182,10 @@ namespace AUSfp
                 userIsLoggedIn = true;
                 showHeaderItems(userIsLoggedIn);
             }
+        }
+        private void DataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("ggg");
         }
     }
 }

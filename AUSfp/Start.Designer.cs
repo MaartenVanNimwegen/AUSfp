@@ -373,8 +373,10 @@ namespace AUSfp
             this.DataGrid.Name = "DataGrid";
             this.DataGrid.RowHeadersWidth = 51;
             this.DataGrid.RowTemplate.Height = 30;
+            this.DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGrid.Size = new System.Drawing.Size(1070, 787);
             this.DataGrid.TabIndex = 42;
+            this.DataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_RowEnter);
             // 
             // nummerArtikel
             // 
