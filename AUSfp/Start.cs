@@ -167,8 +167,6 @@ namespace AUSfp
                 Artikel artikel = GetArtikel(int.Parse(rowIndex));
                 
                 ShowDetails(artikel);
-                
-                
             }
         }
 
