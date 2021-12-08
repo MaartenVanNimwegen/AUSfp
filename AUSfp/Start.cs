@@ -85,13 +85,6 @@ namespace AUSfp
         {
             NameLabel.Text = Login.welkomNaam;
         }
-
-        private void dataGridViewIngelogd_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
         /// <summary>
         /// Deze functie converteerd een SQL ding naar een list
         /// </summary>
@@ -128,15 +121,9 @@ namespace AUSfp
                             myArtikel.ToegevoegdOp = reader.GetDateTime(9);
 
                             artikelen.Add(myArtikel);
-
-
-
-                           
-                            
                         }
                     }
                     reader.Close();
-
                 }
             }
         }
