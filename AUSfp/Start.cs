@@ -47,13 +47,17 @@ namespace AUSfp
         /// <param name="weergeven"></param>
         public void showHeaderItems(bool weergeven)
         {
-            inleverUitleenIcon.Visible = !weergeven;
-            wijzigIcon.Visible = !weergeven;
-            DeleteBtn.Visible = !weergeven;
-            lenerLable.Visible = !weergeven;
-            leerlingnummerLable.Visible = !weergeven;
-            toegevoegddoorLable.Visible = !weergeven;
-            toegevoegdopLable.Visible = !weergeven;
+            LoginBtn.Visible = !weergeven;
+            LogoutBtn.Visible = weergeven;
+            LogoutBtn.Visible = weergeven;
+            ManageItemsBtn.Visible = weergeven;            
+            inleverUitleenIcon.Visible = weergeven;
+            wijzigIcon.Visible = weergeven;
+            DeleteBtn.Visible = weergeven;
+            lenerLable.Visible = weergeven;
+            leerlingnummerLable.Visible = weergeven;
+            toegevoegddoorLable.Visible = weergeven;
+            toegevoegdopLable.Visible = weergeven;
         }
         /// <summary>
         /// logt persoon uit
@@ -75,7 +79,7 @@ namespace AUSfp
             NameLabel.Text = Login.welkomNaam;
         }
         /// <summary>
-        /// Deze functie converteerd een SQL ding naar een list
+        /// Deze functie converteerd alle artikelen van de database naar een list
         /// </summary>
         /// <param name="sqllist"></param>
         private void ArtikelenList()
@@ -134,23 +138,10 @@ namespace AUSfp
             }
         }
         /// <summary>
-        /// wanneer er een rij word geselecteerd word de informatie in het rechter deel van het scherm veranderd naar de info uit het rechter deel van het scherm.
+        /// Opent login scherm en kijkt naar of er is ingelogd
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void testsbtntnt_Click(object sender, EventArgs e)
-        {
-            CategorieBeheer myForm = new CategorieBeheer();
-            DialogResult dialogResult = myForm.ShowDialog();
-
-            if (dialogResult == DialogResult.OK)
-            {
-                userIsLoggedIn = true;
-                showHeaderItems(userIsLoggedIn);
-            }
-
-        }
-        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ArtikelToevoegen myForm = new ArtikelToevoegen();
@@ -181,7 +172,11 @@ namespace AUSfp
             }
         }
 
-
+        /// <summary>
+        /// deze functie kijkt naar welke rij is geselecteerd en geeft dan de info van de geselecteerde rij aan een artikelen lijst
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         private Artikel GetArtikel(int id)
         {
 
@@ -211,7 +206,10 @@ namespace AUSfp
             return artikel;
 
         }
-
+        /// <summary>
+        /// Deze functie geeft de juiste informatie vanuit de functie hierboven op het scherm weer
+        /// </summary>
+        /// <param name="artikel"></param>
         private void ShowDetails(Artikel artikel)
         {
             if (artikel.Status == 0)
@@ -226,7 +224,7 @@ namespace AUSfp
             beschrijvingLable.Text = artikel.Beschrijving.ToString();
             artikelnrLable.Text = "Artikelnummer: " + artikel.Id.ToString();
             categorieLable.Text = "Categorie: " + artikel.Categorie.ToString();
-            
+
             inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
             lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
             leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();

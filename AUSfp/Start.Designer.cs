@@ -146,7 +146,7 @@ namespace AUSfp
             this.LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginBtn.BackgroundImage")));
             this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginBtn.Location = new System.Drawing.Point(1731, 32);
+            this.LoginBtn.Location = new System.Drawing.Point(1381, 26);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(2);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(34, 32);
@@ -161,7 +161,7 @@ namespace AUSfp
             this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
             this.LogoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoutBtn.Location = new System.Drawing.Point(1690, 32);
+            this.LogoutBtn.Location = new System.Drawing.Point(1381, 26);
             this.LogoutBtn.Margin = new System.Windows.Forms.Padding(2);
             this.LogoutBtn.Name = "LogoutBtn";
             this.LogoutBtn.Size = new System.Drawing.Size(37, 32);
@@ -176,7 +176,7 @@ namespace AUSfp
             this.ManageItemsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ManageItemsBtn.BackgroundImage")));
             this.ManageItemsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ManageItemsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ManageItemsBtn.Location = new System.Drawing.Point(1628, 33);
+            this.ManageItemsBtn.Location = new System.Drawing.Point(1340, 26);
             this.ManageItemsBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ManageItemsBtn.Name = "ManageItemsBtn";
             this.ManageItemsBtn.Size = new System.Drawing.Size(37, 32);
