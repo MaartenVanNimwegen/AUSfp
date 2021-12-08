@@ -141,21 +141,18 @@ namespace AUSfp
             }
         }
 
-        private List<string> StrList2CSList(string StrList)
-        {
-            List<string> list = new List<string>();
-            list = StrList.Split('$').ToList();
-
-            return list;
-        }
-
         private void RefreshDataGrid()
         {
             ArtikelenList();
-            
-            foreach (var ItemData in Items)
+
+            for (int i = 1; i <= Items.Count; i++)
             {
-                DataGrid.Rows.Add(ItemData);
+                var Item = Items[i - 1];
+
+                if (Item != null)
+                {
+                    DataGrid.Rows.Add(i.ToString(), Item.Naam, Item.Categorie, Item.Status, Item.Inleverdatum);
+                }
             }
         }
 
