@@ -30,7 +30,7 @@ namespace AUSfp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void LoginBtn_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
             Login myForm = new Login();
             DialogResult dialogResult = myForm.ShowDialog();
@@ -54,7 +54,7 @@ namespace AUSfp
             DeleteBtn.Visible = weergeven;
             wijzigIcon.Visible = weergeven;
             inleverUitleenIcon.Visible = weergeven;
-            LabelLener.Visible = weergeven;
+            lenerLable.Visible = weergeven;
         }
         /// <summary>
         /// logt persoon uit
@@ -199,7 +199,7 @@ namespace AUSfp
                 artikel.Naam = (string)reader["naam"];
                 artikel.Categorie = (string)reader["categorie"];
                 artikel.Lener = (string)reader["lener"];
-                artikel.Inleverdatum = (DateTime)reader["inleverdatum"];
+                //artikel.Inleverdatum = (DateTime)reader["inleverdatum"];
                 artikel.Status = (int)reader["status"];
                 artikel.Leerlingnummer = (int)reader["leerlingnummer"];
                 artikel.Beschrijving = (string)reader["beschrijving"];
@@ -215,9 +215,16 @@ namespace AUSfp
 
         private void ShowDetails(Artikel artikel)
         {
-            LableArtikelNr.Text = artikel.Id.ToString();
-            ItemName.Text = artikel.Naam.ToString();
-
+            naamLable.Text = artikel.Naam.ToString();
+            beschrijvingLable.Text = artikel.Beschrijving.ToString();
+            artikelnrLable.Text = artikel.Id.ToString();
+            categorieLable.Text = artikel.Categorie.ToString();
+            statusLable.Text = artikel.Status.ToString();
+            inleverdatumLable.Text = artikel.Inleverdatum.ToString();
+            lenerLable.Text = artikel.Lener.ToString();
+            leerlingnummerLable.Text = artikel.Leerlingnummer.ToString();
+            toegevoegddoorLable.Text = artikel.Toevoeger.ToString();
+            toegevoegdopLable.Text = artikel.ToegevoegdOp.ToString();
         }
     }
 }
