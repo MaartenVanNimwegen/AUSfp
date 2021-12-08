@@ -121,11 +121,11 @@ namespace AUSfp
                             myArtikel.Categorie = reader.GetString(2);
                             myArtikel.Lener = reader.GetString(3);
                             myArtikel.Inleverdatum = reader.GetDateTime(4);
-                            myArtikel.Status = reader.GetInt32(1);
-                            myArtikel.Leerlingnummer = reader.GetInt32(1);
-                            myArtikel.Beschrijving = reader.GetString(9);
-                            myArtikel.Toevoeger= reader.GetString(1);
-                            myArtikel.ToegevoegdOp = reader.GetDateTime(1);
+                            myArtikel.Status = reader.GetInt32(5);
+                            myArtikel.Leerlingnummer = reader.GetInt32(6);
+                            myArtikel.Beschrijving = reader.GetString(7);
+                            myArtikel.Toevoeger= reader.GetString(8);
+                            myArtikel.ToegevoegdOp = reader.GetDateTime(9);
 
                             artikelen.Add(myArtikel);
 
