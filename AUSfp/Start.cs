@@ -47,14 +47,13 @@ namespace AUSfp
         /// <param name="weergeven"></param>
         public void showHeaderItems(bool weergeven)
         {
-            ManageItemsBtn.Visible = weergeven;
-            LoginBtn.Visible = !weergeven;
-            LogoutBtn.Visible = weergeven;
-            NameLabel.Visible = weergeven;
-            DeleteBtn.Visible = weergeven;
-            wijzigIcon.Visible = weergeven;
-            inleverUitleenIcon.Visible = weergeven;
-            lenerLable.Visible = weergeven;
+            inleverUitleenIcon.Visible = !weergeven;
+            wijzigIcon.Visible = !weergeven;
+            DeleteBtn.Visible = !weergeven;
+            lenerLable.Visible = !weergeven;
+            leerlingnummerLable.Visible = !weergeven;
+            toegevoegddoorLable.Visible = !weergeven;
+            toegevoegdopLable.Visible = !weergeven;
         }
         /// <summary>
         /// logt persoon uit
@@ -199,7 +198,7 @@ namespace AUSfp
                 artikel.Naam = (string)reader["naam"];
                 artikel.Categorie = (string)reader["categorie"];
                 artikel.Lener = (string)reader["lener"];
-                //artikel.Inleverdatum = (DateTime)reader["inleverdatum"];
+                artikel.Inleverdatum = (DateTime)reader["inleverdatum"];
                 artikel.Status = (int)reader["status"];
                 artikel.Leerlingnummer = (int)reader["leerlingnummer"];
                 artikel.Beschrijving = (string)reader["beschrijving"];
@@ -215,16 +214,24 @@ namespace AUSfp
 
         private void ShowDetails(Artikel artikel)
         {
+            if (artikel.Status == 0)
+            {
+                statusLable.Text = "Beschikbaarheid: Beschikbaar";
+            }
+            else if (artikel.Status == 1)
+            {
+                statusLable.Text = "Beschikbaarheid: Onbeschikbaar";
+            }
             naamLable.Text = artikel.Naam.ToString();
             beschrijvingLable.Text = artikel.Beschrijving.ToString();
-            artikelnrLable.Text = artikel.Id.ToString();
-            categorieLable.Text = artikel.Categorie.ToString();
-            statusLable.Text = artikel.Status.ToString();
-            inleverdatumLable.Text = artikel.Inleverdatum.ToString();
-            lenerLable.Text = artikel.Lener.ToString();
-            leerlingnummerLable.Text = artikel.Leerlingnummer.ToString();
-            toegevoegddoorLable.Text = artikel.Toevoeger.ToString();
-            toegevoegdopLable.Text = artikel.ToegevoegdOp.ToString();
+            artikelnrLable.Text = "Artikelnummer: " + artikel.Id.ToString();
+            categorieLable.Text = "Categorie: " + artikel.Categorie.ToString();
+            
+            inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
+            lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
+            leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
+            toegevoegddoorLable.Text = "Toegevoegd door: " + artikel.Toevoeger.ToString();
+            toegevoegdopLable.Text = "Toegevoegd op: " + artikel.ToegevoegdOp.ToString();
         }
     }
 }
