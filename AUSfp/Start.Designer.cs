@@ -43,11 +43,11 @@ namespace AUSfp
             this.DeleteBtn = new System.Windows.Forms.PictureBox();
             this.inleverUitleenIcon = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.naamLenerLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LableInleverdatum = new System.Windows.Forms.Label();
+            this.LabelLener = new System.Windows.Forms.Label();
+            this.LableCategorie = new System.Windows.Forms.Label();
+            this.LableArtikelNr = new System.Windows.Forms.Label();
+            this.LableBeschiktbaar = new System.Windows.Forms.Label();
             this.ItemDescription = new System.Windows.Forms.Label();
             this.ItemName = new System.Windows.Forms.Label();
             this.ItemImage = new System.Windows.Forms.PictureBox();
@@ -242,76 +242,76 @@ namespace AUSfp
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.naamLenerLabel);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.LableInleverdatum);
+            this.panel2.Controls.Add(this.LabelLener);
+            this.panel2.Controls.Add(this.LableCategorie);
+            this.panel2.Controls.Add(this.LableArtikelNr);
+            this.panel2.Controls.Add(this.LableBeschiktbaar);
             this.panel2.Location = new System.Drawing.Point(21, 446);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(747, 145);
             this.panel2.TabIndex = 45;
             // 
-            // label5
+            // LableInleverdatum
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label5.Location = new System.Drawing.Point(1, 85);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(743, 28);
-            this.label5.TabIndex = 48;
-            this.label5.Text = "Inleverdatum:  20/04/2022  16:20";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LableInleverdatum.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LableInleverdatum.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LableInleverdatum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LableInleverdatum.Location = new System.Drawing.Point(1, 85);
+            this.LableInleverdatum.Name = "LableInleverdatum";
+            this.LableInleverdatum.Size = new System.Drawing.Size(743, 28);
+            this.LableInleverdatum.TabIndex = 48;
+            this.LableInleverdatum.Text = "Inleverdatum:  20/04/2022  16:20";
+            this.LableInleverdatum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // naamLenerLabel
+            // LabelLener
             // 
-            this.naamLenerLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.naamLenerLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.naamLenerLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.naamLenerLabel.Location = new System.Drawing.Point(3, 113);
-            this.naamLenerLabel.Name = "naamLenerLabel";
-            this.naamLenerLabel.Size = new System.Drawing.Size(737, 28);
-            this.naamLenerLabel.TabIndex = 47;
-            this.naamLenerLabel.Text = "Lener:  Jesper Minks";
-            this.naamLenerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LabelLener.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LabelLener.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelLener.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LabelLener.Location = new System.Drawing.Point(3, 113);
+            this.LabelLener.Name = "LabelLener";
+            this.LabelLener.Size = new System.Drawing.Size(737, 28);
+            this.LabelLener.TabIndex = 47;
+            this.LabelLener.Text = "Lener:  Jesper Minks";
+            this.LabelLener.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // LableCategorie
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label3.Location = new System.Drawing.Point(1, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(743, 28);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Categorie:  Drones";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LableCategorie.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LableCategorie.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LableCategorie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LableCategorie.Location = new System.Drawing.Point(1, 57);
+            this.LableCategorie.Name = "LableCategorie";
+            this.LableCategorie.Size = new System.Drawing.Size(743, 28);
+            this.LableCategorie.TabIndex = 46;
+            this.LableCategorie.Text = "Categorie:  Drones";
+            this.LableCategorie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // LableArtikelNr
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label2.Location = new System.Drawing.Point(1, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(743, 28);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "Artikel nr:  1";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LableArtikelNr.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LableArtikelNr.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LableArtikelNr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LableArtikelNr.Location = new System.Drawing.Point(1, 30);
+            this.LableArtikelNr.Name = "LableArtikelNr";
+            this.LableArtikelNr.Size = new System.Drawing.Size(743, 28);
+            this.LableArtikelNr.TabIndex = 45;
+            this.LableArtikelNr.Text = "Artikel nr:  1";
+            this.LableArtikelNr.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // LableBeschiktbaar
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(1, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(743, 28);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Status:  Beschikbaar";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LableBeschiktbaar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LableBeschiktbaar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LableBeschiktbaar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LableBeschiktbaar.Location = new System.Drawing.Point(1, 1);
+            this.LableBeschiktbaar.Name = "LableBeschiktbaar";
+            this.LableBeschiktbaar.Size = new System.Drawing.Size(743, 28);
+            this.LableBeschiktbaar.TabIndex = 44;
+            this.LableBeschiktbaar.Text = "Status:  Beschikbaar";
+            this.LableBeschiktbaar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ItemDescription
             // 
@@ -425,7 +425,6 @@ namespace AUSfp
             this.RefreshBtn.Size = new System.Drawing.Size(50, 45);
             this.RefreshBtn.TabIndex = 43;
             this.RefreshBtn.TabStop = false;
-            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // Start
             // 
@@ -482,11 +481,11 @@ namespace AUSfp
         private System.Windows.Forms.Label ItemName;
         private System.Windows.Forms.Label ItemDescription;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label naamLenerLabel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LableBeschiktbaar;
+        private System.Windows.Forms.Label LableInleverdatum;
+        private System.Windows.Forms.Label LabelLener;
+        private System.Windows.Forms.Label LableCategorie;
+        private System.Windows.Forms.Label LableArtikelNr;
         private System.Windows.Forms.PictureBox wijzigIcon;
         private System.Windows.Forms.PictureBox DeleteBtn;
         private System.Windows.Forms.PictureBox inleverUitleenIcon;

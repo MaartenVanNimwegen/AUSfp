@@ -14,6 +14,7 @@ namespace AUSfp
     public partial class Start : Form
     {
         bool userIsLoggedIn = false;
+        public string rowIndex = "";
         List<Artikel> Items = new List<Artikel>();
 
         public Start()
@@ -53,7 +54,7 @@ namespace AUSfp
             DeleteBtn.Visible = weergeven;
             wijzigIcon.Visible = weergeven;
             inleverUitleenIcon.Visible = weergeven;
-            naamLenerLabel.Visible = weergeven;
+            LabelLener.Visible = weergeven;
         }
         /// <summary>
         /// logt persoon uit
@@ -167,13 +168,56 @@ namespace AUSfp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void DataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        private void DataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DataGrid.CurrentCell != null)
+            {
+                string rowIndex = DataGrid.SelectedCells[0].Value.ToString();
+
+                Artikel artikel = GetArtikel(int.Parse(rowIndex));
+                
+                ShowDetails(artikel);
+                
+                
+            }
+        }
+
+
+        private Artikel GetArtikel(int id)
         {
 
-            if(DataGrid.CurrentCell != null)
-            { 
-                string rowIndex = DataGrid.SelectedCells[0].Value.ToString();
+            Artikel artikel = new Artikel();
+
+            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("select * from artikelen where id = " + id, connection);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+
+                artikel.Id = (int)reader["id"];
+                artikel.Naam = (string)reader["naam"];
+                artikel.Categorie = (string)reader["categorie"];
+                artikel.Lener = (string)reader["lener"];
+                artikel.Inleverdatum = (DateTime)reader["inleverdatum"];
+                artikel.Status = (int)reader["status"];
+                artikel.Leerlingnummer = (int)reader["leerlingnummer"];
+                artikel.Beschrijving = (string)reader["beschrijving"];
+                artikel.Toevoeger = (string)reader["toevoeger"];
+                artikel.ToegevoegdOp = (DateTime)reader["toegevoegdOp"];
+
+
             }
+
+            return artikel;
+
+        }
+
+        private void ShowDetails(Artikel artikel)
+        {
+            LableArtikelNr.Text = artikel.Id.ToString();
+            ItemName.Text = artikel.Naam.ToString();
+
         }
     }
 }
