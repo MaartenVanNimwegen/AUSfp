@@ -9,22 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/*
-     Om bij een artikel en zijn properties te komen doe je dit:
-
-            ArtikelDataList = Items[artikelnr - 1]
-
-        artikelnr - 1 is er omdat de list start met positie 0, niet 1
-
-
-
-    Om bij een artikel zijn naam te komen doe je dit:
-
-            ArtikelNaam = Items[artikelnr - 1][0]
-
-        De laatste [0] is omdat je positie 0 van de list met properties selecteert. Als je de categorie wilt hebben doe je dus [1]
-*/
-
 namespace AUSfp
 {
     public partial class Start : Form
@@ -71,6 +55,11 @@ namespace AUSfp
             inleverUitleenIcon.Visible = weergeven;
             naamLenerLabel.Visible = weergeven;
         }
+        /// <summary>
+        /// logt persoon uit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LogoutBtn_Click(object sender, EventArgs e)
         {
             userIsLoggedIn = false;
@@ -85,13 +74,6 @@ namespace AUSfp
         {
             NameLabel.Text = Login.welkomNaam;
         }
-
-        private void dataGridViewIngelogd_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
         /// <summary>
         /// Deze functie converteerd een SQL ding naar een list
         /// </summary>
@@ -134,7 +116,9 @@ namespace AUSfp
                 }
             }
         }
-
+        /// <summary>
+        /// voegd data toe aan tabel voor elke rij uit database
+        /// </summary>
         private void RefreshDataGrid()
         {
             ArtikelenList();
@@ -190,8 +174,6 @@ namespace AUSfp
             { 
                 string rowIndex = DataGrid.SelectedCells[0].Value.ToString();
             }
-            
-
         }
     }
 }
