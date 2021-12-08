@@ -30,7 +30,7 @@ namespace AUSfp
     public partial class Start : Form
     {
         bool userIsLoggedIn = false;
-        Dictionary<int, List<string>> Items = new Dictionary<int, List<string>>() { };
+        List<Artikel> Items = new List<Artikel>();
 
         public Start()
         {
@@ -98,13 +98,13 @@ namespace AUSfp
         /// <param name="sqllist"></param>
         private void ArtikelenList()
         {
-            List<Artikel> artikelen = new List<Artikel>();
+            Items = new List<Artikel>();
 
             string query = "SELECT * FROM artikelen";
 
             using (MySqlConnection connection = new MySqlConnection())
             {
-                connection.ConnectionString = "Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ";
+                connection.ConnectionString = "Data Source = localhost; convert zero datetime=True; Initial Catalog = testdatabase; User ID = root; Password = ";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
 
@@ -121,13 +121,13 @@ namespace AUSfp
                             myArtikel.Categorie = reader.GetString(2);
                             myArtikel.Lener = reader.GetString(3);
                             myArtikel.Inleverdatum = reader.GetDateTime(4);
-                            myArtikel.Status = reader.GetInt32(1);
-                            myArtikel.Leerlingnummer = reader.GetInt32(1);
-                            myArtikel.Beschrijving = reader.GetString(9);
-                            myArtikel.Toevoeger= reader.GetString(1);
-                            myArtikel.ToegevoegdOp = reader.GetDateTime(1);
+                            myArtikel.Status = reader.GetInt32(5);
+                            myArtikel.Leerlingnummer = reader.GetInt32(6);
+                            myArtikel.Beschrijving = reader.GetString(7);
+                            myArtikel.Toevoeger= reader.GetString(8);
+                            myArtikel.ToegevoegdOp = reader.GetDateTime(9);
 
-                            artikelen.Add(myArtikel);
+                            Items.Add(myArtikel);
 
 
 
@@ -170,14 +170,6 @@ namespace AUSfp
         /// <param name="e"></param>
         private void DataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int ArtikelNr = 2 - 1;
-
-            string Naam = Items[ArtikelNr][0];
-            string categorie = Items[ArtikelNr][1];
-            string lener = Items[ArtikelNr][2];
-            string inleverdatum = Items[ArtikelNr][3];
-            int status = Int32.Parse(Items[ArtikelNr][4]);
-            int leerlingnr = Int32.Parse(Items[ArtikelNr][5]);
 
         }
 
