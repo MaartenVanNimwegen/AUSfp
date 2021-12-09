@@ -37,7 +37,7 @@ namespace AUSfp
             this.RocLogo = new System.Windows.Forms.PictureBox();
             this.LoginBtn = new System.Windows.Forms.PictureBox();
             this.LogoutBtn = new System.Windows.Forms.PictureBox();
-            this.ManageItemsBtn = new System.Windows.Forms.PictureBox();
+            this.artikelToevoegen = new System.Windows.Forms.PictureBox();
             this.ItemDetailsPanel = new System.Windows.Forms.Panel();
             this.wijzigIcon = new System.Windows.Forms.PictureBox();
             this.DeleteBtn = new System.Windows.Forms.PictureBox();
@@ -65,7 +65,7 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.RocLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ManageItemsBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikelToevoegen)).BeginInit();
             this.ItemDetailsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wijzigIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
@@ -168,19 +168,20 @@ namespace AUSfp
             this.LogoutBtn.TabStop = false;
             this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
             // 
-            // ManageItemsBtn
+            // artikelToevoegen
             // 
-            this.ManageItemsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ManageItemsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ManageItemsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ManageItemsBtn.BackgroundImage")));
-            this.ManageItemsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ManageItemsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ManageItemsBtn.Location = new System.Drawing.Point(1773, 33);
-            this.ManageItemsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ManageItemsBtn.Name = "ManageItemsBtn";
-            this.ManageItemsBtn.Size = new System.Drawing.Size(49, 39);
-            this.ManageItemsBtn.TabIndex = 39;
-            this.ManageItemsBtn.TabStop = false;
+            this.artikelToevoegen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.artikelToevoegen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.artikelToevoegen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("artikelToevoegen.BackgroundImage")));
+            this.artikelToevoegen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.artikelToevoegen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.artikelToevoegen.Location = new System.Drawing.Point(1773, 33);
+            this.artikelToevoegen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.artikelToevoegen.Name = "artikelToevoegen";
+            this.artikelToevoegen.Size = new System.Drawing.Size(49, 39);
+            this.artikelToevoegen.TabIndex = 39;
+            this.artikelToevoegen.TabStop = false;
+            this.artikelToevoegen.Click += new System.EventHandler(this.artikelToevoegen_Click);
             // 
             // ItemDetailsPanel
             // 
@@ -489,7 +490,7 @@ namespace AUSfp
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.ItemDetailsPanel);
-            this.Controls.Add(this.ManageItemsBtn);
+            this.Controls.Add(this.artikelToevoegen);
             this.Controls.Add(this.LogoutBtn);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.RocLogo);
@@ -507,7 +508,7 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.RocLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ManageItemsBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikelToevoegen)).EndInit();
             this.ItemDetailsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.wijzigIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
@@ -529,7 +530,7 @@ namespace AUSfp
         private System.Windows.Forms.PictureBox RocLogo;
         private System.Windows.Forms.PictureBox LoginBtn;
         private System.Windows.Forms.PictureBox LogoutBtn;
-        private System.Windows.Forms.PictureBox ManageItemsBtn;
+        private System.Windows.Forms.PictureBox artikelToevoegen;
         private System.Windows.Forms.Panel ItemDetailsPanel;
         private System.Windows.Forms.PictureBox ItemImage;
         private System.Windows.Forms.Label naamLable;

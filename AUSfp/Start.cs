@@ -50,7 +50,7 @@ namespace AUSfp
             LoginBtn.Visible = !weergeven;
             LogoutBtn.Visible = weergeven;
             LogoutBtn.Visible = weergeven;
-            ManageItemsBtn.Visible = weergeven;            
+            artikelToevoegen.Visible = weergeven;            
             inleverUitleenIcon.Visible = weergeven;
             wijzigIcon.Visible = weergeven;
             DeleteBtn.Visible = weergeven;
@@ -138,22 +138,6 @@ namespace AUSfp
             }
         }
         /// <summary>
-        /// Opent login scherm en kijkt naar of er is ingelogd
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            ArtikelToevoegen myForm = new ArtikelToevoegen();
-            DialogResult dialogResult = myForm.ShowDialog();
-
-            if (dialogResult == DialogResult.OK)
-            {
-                userIsLoggedIn = true;
-                showHeaderItems(userIsLoggedIn);
-            }
-        }
-        /// <summary>
         /// geeft rowIndex de waarde van de geselcteerde row
         /// </summary>
         /// <param name="sender"></param>
@@ -230,6 +214,12 @@ namespace AUSfp
             categorieLable.Text = "Categorie: " + artikel.Categorie.ToString();
             toegevoegddoorLable.Text = "Toegevoegd door: " + artikel.Toevoeger.ToString();
             toegevoegdopLable.Text = "Toegevoegd op: " + artikel.ToegevoegdOp.ToString();
+        }
+
+        private void artikelToevoegen_Click(object sender, EventArgs e)
+        {
+            ArtikelToevoegen myForm = new ArtikelToevoegen();
+            myForm.ShowDialog();
         }
     }
 }
