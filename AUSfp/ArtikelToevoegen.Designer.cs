@@ -60,6 +60,7 @@ namespace AUSfp
             this.titleTextbox.TabStop = false;
             this.titleTextbox.Text = "Titel...";
             this.titleTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.titleTextbox.Enter += new System.EventHandler(this.titleTextbox_Enter);
             // 
             // AddBtn
             // 
@@ -103,6 +104,7 @@ namespace AUSfp
             this.beschrijvingTextbox.TabStop = false;
             this.beschrijvingTextbox.Text = "Beschrijving...";
             this.beschrijvingTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.beschrijvingTextbox.Enter += new System.EventHandler(this.beschrijvingTextbox_Enter);
             // 
             // CategorieDropdown
             // 
