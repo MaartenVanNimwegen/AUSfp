@@ -213,19 +213,21 @@ namespace AUSfp
             if (artikel.Status == 0)
             {
                 statusLable.Text = "Beschikbaarheid: Beschikbaar";
+                inleverdatumLable.Text = "Inleverdatum: ";
+                lenerLable.Text = "Uitgeleend aan: ";
+                leerlingnummerLable.Text = "Leerlingnummer: ";
             }
             else if (artikel.Status == 1)
             {
                 statusLable.Text = "Beschikbaarheid: Onbeschikbaar";
+                inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
+                lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
+                leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
             }
             naamLable.Text = artikel.Naam.ToString();
             beschrijvingLable.Text = artikel.Beschrijving.ToString();
             artikelnrLable.Text = "Artikelnummer: " + artikel.Id.ToString();
             categorieLable.Text = "Categorie: " + artikel.Categorie.ToString();
-
-            inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
-            lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
-            leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
             toegevoegddoorLable.Text = "Toegevoegd door: " + artikel.Toevoeger.ToString();
             toegevoegdopLable.Text = "Toegevoegd op: " + artikel.ToegevoegdOp.ToString();
         }
