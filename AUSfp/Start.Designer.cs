@@ -492,7 +492,6 @@ namespace AUSfp
             this.RefreshBtn.Size = new System.Drawing.Size(70, 69);
             this.RefreshBtn.TabIndex = 43;
             this.RefreshBtn.TabStop = false;
-            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // Start
             // 
