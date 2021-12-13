@@ -14,6 +14,7 @@ namespace AUSfp
     public partial class Start : Form
     {
         bool userIsLoggedIn = false;
+        public string rowIndex = "";
         List<Artikel> Items = new List<Artikel>();
 
         public Start()
@@ -29,7 +30,7 @@ namespace AUSfp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void LoginBtn_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
             Login myForm = new Login();
             DialogResult dialogResult = myForm.ShowDialog();
@@ -46,14 +47,17 @@ namespace AUSfp
         /// <param name="weergeven"></param>
         public void showHeaderItems(bool weergeven)
         {
-            ManageItemsBtn.Visible = weergeven;
             LoginBtn.Visible = !weergeven;
             LogoutBtn.Visible = weergeven;
-            NameLabel.Visible = weergeven;
-            DeleteBtn.Visible = weergeven;
-            wijzigIcon.Visible = weergeven;
+            LogoutBtn.Visible = weergeven;
+            artikelToevoegen.Visible = weergeven;            
             inleverUitleenIcon.Visible = weergeven;
-            naamLenerLabel.Visible = weergeven;
+            wijzigIcon.Visible = weergeven;
+            DeleteBtn.Visible = weergeven;
+            lenerLable.Visible = weergeven;
+            leerlingnummerLable.Visible = weergeven;
+            toegevoegddoorLable.Visible = weergeven;
+            toegevoegdopLable.Visible = weergeven;
         }
         /// <summary>
         /// logt persoon uit
@@ -75,7 +79,7 @@ namespace AUSfp
             NameLabel.Text = Login.welkomNaam;
         }
         /// <summary>
-        /// Deze functie converteerd een SQL ding naar een list
+        /// Deze functie converteerd alle artikelen van de database naar een list
         /// </summary>
         /// <param name="sqllist"></param>
         private void ArtikelenList()
@@ -134,46 +138,88 @@ namespace AUSfp
             }
         }
         /// <summary>
-        /// wanneer er een rij word geselecteerd word de informatie in het rechter deel van het scherm veranderd naar de info uit het rechter deel van het scherm.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void testsbtntnt_Click(object sender, EventArgs e)
-        {
-            CategorieBeheer myForm = new CategorieBeheer();
-            DialogResult dialogResult = myForm.ShowDialog();
-
-            if (dialogResult == DialogResult.OK)
-            {
-                userIsLoggedIn = true;
-                showHeaderItems(userIsLoggedIn);
-            }
-
-        }
-        
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            ArtikelToevoegen myForm = new ArtikelToevoegen();
-            DialogResult dialogResult = myForm.ShowDialog();
-
-            if (dialogResult == DialogResult.OK)
-            {
-                userIsLoggedIn = true;
-                showHeaderItems(userIsLoggedIn);
-            }
-        }
-        /// <summary>
         /// geeft rowIndex de waarde van de geselcteerde row
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void DataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        private void DataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DataGrid.CurrentCell != null)
+            {
+                string rowIndex = DataGrid.SelectedCells[0].Value.ToString();
+
+                Artikel artikel = GetArtikel(int.Parse(rowIndex));
+                
+                ShowDetails(artikel);
+            }
+        }
+
+        /// <summary>
+        /// deze functie kijkt naar welke rij is geselecteerd en geeft dan de info van de geselecteerde rij aan een artikelen lijst
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        private Artikel GetArtikel(int id)
         {
 
-            if(DataGrid.CurrentCell != null)
-            { 
-                string rowIndex = DataGrid.SelectedCells[0].Value.ToString();
+            Artikel artikel = new Artikel();
+
+            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("select * from artikelen where id = " + id, connection);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+
+                artikel.Id = (int)reader["id"];
+                artikel.Naam = (string)reader["naam"];
+                artikel.Categorie = (string)reader["categorie"];
+                artikel.Lener = (string)reader["lener"];
+                artikel.Inleverdatum = (DateTime)reader["inleverdatum"];
+                artikel.Status = (int)reader["status"];
+                artikel.Leerlingnummer = (int)reader["leerlingnummer"];
+                artikel.Beschrijving = (string)reader["beschrijving"];
+                artikel.Toevoeger = (string)reader["toevoeger"];
+                artikel.ToegevoegdOp = (DateTime)reader["toegevoegdOp"];
+
+
             }
+
+            return artikel;
+
+        }
+        /// <summary>
+        /// Deze functie geeft de juiste informatie vanuit de functie hierboven op het scherm weer
+        /// </summary>
+        /// <param name="artikel"></param>
+        private void ShowDetails(Artikel artikel)
+        {
+            if (artikel.Status == 0)
+            {
+                statusLable.Text = "Beschikbaarheid: Beschikbaar";
+                inleverdatumLable.Text = "Inleverdatum: ";
+                lenerLable.Text = "Uitgeleend aan: ";
+                leerlingnummerLable.Text = "Leerlingnummer: ";
+            }
+            else if (artikel.Status == 1)
+            {
+                statusLable.Text = "Beschikbaarheid: Onbeschikbaar";
+                inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
+                lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
+                leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
+            }
+            naamLable.Text = artikel.Naam.ToString();
+            beschrijvingLable.Text = artikel.Beschrijving.ToString();
+            artikelnrLable.Text = "Artikelnummer: " + artikel.Id.ToString();
+            categorieLable.Text = "Categorie: " + artikel.Categorie.ToString();
+            toegevoegddoorLable.Text = "Toegevoegd door: " + artikel.Toevoeger.ToString();
+            toegevoegdopLable.Text = "Toegevoegd op: " + artikel.ToegevoegdOp.ToString();
+        }
+
+        private void artikelToevoegen_Click(object sender, EventArgs e)
+        {
+            ArtikelToevoegen myForm = new ArtikelToevoegen();
+            myForm.ShowDialog();
         }
     }
 }

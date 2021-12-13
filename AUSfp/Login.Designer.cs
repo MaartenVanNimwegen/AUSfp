@@ -98,7 +98,7 @@ namespace AUSfp
             this.loginBtn.TabIndex = 6;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            this.loginBtn.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // Login
             // 
