@@ -213,6 +213,7 @@ namespace AUSfp
             this.wijzigIcon.Size = new System.Drawing.Size(67, 62);
             this.wijzigIcon.TabIndex = 49;
             this.wijzigIcon.TabStop = false;
+            this.wijzigIcon.Click += new System.EventHandler(this.wijzigIcon_Click);
             // 
             // DeleteBtn
             // 

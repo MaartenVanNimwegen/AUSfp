@@ -146,7 +146,7 @@ namespace AUSfp
         {
             if (DataGrid.CurrentCell != null)
             {
-                string rowIndex = DataGrid.SelectedCells[0].Value.ToString();
+                rowIndex = DataGrid.SelectedCells[0].Value.ToString();
 
                 Artikel artikel = GetArtikel(int.Parse(rowIndex));
                 
@@ -220,6 +220,12 @@ namespace AUSfp
         {
             ArtikelToevoegen myForm = new ArtikelToevoegen();
             myForm.ShowDialog();
+        }
+
+        private void wijzigIcon_Click(object sender, EventArgs e)
+        {
+            ArtikelWijzigen artikelForm = new ArtikelWijzigen(rowIndex);
+            artikelForm.ShowDialog();
         }
     }
 }
