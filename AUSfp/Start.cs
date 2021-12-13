@@ -125,8 +125,6 @@ namespace AUSfp
         /// </summary>
         private void RefreshDataGrid()
         {
-            DataGrid.Rows.Clear();
-
             ArtikelenList();
 
             for (int i = 1; i <= Items.Count; i++)
@@ -148,7 +146,7 @@ namespace AUSfp
         {
             if (DataGrid.CurrentCell != null)
             {
-                string rowIndex = DataGrid.SelectedCells[0].Value.ToString();
+                rowIndex = DataGrid.SelectedCells[0].Value.ToString();
 
                 Artikel artikel = GetArtikel(int.Parse(rowIndex));
                 
@@ -224,17 +222,10 @@ namespace AUSfp
             myForm.ShowDialog();
         }
 
-        private void RefreshBtn_Click(object sender, EventArgs e)
+        private void wijzigIcon_Click(object sender, EventArgs e)
         {
-            //Uitlenen myForm = new Uitlenen();
-            //DialogResult dialogResult = myForm.ShowDialog();
-
-            RefreshDataGrid();
-        }
-
-        private void DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            ArtikelWijzigen artikelForm = new ArtikelWijzigen(rowIndex);
+            artikelForm.ShowDialog();
         }
     }
 }
