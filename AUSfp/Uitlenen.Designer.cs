@@ -42,6 +42,7 @@ namespace AUSfp
             // 
             // StudentId
             // 
+            this.StudentId.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.StudentId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.StudentId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.StudentId.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -59,6 +60,7 @@ namespace AUSfp
             // 
             // ItemId
             // 
+            this.ItemId.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ItemId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.ItemId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ItemId.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -70,12 +72,13 @@ namespace AUSfp
             this.ItemId.Size = new System.Drawing.Size(411, 36);
             this.ItemId.TabIndex = 51;
             this.ItemId.TabStop = false;
-            this.ItemId.Text = "Artikel nr...";
+            this.ItemId.Text = "Student naam...";
             this.ItemId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ItemId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // TurnInDateTime
             // 
+            this.TurnInDateTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TurnInDateTime.Location = new System.Drawing.Point(79, 231);
             this.TurnInDateTime.Name = "TurnInDateTime";
             this.TurnInDateTime.Size = new System.Drawing.Size(411, 29);
@@ -96,7 +99,7 @@ namespace AUSfp
             // 
             // inleverUitleenIcon
             // 
-            this.inleverUitleenIcon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.inleverUitleenIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.inleverUitleenIcon.BackColor = System.Drawing.SystemColors.Control;
             this.inleverUitleenIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("inleverUitleenIcon.BackgroundImage")));
             this.inleverUitleenIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -110,7 +113,7 @@ namespace AUSfp
             // 
             // CancelBtn
             // 
-            this.CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CancelBtn.BackColor = System.Drawing.SystemColors.Control;
             this.CancelBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelBtn.BackgroundImage")));
             this.CancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
