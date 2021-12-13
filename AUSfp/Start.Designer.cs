@@ -438,7 +438,6 @@ namespace AUSfp
             this.DataGrid.ShowRowErrors = false;
             this.DataGrid.Size = new System.Drawing.Size(1470, 1179);
             this.DataGrid.TabIndex = 42;
-            this.DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_CellContentClick);
             this.DataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_RowEnter);
             // 
             // nummerArtikel
@@ -493,7 +492,6 @@ namespace AUSfp
             this.RefreshBtn.Size = new System.Drawing.Size(70, 69);
             this.RefreshBtn.TabIndex = 43;
             this.RefreshBtn.TabStop = false;
-            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // Start
             // 
