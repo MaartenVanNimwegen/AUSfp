@@ -125,6 +125,8 @@ namespace AUSfp
         /// </summary>
         private void RefreshDataGrid()
         {
+            DataGrid.Rows.Clear();
+
             ArtikelenList();
 
             for (int i = 1; i <= Items.Count; i++)
@@ -220,6 +222,19 @@ namespace AUSfp
         {
             ArtikelToevoegen myForm = new ArtikelToevoegen();
             myForm.ShowDialog();
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            //Uitlenen myForm = new Uitlenen();
+            //DialogResult dialogResult = myForm.ShowDialog();
+
+            RefreshDataGrid();
+        }
+
+        private void DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
