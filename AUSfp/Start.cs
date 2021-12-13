@@ -133,6 +133,8 @@ namespace AUSfp
         /// </summary>
         private void RefreshDataGrid()
         {
+            DataGrid.Rows.Clear();
+
             ArtikelenList();
 
             for (int i = 1; i <= Items.Count; i++)
@@ -234,6 +236,11 @@ namespace AUSfp
         {
             ArtikelWijzigen artikelForm = new ArtikelWijzigen(rowIndex);
             artikelForm.ShowDialog();
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            RefreshDataGrid();
         }
     }
 }
