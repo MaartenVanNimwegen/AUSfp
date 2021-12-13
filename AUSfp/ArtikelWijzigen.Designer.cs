@@ -50,10 +50,10 @@ namespace AUSfp
             this.CancelBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelBtn.BackgroundImage")));
             this.CancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CancelBtn.Location = new System.Drawing.Point(193, 343);
-            this.CancelBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.CancelBtn.Location = new System.Drawing.Point(257, 422);
+            this.CancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(47, 45);
+            this.CancelBtn.Size = new System.Drawing.Size(63, 55);
             this.CancelBtn.TabIndex = 72;
             this.CancelBtn.TabStop = false;
             this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
@@ -65,10 +65,10 @@ namespace AUSfp
             this.WijzigItemBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WijzigItemBtn.BackgroundImage")));
             this.WijzigItemBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.WijzigItemBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.WijzigItemBtn.Location = new System.Drawing.Point(133, 343);
-            this.WijzigItemBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.WijzigItemBtn.Location = new System.Drawing.Point(177, 422);
+            this.WijzigItemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.WijzigItemBtn.Name = "WijzigItemBtn";
-            this.WijzigItemBtn.Size = new System.Drawing.Size(47, 45);
+            this.WijzigItemBtn.Size = new System.Drawing.Size(63, 55);
             this.WijzigItemBtn.TabIndex = 71;
             this.WijzigItemBtn.TabStop = false;
             this.WijzigItemBtn.Click += new System.EventHandler(this.WijzigItemBtn_Click);
@@ -78,10 +78,9 @@ namespace AUSfp
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(80, 190);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(107, 234);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 18);
+            this.label1.Size = new System.Drawing.Size(273, 22);
             this.label1.TabIndex = 70;
             this.label1.Text = "Categorie:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -92,10 +91,10 @@ namespace AUSfp
             this.WijzigCategorieDropdown.FormattingEnabled = true;
             this.WijzigCategorieDropdown.Items.AddRange(new object[] {
             "Drones"});
-            this.WijzigCategorieDropdown.Location = new System.Drawing.Point(84, 210);
-            this.WijzigCategorieDropdown.Margin = new System.Windows.Forms.Padding(2);
+            this.WijzigCategorieDropdown.Location = new System.Drawing.Point(112, 258);
+            this.WijzigCategorieDropdown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.WijzigCategorieDropdown.Name = "WijzigCategorieDropdown";
-            this.WijzigCategorieDropdown.Size = new System.Drawing.Size(201, 21);
+            this.WijzigCategorieDropdown.Size = new System.Drawing.Size(267, 24);
             this.WijzigCategorieDropdown.TabIndex = 69;
             // 
             // WijzigBeschrijvingTextbox
@@ -105,25 +104,25 @@ namespace AUSfp
             this.WijzigBeschrijvingTextbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WijzigBeschrijvingTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.WijzigBeschrijvingTextbox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.WijzigBeschrijvingTextbox.Location = new System.Drawing.Point(84, 246);
-            this.WijzigBeschrijvingTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.WijzigBeschrijvingTextbox.Location = new System.Drawing.Point(112, 303);
+            this.WijzigBeschrijvingTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.WijzigBeschrijvingTextbox.Multiline = true;
             this.WijzigBeschrijvingTextbox.Name = "WijzigBeschrijvingTextbox";
-            this.WijzigBeschrijvingTextbox.Size = new System.Drawing.Size(201, 93);
+            this.WijzigBeschrijvingTextbox.Size = new System.Drawing.Size(268, 114);
             this.WijzigBeschrijvingTextbox.TabIndex = 68;
             this.WijzigBeschrijvingTextbox.TabStop = false;
             this.WijzigBeschrijvingTextbox.Text = "Beschrijving...";
             this.WijzigBeschrijvingTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.WijzigBeschrijvingTextbox.Enter += new System.EventHandler(this.WijzigBeschrijvingTextbox_Enter_1);
             // 
             // ImageName
             // 
             this.ImageName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ImageName.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ImageName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ImageName.Location = new System.Drawing.Point(69, 123);
-            this.ImageName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ImageName.Location = new System.Drawing.Point(92, 151);
             this.ImageName.Name = "ImageName";
-            this.ImageName.Size = new System.Drawing.Size(242, 18);
+            this.ImageName.Size = new System.Drawing.Size(323, 22);
             this.ImageName.TabIndex = 67;
             this.ImageName.Text = "Selecteer een plaatje";
             this.ImageName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -135,10 +134,10 @@ namespace AUSfp
             this.AddBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddBtn.BackgroundImage")));
             this.AddBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddBtn.Location = new System.Drawing.Point(133, 11);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AddBtn.Location = new System.Drawing.Point(177, 14);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(107, 110);
+            this.AddBtn.Size = new System.Drawing.Size(143, 135);
             this.AddBtn.TabIndex = 66;
             this.AddBtn.TabStop = false;
             // 
@@ -149,20 +148,21 @@ namespace AUSfp
             this.wijzigTitleTextbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wijzigTitleTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.wijzigTitleTextbox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.wijzigTitleTextbox.Location = new System.Drawing.Point(84, 155);
-            this.wijzigTitleTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.wijzigTitleTextbox.Location = new System.Drawing.Point(112, 191);
+            this.wijzigTitleTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wijzigTitleTextbox.Name = "wijzigTitleTextbox";
-            this.wijzigTitleTextbox.Size = new System.Drawing.Size(201, 21);
+            this.wijzigTitleTextbox.Size = new System.Drawing.Size(268, 26);
             this.wijzigTitleTextbox.TabIndex = 65;
             this.wijzigTitleTextbox.TabStop = false;
             this.wijzigTitleTextbox.Text = "Titel...";
             this.wijzigTitleTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.wijzigTitleTextbox.Enter += new System.EventHandler(this.wijzigTitleTextbox_Enter_1);
             // 
             // ArtikelWijzigen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 450);
+            this.ClientSize = new System.Drawing.Size(493, 554);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.WijzigItemBtn);
             this.Controls.Add(this.label1);
@@ -171,6 +171,7 @@ namespace AUSfp
             this.Controls.Add(this.ImageName);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.wijzigTitleTextbox);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ArtikelWijzigen";
             this.Text = "ArtikelWijzigen";
             ((System.ComponentModel.ISupportInitialize)(this.CancelBtn)).EndInit();

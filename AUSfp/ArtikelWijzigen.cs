@@ -51,19 +51,30 @@ namespace AUSfp
             beschrijving = WijzigBeschrijvingTextbox.Text;
             categorie = WijzigCategorieDropdown.Text;
             
-            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
-            connection.Open();
-            MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET naam='"+ naam + "', categorie='"+ categorie + "', beschrijving='" + beschrijving + "' WHERE id='" + id +"'", connection);
-            cmd.ExecuteReader();
-            MessageBox.Show("Artikel gewijzigd");
-            Close();
+            if (wijzigTitleTextbox.Text == "")
+            {
+                MessageBox.Show("Dit veld mag niet leeg zijn.");
+            }
+            else if (wijzigTitleTextbox.Text.Length > 100)
+            {
+                MessageBox.Show("De naam mag niet langer zijn dan 100 karakters.");
+            }
+            else
+            {
+                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET naam='" + naam + "', categorie='" + categorie + "', beschrijving='" + beschrijving + "' WHERE id='" + id + "'", connection);
+                cmd.ExecuteReader();
+                MessageBox.Show("Artikel gewijzigd");
+                Close();
+            }
         }
         /// <summary>
         /// leegt de titel box wanneer je erin springt
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void WijzigTitleTextbox_Enter(object sender, EventArgs e)
+        private void wijzigTitleTextbox_Enter_1(object sender, EventArgs e)
         {
             wijzigTitleTextbox.Text = "";
         }
@@ -72,7 +83,7 @@ namespace AUSfp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void WijzigBeschrijvingTextbox_Enter(object sender, EventArgs e)
+        private void WijzigBeschrijvingTextbox_Enter_1(object sender, EventArgs e)
         {
             WijzigBeschrijvingTextbox.Text = "";
         }
