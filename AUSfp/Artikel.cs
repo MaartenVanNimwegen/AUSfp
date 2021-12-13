@@ -19,6 +19,8 @@ namespace AUSfp
         public DateTime? Inleverdatum { get; set; }
         
         public int Status { get; set; }
+
+        public string StatusString { get; set; }
         
         public int? Leerlingnummer { get; set; }
         
