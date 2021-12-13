@@ -438,7 +438,6 @@ namespace AUSfp
             this.DataGrid.ShowRowErrors = false;
             this.DataGrid.Size = new System.Drawing.Size(1470, 1179);
             this.DataGrid.TabIndex = 42;
-            this.DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_CellContentClick);
             this.DataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_RowEnter);
             // 
             // nummerArtikel
