@@ -107,11 +107,19 @@ namespace AUSfp
                             myArtikel.Categorie = reader.GetString(2);
                             myArtikel.Lener = reader.GetString(3);
                             myArtikel.Inleverdatum = reader.GetDateTime(4);
-                            myArtikel.Status = reader.GetInt32(5);
                             myArtikel.Leerlingnummer = reader.GetInt32(6);
                             myArtikel.Beschrijving = reader.GetString(7);
                             myArtikel.Toevoeger= reader.GetString(8);
                             myArtikel.ToegevoegdOp = reader.GetDateTime(9);
+
+                            if (reader.GetInt32(5)==0)
+                            {
+                                myArtikel.StatusString = "Beschikbaar";
+                            }
+                            else if (reader.GetInt32(5)==1)
+                            {
+                                myArtikel.StatusString = "Onbeschikbaar";
+                            }
 
                             Items.Add(myArtikel);
                         }
@@ -133,7 +141,7 @@ namespace AUSfp
 
                 if (Item != null)
                 {
-                    DataGrid.Rows.Add(i.ToString(), Item.Naam, Item.Categorie, Item.Status, Item.Inleverdatum);
+                    DataGrid.Rows.Add(i.ToString(), Item.Naam, Item.Categorie, Item.StatusString, Item.Inleverdatum);
                 }
             }
         }

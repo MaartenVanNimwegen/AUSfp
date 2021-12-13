@@ -56,6 +56,7 @@ namespace AUSfp
             MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET naam='"+ naam + "', categorie='"+ categorie + "', beschrijving='" + beschrijving + "' WHERE id='" + id +"'", connection);
             cmd.ExecuteReader();
             MessageBox.Show("Artikel gewijzigd");
+            Close();
         }
         /// <summary>
         /// leegt de titel box wanneer je erin springt
