@@ -243,7 +243,6 @@ namespace AUSfp
             this.inleverUitleenIcon.Size = new System.Drawing.Size(67, 62);
             this.inleverUitleenIcon.TabIndex = 47;
             this.inleverUitleenIcon.TabStop = false;
-            this.inleverUitleenIcon.Click += new System.EventHandler(this.inleverUitleenIcon_Click);
             // 
             // panel2
             // 
@@ -483,7 +482,6 @@ namespace AUSfp
             this.RefreshBtn.Size = new System.Drawing.Size(51, 46);
             this.RefreshBtn.TabIndex = 43;
             this.RefreshBtn.TabStop = false;
-            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click_1);
             // 
             // Start
             // 

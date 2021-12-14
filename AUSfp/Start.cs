@@ -246,19 +246,5 @@ namespace AUSfp
         {
             RefreshDataGrid();
         }
-
-        private void RefreshBtn_Click_1(object sender, EventArgs e)
-        {
-            RefreshDataGrid();
-        }
-
-        private void inleverUitleenIcon_Click(object sender, EventArgs e)
-        {
-            rowIndex = DataGrid.SelectedCells[0].Value.ToString();
-            Artikel artikel = GetArtikel(int.Parse(rowIndex));
-
-            Uitlenen uitlenen = new Uitlenen(artikel);
-            uitlenen.ShowDialog();
-        }
     }
 }
