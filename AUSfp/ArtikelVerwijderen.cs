@@ -29,7 +29,7 @@ namespace AUSfp
         {
             MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
             connection.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from artikelen where id = " + id, connection);
+            MySqlCommand cmd = new MySqlCommand("DELETE  from artikelen where id ="+ id , connection);
             MySqlDataReader reader = cmd.ExecuteReader();
         }
     }

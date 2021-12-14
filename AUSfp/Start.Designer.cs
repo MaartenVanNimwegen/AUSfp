@@ -145,7 +145,7 @@ namespace AUSfp
             this.LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginBtn.BackgroundImage")));
             this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginBtn.Location = new System.Drawing.Point(2335, 32);
+            this.LoginBtn.Location = new System.Drawing.Point(1843, 31);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(45, 39);
@@ -160,7 +160,7 @@ namespace AUSfp
             this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
             this.LogoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoutBtn.Location = new System.Drawing.Point(2263, 31);
+            this.LogoutBtn.Location = new System.Drawing.Point(1843, 31);
             this.LogoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LogoutBtn.Name = "LogoutBtn";
             this.LogoutBtn.Size = new System.Drawing.Size(49, 39);
@@ -175,7 +175,7 @@ namespace AUSfp
             this.artikelToevoegen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("artikelToevoegen.BackgroundImage")));
             this.artikelToevoegen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.artikelToevoegen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.artikelToevoegen.Location = new System.Drawing.Point(2196, 32);
+            this.artikelToevoegen.Location = new System.Drawing.Point(1788, 31);
             this.artikelToevoegen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.artikelToevoegen.Name = "artikelToevoegen";
             this.artikelToevoegen.Size = new System.Drawing.Size(49, 39);
@@ -194,7 +194,7 @@ namespace AUSfp
             this.ItemDetailsPanel.Controls.Add(this.beschrijvingLable);
             this.ItemDetailsPanel.Controls.Add(this.naamLable);
             this.ItemDetailsPanel.Controls.Add(this.ItemImage);
-            this.ItemDetailsPanel.Location = new System.Drawing.Point(1645, 128);
+            this.ItemDetailsPanel.Location = new System.Drawing.Point(1105, 128);
             this.ItemDetailsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ItemDetailsPanel.Name = "ItemDetailsPanel";
             this.ItemDetailsPanel.Size = new System.Drawing.Size(783, 786);
@@ -228,7 +228,6 @@ namespace AUSfp
             this.DeleteBtn.Size = new System.Drawing.Size(67, 62);
             this.DeleteBtn.TabIndex = 48;
             this.DeleteBtn.TabStop = false;
-            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // inleverUitleenIcon
             // 
@@ -426,7 +425,7 @@ namespace AUSfp
             this.DataGrid.ShowCellToolTips = false;
             this.DataGrid.ShowEditingIcon = false;
             this.DataGrid.ShowRowErrors = false;
-            this.DataGrid.Size = new System.Drawing.Size(1594, 786);
+            this.DataGrid.Size = new System.Drawing.Size(938, 786);
             this.DataGrid.TabIndex = 42;
             this.DataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_RowEnter);
             // 
@@ -476,7 +475,7 @@ namespace AUSfp
             this.RefreshBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RefreshBtn.BackgroundImage")));
             this.RefreshBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RefreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RefreshBtn.Location = new System.Drawing.Point(699, 33);
+            this.RefreshBtn.Location = new System.Drawing.Point(689, 32);
             this.RefreshBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RefreshBtn.Name = "RefreshBtn";
             this.RefreshBtn.Size = new System.Drawing.Size(51, 46);
