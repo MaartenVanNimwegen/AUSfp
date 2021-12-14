@@ -31,7 +31,7 @@ namespace AUSfp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uitlenen));
             this.StudentId = new System.Windows.Forms.TextBox();
-            this.ItemId = new System.Windows.Forms.TextBox();
+            this.StudentName = new System.Windows.Forms.TextBox();
             this.TurnInDateTime = new System.Windows.Forms.DateTimePicker();
             this.ImageName = new System.Windows.Forms.Label();
             this.inleverUitleenIcon = new System.Windows.Forms.PictureBox();
@@ -58,27 +58,29 @@ namespace AUSfp
             this.StudentId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.StudentId.TextChanged += new System.EventHandler(this.StudentId_TextChanged);
             // 
-            // ItemId
+            // StudentName
             // 
-            this.ItemId.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ItemId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.ItemId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ItemId.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.ItemId.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.ItemId.Location = new System.Drawing.Point(80, 114);
-            this.ItemId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.ItemId.Name = "ItemId";
-            this.ItemId.Size = new System.Drawing.Size(411, 36);
-            this.ItemId.TabIndex = 51;
-            this.ItemId.TabStop = false;
-            this.ItemId.Text = "Student naam...";
-            this.ItemId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ItemId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.StudentName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.StudentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.StudentName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StudentName.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.StudentName.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.StudentName.Location = new System.Drawing.Point(80, 114);
+            this.StudentName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.StudentName.Name = "StudentName";
+            this.StudentName.Size = new System.Drawing.Size(411, 36);
+            this.StudentName.TabIndex = 51;
+            this.StudentName.TabStop = false;
+            this.StudentName.Text = "Student naam...";
+            this.StudentName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.StudentName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // TurnInDateTime
             // 
             this.TurnInDateTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TurnInDateTime.CustomFormat = "yyyy-MM-dd";
+            this.TurnInDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.TurnInDateTime.Location = new System.Drawing.Point(79, 231);
             this.TurnInDateTime.Name = "TurnInDateTime";
             this.TurnInDateTime.Size = new System.Drawing.Size(411, 29);
@@ -125,6 +127,7 @@ namespace AUSfp
             this.CancelBtn.Size = new System.Drawing.Size(87, 82);
             this.CancelBtn.TabIndex = 65;
             this.CancelBtn.TabStop = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // Uitlenen
             // 
@@ -135,7 +138,7 @@ namespace AUSfp
             this.Controls.Add(this.inleverUitleenIcon);
             this.Controls.Add(this.ImageName);
             this.Controls.Add(this.TurnInDateTime);
-            this.Controls.Add(this.ItemId);
+            this.Controls.Add(this.StudentName);
             this.Controls.Add(this.StudentId);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Uitlenen";
@@ -150,7 +153,7 @@ namespace AUSfp
         #endregion
 
         private System.Windows.Forms.TextBox StudentId;
-        private System.Windows.Forms.TextBox ItemId;
+        private System.Windows.Forms.TextBox StudentName;
         private System.Windows.Forms.DateTimePicker TurnInDateTime;
         private System.Windows.Forms.Label ImageName;
         private System.Windows.Forms.PictureBox inleverUitleenIcon;
