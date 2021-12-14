@@ -95,6 +95,12 @@
     <Compile Include="ArtikelToevoegen.Designer.cs">
       <DependentUpon>ArtikelToevoegen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ArtikelVerwijderen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArtikelVerwijderen.Designer.cs">
+      <DependentUpon>ArtikelVerwijderen.cs</DependentUpon>
+    </Compile>
     <Compile Include="ArtikelWijzigen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ArtikelToevoegen.resx">
       <DependentUpon>ArtikelToevoegen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArtikelVerwijderen.resx">
+      <DependentUpon>ArtikelVerwijderen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ArtikelWijzigen.resx">
       <DependentUpon>ArtikelWijzigen.cs</DependentUpon>

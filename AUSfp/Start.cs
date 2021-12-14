@@ -242,5 +242,11 @@ namespace AUSfp
         {
             RefreshDataGrid();
         }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            ArtikelVerwijderen artikelForm = new ArtikelVerwijderen(rowIndex);
+            artikelForm.ShowDialog();
+        }
     }
 }
