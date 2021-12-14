@@ -17,7 +17,10 @@ namespace AUSfp
         private string beschrijving = "";
         private string categorie = "";
         private static string id = "";
-
+        /// <summary>
+        /// deze functie bouwd het scherm en zet de huidige info in de velden.
+        /// </summary>
+        /// <param name="rowId"></param>
         public ArtikelWijzigen(string rowId)
         {
             InitializeComponent();
@@ -39,12 +42,20 @@ namespace AUSfp
             WijzigCategorieDropdown.Text = categorie;
             WijzigBeschrijvingTextbox.Text = beschrijving;
         }
-
+        /// <summary>
+        /// sluit het scherm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             Close();
         }
-
+        /// <summary>
+        /// veranderd de info van het artikel naar wat is ingevuld
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WijzigItemBtn_Click(object sender, EventArgs e)
         {
             naam = wijzigTitleTextbox.Text;

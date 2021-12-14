@@ -143,7 +143,7 @@ namespace AUSfp
 
                 if (Item != null)
                 {
-                    DataGrid.Rows.Add(i.ToString(), Item.Naam, Item.Categorie, Item.StatusString, Item.Inleverdatum);
+                    DataGrid.Rows.Add(Item.Id, Item.Naam, Item.Categorie, Item.StatusString, Item.Inleverdatum);
                 }
             }
         }
@@ -225,7 +225,11 @@ namespace AUSfp
             toegevoegddoorLable.Text = "Toegevoegd door: " + artikel.Toevoeger.ToString();
             toegevoegdopLable.Text = "Toegevoegd op: " + artikel.ToegevoegdOp.ToString();
         }
-
+        /// <summary>
+        /// opent het scherm waarin artikelen kunnen worden toegevoegd en refreshed de datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void artikelToevoegen_Click(object sender, EventArgs e)
         {
             ArtikelToevoegen myForm = new ArtikelToevoegen();
@@ -233,7 +237,11 @@ namespace AUSfp
 
             RefreshDataGrid();
         }
-
+        /// <summary>
+        /// opent het scherm waarin artikelen kunnen worden gewijzigd en refreshed de datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void wijzigIcon_Click(object sender, EventArgs e)
         {
             ArtikelWijzigen artikelForm = new ArtikelWijzigen(rowIndex);
@@ -241,6 +249,11 @@ namespace AUSfp
 
             RefreshDataGrid();
         }
+        /// <summary>
+        /// verwijderd het geselecteerde scherm na bevesteging
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Weet je zeker dat je dit artikel wilt verwijderen?", "Artikel verwijderen", MessageBoxButtons.YesNo);
@@ -257,7 +270,11 @@ namespace AUSfp
                 
             }
         }
-
+        /// <summary>
+        /// refresched de datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RefreshBtn_Click_1(object sender, EventArgs e)
         {
             RefreshDataGrid();
