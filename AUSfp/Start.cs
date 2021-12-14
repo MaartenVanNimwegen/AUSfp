@@ -241,8 +241,24 @@ namespace AUSfp
 
             RefreshDataGrid();
         }
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Weet je zeker dat je dit artikel wilt verwijderen?", "Artikel verwijderen", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand("DELETE  from artikelen where id =" + rowIndex, connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                RefreshDataGrid();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                
+            }
+        }
 
-        private void RefreshBtn_Click(object sender, EventArgs e)
+        private void RefreshBtn_Click_1(object sender, EventArgs e)
         {
             RefreshDataGrid();
         }

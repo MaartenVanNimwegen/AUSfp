@@ -228,6 +228,7 @@ namespace AUSfp
             this.DeleteBtn.Size = new System.Drawing.Size(67, 62);
             this.DeleteBtn.TabIndex = 48;
             this.DeleteBtn.TabStop = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // inleverUitleenIcon
             // 
@@ -481,6 +482,7 @@ namespace AUSfp
             this.RefreshBtn.Size = new System.Drawing.Size(51, 46);
             this.RefreshBtn.TabIndex = 43;
             this.RefreshBtn.TabStop = false;
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click_1);
             // 
             // Start
             // 
