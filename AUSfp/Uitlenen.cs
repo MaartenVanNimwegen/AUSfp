@@ -12,9 +12,13 @@ namespace AUSfp
 {
     public partial class Uitlenen : Form
     {
-        public Uitlenen()
+        Artikel artikel;
+
+        public Uitlenen(Artikel artkl)
         {
             InitializeComponent();
+
+            artikel = artkl;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -23,6 +27,11 @@ namespace AUSfp
         }
 
         private void StudentId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inleverUitleenIcon_Click(object sender, EventArgs e)
         {
 
         }

@@ -230,12 +230,16 @@ namespace AUSfp
         {
             ArtikelToevoegen myForm = new ArtikelToevoegen();
             myForm.ShowDialog();
+
+            RefreshDataGrid();
         }
 
         private void wijzigIcon_Click(object sender, EventArgs e)
         {
             ArtikelWijzigen artikelForm = new ArtikelWijzigen(rowIndex);
             artikelForm.ShowDialog();
+
+            RefreshDataGrid();
         }
 
         private void RefreshBtn_Click(object sender, EventArgs e)
@@ -243,10 +247,18 @@ namespace AUSfp
             RefreshDataGrid();
         }
 
-        private void DeleteBtn_Click(object sender, EventArgs e)
+        private void RefreshBtn_Click_1(object sender, EventArgs e)
         {
-            ArtikelVerwijderen artikelForm = new ArtikelVerwijderen(rowIndex);
-            artikelForm.ShowDialog();
+            RefreshDataGrid();
+        }
+
+        private void inleverUitleenIcon_Click(object sender, EventArgs e)
+        {
+            rowIndex = DataGrid.SelectedCells[0].Value.ToString();
+            Artikel artikel = GetArtikel(int.Parse(rowIndex));
+
+            Uitlenen uitlenen = new Uitlenen(artikel);
+            uitlenen.ShowDialog();
         }
     }
 }
