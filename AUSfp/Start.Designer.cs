@@ -245,7 +245,6 @@ namespace AUSfp
             this.inleverUitleenIcon.Size = new System.Drawing.Size(67, 62);
             this.inleverUitleenIcon.TabIndex = 47;
             this.inleverUitleenIcon.TabStop = false;
-            this.inleverUitleenIcon.Click += new System.EventHandler(this.inleverUitleenIcon_Click);
             // 
             // panel2
             // 

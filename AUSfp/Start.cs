@@ -90,7 +90,7 @@ namespace AUSfp
 
             using (MySqlConnection connection = new MySqlConnection())
             {
-                connection.ConnectionString = "Data Source = localhost; convert zero datetime=True; Initial Catalog = testdatabase; User ID = root; Password = ";
+                connection.ConnectionString = "Data Source = localhost; convert zero datetime=True; Initial Catalog = ; User ID = root; Password = ";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
 
