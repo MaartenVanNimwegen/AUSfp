@@ -332,8 +332,28 @@ namespace AUSfp
             Artikel artikel = GetArtikel(int.Parse(rowIndex));
 
 
-            Uitlenen UitleenForm = new Uitlenen(artikel);
-            UitleenForm.ShowDialog();
+
+            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("select * from artikelen WHERE id = '" + artikel.Id + "' AND status = '1'", connection);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                Inleveren InleverForm = new Inleveren(artikel);
+                InleverForm.ShowDialog();
+            }
+            else
+            {
+                Uitlenen UitleenForm = new Uitlenen(artikel);
+                UitleenForm.ShowDialog();
+            }
+
+            reader.Close();
+            cmd.Dispose();
+            connection.Close();
+
+            RefreshDataGrid();
         }
 
         private void SearchBar_KeyDown(object sender, KeyEventArgs e)
