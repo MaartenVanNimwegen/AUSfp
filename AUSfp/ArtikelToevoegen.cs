@@ -41,7 +41,7 @@ namespace AUSfp
             beschrijving = beschrijvingTextbox.Text;
             categorie = CategorieDropdown.Text;
             
-            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
             connection.Open();
             MySqlCommand cmd = new MySqlCommand("INSERT INTO `artikelen` (`naam`, `categorie`, `inleverdatum`, `beschrijving`, `toevoeger`, `toegevoegdOp`) VALUES ( '"+ naam +"', '"+ categorie +"', now(), '"+ beschrijving +"', '"+ Login.naam +"', now());", connection);
             cmd.ExecuteReader();

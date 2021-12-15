@@ -51,7 +51,7 @@ namespace AUSfp
         /// <param name="e"></param>
         public void loginButton_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
             connection.Open();
             MySqlCommand cmd = new MySqlCommand("select * from users where username = '" + usernameInput.Text + "' AND password = '" + passwordInput.Text + "'", connection);
             MySqlDataReader reader = cmd.ExecuteReader();

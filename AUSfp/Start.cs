@@ -90,7 +90,7 @@ namespace AUSfp
 
             using (MySqlConnection connection = new MySqlConnection())
             {
-                connection.ConnectionString = "Data Source = localhost; convert zero datetime=True; Initial Catalog = testdatabase; User ID = root; Password = ";
+                connection.ConnectionString = "Data Source = localhost; convert zero datetime=True; Initial Catalog = AUSfp; User ID = root; Password = ";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
 
@@ -174,7 +174,7 @@ namespace AUSfp
 
             Artikel artikel = new Artikel();
 
-            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
             connection.Open();
             MySqlCommand cmd = new MySqlCommand("select * from artikelen where id = " + id, connection);
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -259,7 +259,7 @@ namespace AUSfp
             DialogResult dialogResult = MessageBox.Show("Weet je zeker dat je dit artikel wilt verwijderen?", "Artikel verwijderen", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand("DELETE  from artikelen where id =" + rowIndex, connection);
                 MySqlDataReader reader = cmd.ExecuteReader();
