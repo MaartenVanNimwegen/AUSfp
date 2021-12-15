@@ -114,6 +114,7 @@ namespace AUSfp
             this.SearchBar.Size = new System.Drawing.Size(444, 46);
             this.SearchBar.TabIndex = 6;
             this.SearchBar.TabStop = false;
+            this.SearchBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchBar_KeyDown);
             // 
             // SearchIcon
             // 
@@ -126,6 +127,7 @@ namespace AUSfp
             this.SearchIcon.Size = new System.Drawing.Size(35, 31);
             this.SearchIcon.TabIndex = 34;
             this.SearchIcon.TabStop = false;
+            this.SearchIcon.Click += new System.EventHandler(this.SearchIcon_Click_1);
             // 
             // RocLogo
             // 
