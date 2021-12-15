@@ -50,6 +50,7 @@ namespace AUSfp
             this.CancelBtn.Size = new System.Drawing.Size(87, 82);
             this.CancelBtn.TabIndex = 68;
             this.CancelBtn.TabStop = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // inleverUitleenIcon
             // 
@@ -64,6 +65,7 @@ namespace AUSfp
             this.inleverUitleenIcon.Size = new System.Drawing.Size(92, 93);
             this.inleverUitleenIcon.TabIndex = 67;
             this.inleverUitleenIcon.TabStop = false;
+            this.inleverUitleenIcon.Click += new System.EventHandler(this.inleverUitleenIcon_Click);
             // 
             // Note
             // 
@@ -81,6 +83,7 @@ namespace AUSfp
             this.Note.TabStop = false;
             this.Note.Text = "Notitie...";
             this.Note.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Note.Enter += new System.EventHandler(this.Note_Enter);
             // 
             // Inleveren
             // 

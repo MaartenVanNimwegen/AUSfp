@@ -84,9 +84,19 @@ namespace AUSfp
         /// <param name="sqllist"></param>
         private void ArtikelenList()
         {
+            string query = "";
+            string valueToSearch = "";
+            valueToSearch = SearchBar.Text;
+            if (SearchBar.Text.Length > 0)
+            {
+                query = "SELECT * FROM artikelen WHERE CONCAT (id, naam, categorie, inleverdatum) LIKE '%" + valueToSearch + "%'";
+            }
+            else if (SearchBar.Text.Length == 0)
+            {
+                query = "SELECT * FROM artikelen";
+            }
             Items = new List<Artikel>();
 
-            string query = "SELECT * FROM artikelen";
 
             using (MySqlConnection connection = new MySqlConnection())
             {
@@ -127,6 +137,16 @@ namespace AUSfp
                     reader.Close();
                 }
             }
+        }
+        /// <summary>
+        /// wanneer zoek knop gedrukt wordt functie uitgevoerd.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SearchIcon_Click_1(object sender, EventArgs e)
+        {
+            RefreshDataGrid();
+
         }
         /// <summary>
         /// voegd data toe aan tabel voor elke rij uit database
@@ -288,8 +308,36 @@ namespace AUSfp
             Artikel artikel = GetArtikel(int.Parse(rowIndex));
 
 
-            Uitlenen UitleenForm = new Uitlenen(artikel);
-            UitleenForm.ShowDialog();
+
+            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("select * from artikelen WHERE id = '" + artikel.Id + "' AND status = '1'", connection);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                Inleveren InleverForm = new Inleveren(artikel);
+                InleverForm.ShowDialog();
+            }
+            else
+            {
+                Uitlenen UitleenForm = new Uitlenen(artikel);
+                UitleenForm.ShowDialog();
+            }
+
+            reader.Close();
+            cmd.Dispose();
+            connection.Close();
+
+            RefreshDataGrid();
+        }
+
+        private void SearchBar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchIcon_Click_1(this, new EventArgs());
+            }
         }
     }
 }
