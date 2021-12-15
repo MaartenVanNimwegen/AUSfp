@@ -71,5 +71,17 @@ namespace AUSfp
             cmd.Dispose();
             connection.Close();        
         }
+        /// <summary>
+        /// kijken of enter word gedrukt in wachtwoord. Als dat zo is dan voert de loginbtn click event uit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void passwordInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                loginButton_Click(this, new EventArgs());
+            }
+        }
     }
 }
