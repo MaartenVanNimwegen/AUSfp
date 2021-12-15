@@ -47,7 +47,7 @@ namespace AUSfp
             else
             {
 
-                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET status='1', leerlingnummer='" + leerlingnr + "', inleverdatum='" + TurnInDateTime.Value.Date + "' WHERE id='" + artikel.Id + "'", connection);
                 cmd.ExecuteReader();
