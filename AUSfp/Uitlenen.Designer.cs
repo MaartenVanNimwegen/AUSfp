@@ -56,7 +56,7 @@ namespace AUSfp
             this.StudentId.TabStop = false;
             this.StudentId.Text = "Student nr...";
             this.StudentId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.StudentId.TextChanged += new System.EventHandler(this.StudentId_TextChanged);
+            this.StudentId.Enter += new System.EventHandler(this.StudentId_Enter);
             // 
             // StudentName
             // 
@@ -74,7 +74,7 @@ namespace AUSfp
             this.StudentName.TabStop = false;
             this.StudentName.Text = "Student naam...";
             this.StudentName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.StudentName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.StudentName.Enter += new System.EventHandler(this.StudentName_Enter);
             // 
             // TurnInDateTime
             // 

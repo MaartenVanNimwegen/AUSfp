@@ -146,7 +146,7 @@ namespace AUSfp
             this.LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginBtn.BackgroundImage")));
             this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginBtn.Location = new System.Drawing.Point(2534, 46);
+            this.LoginBtn.Location = new System.Drawing.Point(2489, 46);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(62, 58);
@@ -161,7 +161,7 @@ namespace AUSfp
             this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
             this.LogoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoutBtn.Location = new System.Drawing.Point(2534, 46);
+            this.LogoutBtn.Location = new System.Drawing.Point(2403, 46);
             this.LogoutBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.LogoutBtn.Name = "LogoutBtn";
             this.LogoutBtn.Size = new System.Drawing.Size(67, 58);
@@ -176,7 +176,7 @@ namespace AUSfp
             this.artikelToevoegen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("artikelToevoegen.BackgroundImage")));
             this.artikelToevoegen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.artikelToevoegen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.artikelToevoegen.Location = new System.Drawing.Point(2458, 46);
+            this.artikelToevoegen.Location = new System.Drawing.Point(2327, 46);
             this.artikelToevoegen.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.artikelToevoegen.Name = "artikelToevoegen";
             this.artikelToevoegen.Size = new System.Drawing.Size(67, 58);
