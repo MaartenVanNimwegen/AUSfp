@@ -80,7 +80,7 @@ namespace AUSfp
             // 
             this.NameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(2412, 50);
+            this.NameLabel.Location = new System.Drawing.Point(2302, 50);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(277, 22);
             this.NameLabel.TabIndex = 1;
@@ -96,7 +96,7 @@ namespace AUSfp
             this.panel1.Location = new System.Drawing.Point(21, 98);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2916, 2);
+            this.panel1.Size = new System.Drawing.Size(2806, 2);
             this.panel1.TabIndex = 2;
             // 
             // SearchBar
@@ -145,10 +145,10 @@ namespace AUSfp
             this.LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginBtn.BackgroundImage")));
             this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginBtn.Location = new System.Drawing.Point(1843, 31);
+            this.LoginBtn.Location = new System.Drawing.Point(1709, 32);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(45, 39);
+            this.LoginBtn.Size = new System.Drawing.Size(49, 46);
             this.LoginBtn.TabIndex = 37;
             this.LoginBtn.TabStop = false;
             this.LoginBtn.Click += new System.EventHandler(this.LoginButton_Click);
@@ -160,10 +160,10 @@ namespace AUSfp
             this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
             this.LogoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoutBtn.Location = new System.Drawing.Point(1843, 31);
+            this.LogoutBtn.Location = new System.Drawing.Point(1709, 32);
             this.LogoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LogoutBtn.Name = "LogoutBtn";
-            this.LogoutBtn.Size = new System.Drawing.Size(49, 39);
+            this.LogoutBtn.Size = new System.Drawing.Size(49, 47);
             this.LogoutBtn.TabIndex = 38;
             this.LogoutBtn.TabStop = false;
             this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
@@ -175,10 +175,10 @@ namespace AUSfp
             this.artikelToevoegen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("artikelToevoegen.BackgroundImage")));
             this.artikelToevoegen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.artikelToevoegen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.artikelToevoegen.Location = new System.Drawing.Point(1788, 31);
+            this.artikelToevoegen.Location = new System.Drawing.Point(1654, 32);
             this.artikelToevoegen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.artikelToevoegen.Name = "artikelToevoegen";
-            this.artikelToevoegen.Size = new System.Drawing.Size(49, 39);
+            this.artikelToevoegen.Size = new System.Drawing.Size(49, 47);
             this.artikelToevoegen.TabIndex = 39;
             this.artikelToevoegen.TabStop = false;
             this.artikelToevoegen.Click += new System.EventHandler(this.artikelToevoegen_Click);
@@ -194,7 +194,7 @@ namespace AUSfp
             this.ItemDetailsPanel.Controls.Add(this.beschrijvingLable);
             this.ItemDetailsPanel.Controls.Add(this.naamLable);
             this.ItemDetailsPanel.Controls.Add(this.ItemImage);
-            this.ItemDetailsPanel.Location = new System.Drawing.Point(1105, 128);
+            this.ItemDetailsPanel.Location = new System.Drawing.Point(975, 128);
             this.ItemDetailsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ItemDetailsPanel.Name = "ItemDetailsPanel";
             this.ItemDetailsPanel.Size = new System.Drawing.Size(783, 786);
@@ -426,7 +426,7 @@ namespace AUSfp
             this.DataGrid.ShowCellToolTips = false;
             this.DataGrid.ShowEditingIcon = false;
             this.DataGrid.ShowRowErrors = false;
-            this.DataGrid.Size = new System.Drawing.Size(938, 786);
+            this.DataGrid.Size = new System.Drawing.Size(809, 786);
             this.DataGrid.TabIndex = 42;
             this.DataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_RowEnter);
             // 
@@ -489,7 +489,7 @@ namespace AUSfp
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1814, 1055);
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.ItemDetailsPanel);
