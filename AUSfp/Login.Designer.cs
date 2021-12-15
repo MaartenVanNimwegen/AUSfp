@@ -42,10 +42,10 @@ namespace AUSfp
             // 
             this.LoginBg.Image = ((System.Drawing.Image)(resources.GetObject("LoginBg.Image")));
             this.LoginBg.InitialImage = ((System.Drawing.Image)(resources.GetObject("LoginBg.InitialImage")));
-            this.LoginBg.Location = new System.Drawing.Point(-15, -49);
-            this.LoginBg.Margin = new System.Windows.Forms.Padding(2);
+            this.LoginBg.Location = new System.Drawing.Point(-20, -60);
+            this.LoginBg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoginBg.Name = "LoginBg";
-            this.LoginBg.Size = new System.Drawing.Size(555, 604);
+            this.LoginBg.Size = new System.Drawing.Size(740, 743);
             this.LoginBg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LoginBg.TabIndex = 0;
             this.LoginBg.TabStop = false;
@@ -54,10 +54,10 @@ namespace AUSfp
             // 
             this.usernameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameInput.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameInput.Location = new System.Drawing.Point(614, 218);
-            this.usernameInput.Margin = new System.Windows.Forms.Padding(2);
+            this.usernameInput.Location = new System.Drawing.Point(819, 268);
+            this.usernameInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usernameInput.Name = "usernameInput";
-            this.usernameInput.Size = new System.Drawing.Size(160, 24);
+            this.usernameInput.Size = new System.Drawing.Size(212, 29);
             this.usernameInput.TabIndex = 2;
             this.usernameInput.Text = "Gebruikersnaam";
             this.usernameInput.Click += new System.EventHandler(this.usernameInput_Click);
@@ -67,10 +67,9 @@ namespace AUSfp
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(608, 174);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(811, 214);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 39);
+            this.label1.Size = new System.Drawing.Size(129, 48);
             this.label1.TabIndex = 4;
             this.label1.Text = "Login:";
             // 
@@ -78,23 +77,24 @@ namespace AUSfp
             // 
             this.passwordInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordInput.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordInput.Location = new System.Drawing.Point(614, 246);
-            this.passwordInput.Margin = new System.Windows.Forms.Padding(2);
+            this.passwordInput.Location = new System.Drawing.Point(819, 303);
+            this.passwordInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passwordInput.Name = "passwordInput";
-            this.passwordInput.Size = new System.Drawing.Size(160, 24);
+            this.passwordInput.Size = new System.Drawing.Size(212, 29);
             this.passwordInput.TabIndex = 5;
             this.passwordInput.Text = "Wachtwoord";
             this.passwordInput.Enter += new System.EventHandler(this.passwordInput_Enter);
+            this.passwordInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passwordInput_KeyDown);
             // 
             // loginBtn
             // 
             this.loginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.Location = new System.Drawing.Point(614, 275);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.loginBtn.Location = new System.Drawing.Point(819, 338);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(83, 34);
+            this.loginBtn.Size = new System.Drawing.Size(111, 42);
             this.loginBtn.TabIndex = 6;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@ namespace AUSfp
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 495);
+            this.ClientSize = new System.Drawing.Size(1147, 609);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.passwordInput);
             this.Controls.Add(this.label1);
@@ -112,7 +112,7 @@ namespace AUSfp
             this.Controls.Add(this.LoginBg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
