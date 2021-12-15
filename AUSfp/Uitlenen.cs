@@ -21,15 +21,7 @@ namespace AUSfp
             artikel = artkl;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void StudentId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void inleverUitleenIcon_Click(object sender, EventArgs e)
         {
@@ -61,6 +53,22 @@ namespace AUSfp
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void StudentId_Enter(object sender, EventArgs e)
+        {
+            if (StudentId.Text == "Student nr...")
+            {
+                StudentId.Text = "";
+            }
+        }
+
+        private void StudentName_Enter(object sender, EventArgs e)
+        {
+            if (StudentName.Text == "Student naam...")
+            {
+                StudentName.Text = "";
+            }
         }
     }
 }

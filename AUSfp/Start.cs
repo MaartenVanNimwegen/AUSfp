@@ -305,5 +305,15 @@ namespace AUSfp
         {
             SearchData("");
         }
+
+        private void inleverUitleenIcon_Click(object sender, EventArgs e)
+        {
+            rowIndex = DataGrid.SelectedCells[0].Value.ToString();
+            Artikel artikel = GetArtikel(int.Parse(rowIndex));
+
+
+            Uitlenen UitleenForm = new Uitlenen(artikel);
+            UitleenForm.ShowDialog();
+        }
     }
 }
