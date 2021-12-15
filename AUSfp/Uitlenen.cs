@@ -38,10 +38,12 @@ namespace AUSfp
             }
             else
             {
+                string CorrectDateFormat = TurnInDateTime.Value.Year.ToString() + "-" + TurnInDateTime.Value.Month.ToString() + "-" + TurnInDateTime.Value.Day.ToString();
+                //string _optie2 = TurnInDateTime.Value.ToString("yyyy-MM-dd");
 
                 MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
                 connection.Open();
-                MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET status='1', leerlingnummer='" + leerlingnr + "', inleverdatum='" + TurnInDateTime.Value.Date + "' WHERE id='" + artikel.Id + "'", connection);
+                MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET status='1', leerlingnummer='" + leerlingnr + "', lener='" + leerlingnaam + "', inleverdatum='" + CorrectDateFormat + "' WHERE id='" + artikel.Id + "'", connection);
                 cmd.ExecuteReader();
 
                 MessageBox.Show("Artikel succesvol uitgeleend.");

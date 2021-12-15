@@ -286,6 +286,7 @@ namespace AUSfp
             Artikel artikel = GetArtikel(int.Parse(rowIndex));
 
 
+
             Uitlenen UitleenForm = new Uitlenen(artikel);
             UitleenForm.ShowDialog();
         }
