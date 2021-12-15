@@ -27,7 +27,7 @@ namespace AUSfp
             id = rowId;
 
 
-            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
             connection.Open();
             MySqlCommand cmd = new MySqlCommand("select * from artikelen where id = " + id, connection);
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -72,7 +72,7 @@ namespace AUSfp
             }
             else
             {
-                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = testdatabase; User ID = root; Password = ");
+                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET naam='" + naam + "', categorie='" + categorie + "', beschrijving='" + beschrijving + "' WHERE id='" + id + "'", connection);
                 cmd.ExecuteReader();
