@@ -80,10 +80,10 @@ namespace AUSfp
             // 
             this.NameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(2192, 33);
+            this.NameLabel.Location = new System.Drawing.Point(2466, 41);
             this.NameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(277, 22);
+            this.NameLabel.Size = new System.Drawing.Size(312, 28);
             this.NameLabel.TabIndex = 1;
             this.NameLabel.Text = "Welkom, ";
             this.NameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -94,10 +94,10 @@ namespace AUSfp
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.panel1.Location = new System.Drawing.Point(21, 98);
+            this.panel1.Location = new System.Drawing.Point(24, 122);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2559, 1);
+            this.panel1.Size = new System.Drawing.Size(2879, 1);
             this.panel1.TabIndex = 2;
             // 
             // SearchBar
@@ -107,11 +107,11 @@ namespace AUSfp
             this.SearchBar.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.SearchBar.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.SearchBar.Location = new System.Drawing.Point(216, 32);
+            this.SearchBar.Location = new System.Drawing.Point(243, 40);
             this.SearchBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchBar.Multiline = true;
             this.SearchBar.Name = "SearchBar";
-            this.SearchBar.Size = new System.Drawing.Size(444, 46);
+            this.SearchBar.Size = new System.Drawing.Size(500, 58);
             this.SearchBar.TabIndex = 6;
             this.SearchBar.TabStop = false;
             // 
@@ -120,22 +120,23 @@ namespace AUSfp
             this.SearchIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.SearchIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SearchIcon.BackgroundImage")));
             this.SearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SearchIcon.Location = new System.Drawing.Point(625, 41);
+            this.SearchIcon.Location = new System.Drawing.Point(703, 51);
             this.SearchIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchIcon.Name = "SearchIcon";
-            this.SearchIcon.Size = new System.Drawing.Size(35, 31);
+            this.SearchIcon.Size = new System.Drawing.Size(39, 39);
             this.SearchIcon.TabIndex = 34;
             this.SearchIcon.TabStop = false;
+            this.SearchIcon.Click += new System.EventHandler(this.SearchIcon_Click);
             // 
             // RocLogo
             // 
             this.RocLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.RocLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RocLogo.BackgroundImage")));
             this.RocLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RocLogo.Location = new System.Drawing.Point(21, 32);
+            this.RocLogo.Location = new System.Drawing.Point(24, 40);
             this.RocLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RocLogo.Name = "RocLogo";
-            this.RocLogo.Size = new System.Drawing.Size(148, 46);
+            this.RocLogo.Size = new System.Drawing.Size(166, 58);
             this.RocLogo.TabIndex = 36;
             this.RocLogo.TabStop = false;
             // 
@@ -146,10 +147,10 @@ namespace AUSfp
             this.LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginBtn.BackgroundImage")));
             this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginBtn.Location = new System.Drawing.Point(1707, 32);
+            this.LoginBtn.Location = new System.Drawing.Point(1920, 40);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(48, 46);
+            this.LoginBtn.Size = new System.Drawing.Size(54, 58);
             this.LoginBtn.TabIndex = 37;
             this.LoginBtn.TabStop = false;
             this.LoginBtn.Click += new System.EventHandler(this.LoginButton_Click);
@@ -161,10 +162,10 @@ namespace AUSfp
             this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
             this.LogoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoutBtn.Location = new System.Drawing.Point(1707, 32);
+            this.LogoutBtn.Location = new System.Drawing.Point(1920, 40);
             this.LogoutBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.LogoutBtn.Name = "LogoutBtn";
-            this.LogoutBtn.Size = new System.Drawing.Size(48, 46);
+            this.LogoutBtn.Size = new System.Drawing.Size(54, 58);
             this.LogoutBtn.TabIndex = 38;
             this.LogoutBtn.TabStop = false;
             this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
@@ -176,10 +177,10 @@ namespace AUSfp
             this.artikelToevoegen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("artikelToevoegen.BackgroundImage")));
             this.artikelToevoegen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.artikelToevoegen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.artikelToevoegen.Location = new System.Drawing.Point(1655, 32);
+            this.artikelToevoegen.Location = new System.Drawing.Point(1862, 40);
             this.artikelToevoegen.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.artikelToevoegen.Name = "artikelToevoegen";
-            this.artikelToevoegen.Size = new System.Drawing.Size(48, 46);
+            this.artikelToevoegen.Size = new System.Drawing.Size(54, 58);
             this.artikelToevoegen.TabIndex = 39;
             this.artikelToevoegen.TabStop = false;
             this.artikelToevoegen.Click += new System.EventHandler(this.artikelToevoegen_Click);
@@ -195,10 +196,10 @@ namespace AUSfp
             this.ItemDetailsPanel.Controls.Add(this.beschrijvingLable);
             this.ItemDetailsPanel.Controls.Add(this.naamLable);
             this.ItemDetailsPanel.Controls.Add(this.ItemImage);
-            this.ItemDetailsPanel.Location = new System.Drawing.Point(1028, 128);
+            this.ItemDetailsPanel.Location = new System.Drawing.Point(1156, 160);
             this.ItemDetailsPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.ItemDetailsPanel.Name = "ItemDetailsPanel";
-            this.ItemDetailsPanel.Size = new System.Drawing.Size(783, 786);
+            this.ItemDetailsPanel.Size = new System.Drawing.Size(881, 982);
             this.ItemDetailsPanel.TabIndex = 3;
             // 
             // wijzigIcon
@@ -208,10 +209,10 @@ namespace AUSfp
             this.wijzigIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wijzigIcon.BackgroundImage")));
             this.wijzigIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.wijzigIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.wijzigIcon.Location = new System.Drawing.Point(372, 711);
+            this.wijzigIcon.Location = new System.Drawing.Point(418, 889);
             this.wijzigIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wijzigIcon.Name = "wijzigIcon";
-            this.wijzigIcon.Size = new System.Drawing.Size(67, 62);
+            this.wijzigIcon.Size = new System.Drawing.Size(75, 78);
             this.wijzigIcon.TabIndex = 49;
             this.wijzigIcon.TabStop = false;
             this.wijzigIcon.Click += new System.EventHandler(this.wijzigIcon_Click);
@@ -223,10 +224,10 @@ namespace AUSfp
             this.DeleteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.BackgroundImage")));
             this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteBtn.Location = new System.Drawing.Point(444, 711);
+            this.DeleteBtn.Location = new System.Drawing.Point(500, 889);
             this.DeleteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(67, 62);
+            this.DeleteBtn.Size = new System.Drawing.Size(75, 78);
             this.DeleteBtn.TabIndex = 48;
             this.DeleteBtn.TabStop = false;
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
@@ -238,10 +239,10 @@ namespace AUSfp
             this.inleverUitleenIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("inleverUitleenIcon.BackgroundImage")));
             this.inleverUitleenIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inleverUitleenIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.inleverUitleenIcon.Location = new System.Drawing.Point(300, 711);
+            this.inleverUitleenIcon.Location = new System.Drawing.Point(338, 889);
             this.inleverUitleenIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.inleverUitleenIcon.Name = "inleverUitleenIcon";
-            this.inleverUitleenIcon.Size = new System.Drawing.Size(67, 62);
+            this.inleverUitleenIcon.Size = new System.Drawing.Size(75, 78);
             this.inleverUitleenIcon.TabIndex = 47;
             this.inleverUitleenIcon.TabStop = false;
             this.inleverUitleenIcon.Click += new System.EventHandler(this.inleverUitleenIcon_Click);
@@ -258,10 +259,10 @@ namespace AUSfp
             this.panel2.Controls.Add(this.categorieLable);
             this.panel2.Controls.Add(this.artikelnrLable);
             this.panel2.Controls.Add(this.statusLable);
-            this.panel2.Location = new System.Drawing.Point(21, 476);
+            this.panel2.Location = new System.Drawing.Point(24, 595);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(747, 230);
+            this.panel2.Size = new System.Drawing.Size(840, 288);
             this.panel2.TabIndex = 45;
             // 
             // toegevoegddoorLable
@@ -269,9 +270,9 @@ namespace AUSfp
             this.toegevoegddoorLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.toegevoegddoorLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toegevoegddoorLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.toegevoegddoorLable.Location = new System.Drawing.Point(3, 170);
+            this.toegevoegddoorLable.Location = new System.Drawing.Point(3, 212);
             this.toegevoegddoorLable.Name = "toegevoegddoorLable";
-            this.toegevoegddoorLable.Size = new System.Drawing.Size(737, 28);
+            this.toegevoegddoorLable.Size = new System.Drawing.Size(829, 35);
             this.toegevoegddoorLable.TabIndex = 51;
             this.toegevoegddoorLable.Text = "Toegevoegd door:";
             this.toegevoegddoorLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -281,9 +282,9 @@ namespace AUSfp
             this.toegevoegdopLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.toegevoegdopLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toegevoegdopLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.toegevoegdopLable.Location = new System.Drawing.Point(3, 198);
+            this.toegevoegdopLable.Location = new System.Drawing.Point(3, 248);
             this.toegevoegdopLable.Name = "toegevoegdopLable";
-            this.toegevoegdopLable.Size = new System.Drawing.Size(737, 28);
+            this.toegevoegdopLable.Size = new System.Drawing.Size(829, 35);
             this.toegevoegdopLable.TabIndex = 50;
             this.toegevoegdopLable.Text = "Toegevoegd op: ";
             this.toegevoegdopLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -293,9 +294,9 @@ namespace AUSfp
             this.leerlingnummerLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.leerlingnummerLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.leerlingnummerLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.leerlingnummerLable.Location = new System.Drawing.Point(3, 142);
+            this.leerlingnummerLable.Location = new System.Drawing.Point(3, 178);
             this.leerlingnummerLable.Name = "leerlingnummerLable";
-            this.leerlingnummerLable.Size = new System.Drawing.Size(737, 28);
+            this.leerlingnummerLable.Size = new System.Drawing.Size(829, 35);
             this.leerlingnummerLable.TabIndex = 49;
             this.leerlingnummerLable.Text = "Leerlingnummer: ";
             this.leerlingnummerLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -305,9 +306,9 @@ namespace AUSfp
             this.inleverdatumLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.inleverdatumLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inleverdatumLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.inleverdatumLable.Location = new System.Drawing.Point(1, 85);
+            this.inleverdatumLable.Location = new System.Drawing.Point(1, 106);
             this.inleverdatumLable.Name = "inleverdatumLable";
-            this.inleverdatumLable.Size = new System.Drawing.Size(743, 28);
+            this.inleverdatumLable.Size = new System.Drawing.Size(836, 35);
             this.inleverdatumLable.TabIndex = 48;
             this.inleverdatumLable.Text = "Inleverdatum:  ";
             this.inleverdatumLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -317,9 +318,9 @@ namespace AUSfp
             this.lenerLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lenerLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lenerLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.lenerLable.Location = new System.Drawing.Point(3, 113);
+            this.lenerLable.Location = new System.Drawing.Point(3, 141);
             this.lenerLable.Name = "lenerLable";
-            this.lenerLable.Size = new System.Drawing.Size(737, 28);
+            this.lenerLable.Size = new System.Drawing.Size(829, 35);
             this.lenerLable.TabIndex = 47;
             this.lenerLable.Text = "Lener:  ";
             this.lenerLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -329,9 +330,9 @@ namespace AUSfp
             this.categorieLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.categorieLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categorieLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.categorieLable.Location = new System.Drawing.Point(1, 28);
+            this.categorieLable.Location = new System.Drawing.Point(1, 35);
             this.categorieLable.Name = "categorieLable";
-            this.categorieLable.Size = new System.Drawing.Size(743, 28);
+            this.categorieLable.Size = new System.Drawing.Size(836, 35);
             this.categorieLable.TabIndex = 46;
             this.categorieLable.Text = "Categorie: ";
             this.categorieLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -343,7 +344,7 @@ namespace AUSfp
             this.artikelnrLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.artikelnrLable.Location = new System.Drawing.Point(3, 0);
             this.artikelnrLable.Name = "artikelnrLable";
-            this.artikelnrLable.Size = new System.Drawing.Size(743, 28);
+            this.artikelnrLable.Size = new System.Drawing.Size(836, 35);
             this.artikelnrLable.TabIndex = 45;
             this.artikelnrLable.Text = "Artikel nr:  ";
             this.artikelnrLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -353,9 +354,9 @@ namespace AUSfp
             this.statusLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.statusLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.statusLable.Location = new System.Drawing.Point(3, 57);
+            this.statusLable.Location = new System.Drawing.Point(3, 71);
             this.statusLable.Name = "statusLable";
-            this.statusLable.Size = new System.Drawing.Size(743, 28);
+            this.statusLable.Size = new System.Drawing.Size(836, 35);
             this.statusLable.TabIndex = 44;
             this.statusLable.Text = "Status:  ";
             this.statusLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -365,9 +366,9 @@ namespace AUSfp
             this.beschrijvingLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.beschrijvingLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.beschrijvingLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.beschrijvingLable.Location = new System.Drawing.Point(13, 373);
+            this.beschrijvingLable.Location = new System.Drawing.Point(15, 466);
             this.beschrijvingLable.Name = "beschrijvingLable";
-            this.beschrijvingLable.Size = new System.Drawing.Size(747, 101);
+            this.beschrijvingLable.Size = new System.Drawing.Size(840, 126);
             this.beschrijvingLable.TabIndex = 43;
             this.beschrijvingLable.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -376,9 +377,9 @@ namespace AUSfp
             this.naamLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.naamLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.naamLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.naamLable.Location = new System.Drawing.Point(21, 310);
+            this.naamLable.Location = new System.Drawing.Point(24, 388);
             this.naamLable.Name = "naamLable";
-            this.naamLable.Size = new System.Drawing.Size(747, 53);
+            this.naamLable.Size = new System.Drawing.Size(840, 66);
             this.naamLable.TabIndex = 42;
             this.naamLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -388,10 +389,10 @@ namespace AUSfp
             this.ItemImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.ItemImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemImage.BackgroundImage")));
             this.ItemImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ItemImage.Location = new System.Drawing.Point(21, 12);
+            this.ItemImage.Location = new System.Drawing.Point(24, 15);
             this.ItemImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(747, 295);
+            this.ItemImage.Size = new System.Drawing.Size(840, 369);
             this.ItemImage.TabIndex = 41;
             this.ItemImage.TabStop = false;
             // 
@@ -415,7 +416,7 @@ namespace AUSfp
             this.statusArtikel,
             this.inleverdatumArtikel});
             this.DataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.DataGrid.Location = new System.Drawing.Point(21, 128);
+            this.DataGrid.Location = new System.Drawing.Point(24, 160);
             this.DataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DataGrid.MultiSelect = false;
             this.DataGrid.Name = "DataGrid";
@@ -428,7 +429,7 @@ namespace AUSfp
             this.DataGrid.ShowCellToolTips = false;
             this.DataGrid.ShowEditingIcon = false;
             this.DataGrid.ShowRowErrors = false;
-            this.DataGrid.Size = new System.Drawing.Size(908, 743);
+            this.DataGrid.Size = new System.Drawing.Size(1022, 929);
             this.DataGrid.TabIndex = 42;
             this.DataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_RowEnter);
             // 
@@ -478,20 +479,20 @@ namespace AUSfp
             this.RefreshBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RefreshBtn.BackgroundImage")));
             this.RefreshBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RefreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RefreshBtn.Location = new System.Drawing.Point(689, 32);
+            this.RefreshBtn.Location = new System.Drawing.Point(775, 40);
             this.RefreshBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(51, 46);
+            this.RefreshBtn.Size = new System.Drawing.Size(57, 58);
             this.RefreshBtn.TabIndex = 43;
             this.RefreshBtn.TabStop = false;
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click_1);
             // 
             // Start
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1837, 895);
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.ItemDetailsPanel);
