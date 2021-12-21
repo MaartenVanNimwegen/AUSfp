@@ -16,6 +16,7 @@ namespace AUSfp
         bool userIsLoggedIn = false;
         public string rowIndex = "";
         List<Artikel> Items = new List<Artikel>();
+        string UserEmail = "";
 
         public Start()
         {
@@ -361,6 +362,14 @@ namespace AUSfp
             if (e.KeyCode == Keys.Enter)
             {
                 SearchIcon_Click_1(this, new EventArgs());
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (leerlingnummerLable.Text != "0")
+            {
+                System.Diagnostics.Process.Start("https://teams.microsoft.com/l/chat/0/0?users=" + UserEmail);
             }
         }
     }
