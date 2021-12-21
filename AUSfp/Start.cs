@@ -146,7 +146,6 @@ namespace AUSfp
         private void SearchIcon_Click_1(object sender, EventArgs e)
         {
             RefreshDataGrid();
-
         }
         /// <summary>
         /// voegd data toe aan tabel voor elke rij uit database
@@ -157,7 +156,7 @@ namespace AUSfp
 
             ArtikelenList();
 
-            for (int i = 1; i <= Items.Count; i++)
+            for (int i = 1;    i <= Items.Count; i++)
             {
                 var Item = Items[i - 1];
 
