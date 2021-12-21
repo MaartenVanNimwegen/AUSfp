@@ -59,6 +59,10 @@ namespace AUSfp
             leerlingnummerLable.Visible = weergeven;
             toegevoegddoorLable.Visible = weergeven;
             toegevoegdopLable.Visible = weergeven;
+            uitleenInleverLable.Visible = weergeven;
+            WijzigLable.Visible = weergeven;
+            VerwijderLable.Visible = weergeven;
+
         }
         /// <summary>
         /// logt persoon uit
@@ -248,10 +252,12 @@ namespace AUSfp
             if (artikel.Leerlingnummer.ToString() == "0")
             {
                 teamsLogo.Visible = false;
+                ContactLable.Visible = false;
             }
             else if(artikel.Leerlingnummer.ToString() != "0" && userIsLoggedIn == true)
             {
                 teamsLogo.Visible = true;
+                ContactLable.Visible = true;
                 UserEmail = artikel.Leerlingnummer.ToString() + "@edu.rocfriesepoort.nl";
             }
         }
