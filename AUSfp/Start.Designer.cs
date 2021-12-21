@@ -61,7 +61,7 @@ namespace AUSfp
             this.statusArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inleverdatumArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefreshBtn = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.teamsLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RocLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBtn)).BeginInit();
@@ -75,7 +75,7 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamsLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -192,7 +192,7 @@ namespace AUSfp
             // 
             this.ItemDetailsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ItemDetailsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.ItemDetailsPanel.Controls.Add(this.pictureBox1);
+            this.ItemDetailsPanel.Controls.Add(this.teamsLogo);
             this.ItemDetailsPanel.Controls.Add(this.wijzigIcon);
             this.ItemDetailsPanel.Controls.Add(this.DeleteBtn);
             this.ItemDetailsPanel.Controls.Add(this.inleverUitleenIcon);
@@ -501,15 +501,15 @@ namespace AUSfp
             this.RefreshBtn.TabStop = false;
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click_1);
             // 
-            // pictureBox1
+            // teamsLogo
             // 
-            this.pictureBox1.Image = global::AUSfp.Properties.Resources.Teams_48x48;
-            this.pictureBox1.Location = new System.Drawing.Point(388, 579);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 50;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.teamsLogo.Image = global::AUSfp.Properties.Resources.Teams_48x48;
+            this.teamsLogo.Location = new System.Drawing.Point(388, 579);
+            this.teamsLogo.Name = "teamsLogo";
+            this.teamsLogo.Size = new System.Drawing.Size(50, 50);
+            this.teamsLogo.TabIndex = 50;
+            this.teamsLogo.TabStop = false;
+            this.teamsLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Start
             // 
@@ -547,7 +547,7 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamsLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -585,7 +585,7 @@ namespace AUSfp
         private System.Windows.Forms.Label toegevoegddoorLable;
         private System.Windows.Forms.Label toegevoegdopLable;
         private System.Windows.Forms.Label leerlingnummerLable;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox teamsLogo;
     }
 }
 
