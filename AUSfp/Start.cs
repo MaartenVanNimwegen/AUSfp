@@ -16,6 +16,7 @@ namespace AUSfp
         bool userIsLoggedIn = false;
         public string rowIndex = "";
         List<Artikel> Items = new List<Artikel>();
+        string UserEmail = "";
 
         public Start()
         {
@@ -243,6 +244,16 @@ namespace AUSfp
             categorieLable.Text = "Categorie: " + artikel.Categorie.ToString();
             toegevoegddoorLable.Text = "Toegevoegd door: " + artikel.Toevoeger.ToString();
             toegevoegdopLable.Text = "Toegevoegd op: " + artikel.ToegevoegdOp.ToString();
+
+            if (artikel.Leerlingnummer.ToString() == "0")
+            {
+                teamsLogo.Visible = false;
+            }
+            else if(artikel.Leerlingnummer.ToString() != "0" && userIsLoggedIn == true)
+            {
+                teamsLogo.Visible = true;
+                UserEmail = artikel.Leerlingnummer.ToString() + "@edu.rocfriesepoort.nl";
+            }
         }
         /// <summary>
         /// opent het scherm waarin artikelen kunnen worden toegevoegd en refreshed de datagrid
@@ -337,6 +348,15 @@ namespace AUSfp
             {
                 SearchIcon_Click_1(this, new EventArgs());
             }
+        }
+        /// <summary>
+        /// opent chat met leerlingnummer van persoon waaraan artikel is uitgeleend
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://teams.microsoft.com/l/chat/0/0?users=" + UserEmail);
         }
     }
 }
