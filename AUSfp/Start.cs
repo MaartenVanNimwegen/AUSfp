@@ -301,31 +301,7 @@ namespace AUSfp
             RefreshDataGrid();
         }
 
-        public void SearchData(string valueToSearch)
-        {
-            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = ausfp; User ID = root; Password = ");
-            MySqlCommand command;
-            MySqlDataAdapter adapter;
-            DataTable table;
 
-            string query = "SELECT * FROM artikelen like '%" + valueToSearch + "%'";
-            command = new MySqlCommand(query, connection);
-            adapter = new MySqlDataAdapter(command);
-            table = new DataTable();
-            adapter.Fill(table);
-            DataGrid.DataSource = table;
-        }
-
-        private void SearchIcon_Click(object sender, EventArgs e)
-        {
-            string valueToSearch = SearchBar.Text.ToString();
-            SearchData(valueToSearch);
-        }
-
-        private void SearchBar_TextChanged(object sender, EventArgs e)
-        {
-            SearchData("");
-        }
 
         private void inleverUitleenIcon_Click(object sender, EventArgs e)
         {
