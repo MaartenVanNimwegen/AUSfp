@@ -204,7 +204,6 @@ namespace AUSfp
             MySqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-
                 artikel.Id = (int)reader["id"];
                 artikel.Naam = (string)reader["naam"];
                 artikel.Categorie = (string)reader["categorie"];
@@ -215,8 +214,6 @@ namespace AUSfp
                 artikel.Beschrijving = (string)reader["beschrijving"];
                 artikel.Toevoeger = (string)reader["toevoeger"];
                 artikel.ToegevoegdOp = (DateTime)reader["toegevoegdOp"];
-
-
             }
 
             return artikel;
@@ -242,6 +239,7 @@ namespace AUSfp
                 lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
                 leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
             }
+
             naamLable.Text = artikel.Naam.ToString();
             beschrijvingLable.Text = artikel.Beschrijving.ToString();
             artikelnrLable.Text = "Artikelnummer: " + artikel.Id.ToString();
@@ -360,7 +358,7 @@ namespace AUSfp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void TeamsImg_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://teams.microsoft.com/l/chat/0/0?users=" + UserEmail);
         }

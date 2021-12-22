@@ -84,7 +84,6 @@ namespace AUSfp
             // 
             // NameLabel
             // 
-            this.NameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameLabel.Location = new System.Drawing.Point(1122, 46);
             this.NameLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
@@ -97,13 +96,11 @@ namespace AUSfp
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.panel1.Location = new System.Drawing.Point(16, 79);
+            this.panel1.Location = new System.Drawing.Point(16, 78);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2081, 1);
+            this.panel1.Size = new System.Drawing.Size(1403, 10);
             this.panel1.TabIndex = 2;
             // 
             // SearchBar
@@ -257,7 +254,7 @@ namespace AUSfp
             this.teamsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.teamsLogo.TabIndex = 50;
             this.teamsLogo.TabStop = false;
-            this.teamsLogo.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.teamsLogo.Click += new System.EventHandler(this.TeamsImg_Click);
             // 
             // wijzigIcon
             // 
@@ -451,7 +448,6 @@ namespace AUSfp
             // 
             // ItemImage
             // 
-            this.ItemImage.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ItemImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.ItemImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemImage.BackgroundImage")));
             this.ItemImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
