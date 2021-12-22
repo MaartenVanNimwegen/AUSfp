@@ -39,6 +39,10 @@ namespace AUSfp
             this.LogoutBtn = new System.Windows.Forms.PictureBox();
             this.artikelToevoegen = new System.Windows.Forms.PictureBox();
             this.ItemDetailsPanel = new System.Windows.Forms.Panel();
+            this.ContactLable = new System.Windows.Forms.Label();
+            this.VerwijderLable = new System.Windows.Forms.Label();
+            this.WijzigLable = new System.Windows.Forms.Label();
+            this.uitleenInleverLable = new System.Windows.Forms.Label();
             this.teamsLogo = new System.Windows.Forms.PictureBox();
             this.wijzigIcon = new System.Windows.Forms.PictureBox();
             this.DeleteBtn = new System.Windows.Forms.PictureBox();
@@ -62,10 +66,6 @@ namespace AUSfp
             this.statusArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inleverdatumArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefreshBtn = new System.Windows.Forms.PictureBox();
-            this.uitleenInleverLable = new System.Windows.Forms.Label();
-            this.WijzigLable = new System.Windows.Forms.Label();
-            this.VerwijderLable = new System.Windows.Forms.Label();
-            this.ContactLable = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RocLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBtn)).BeginInit();
@@ -86,7 +86,7 @@ namespace AUSfp
             // 
             this.NameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(1850, 27);
+            this.NameLabel.Location = new System.Drawing.Point(1122, 46);
             this.NameLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(208, 18);
@@ -103,7 +103,7 @@ namespace AUSfp
             this.panel1.Location = new System.Drawing.Point(16, 79);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2125, 1);
+            this.panel1.Size = new System.Drawing.Size(2081, 1);
             this.panel1.TabIndex = 2;
             // 
             // SearchBar
@@ -209,6 +209,42 @@ namespace AUSfp
             this.ItemDetailsPanel.Name = "ItemDetailsPanel";
             this.ItemDetailsPanel.Size = new System.Drawing.Size(587, 703);
             this.ItemDetailsPanel.TabIndex = 3;
+            // 
+            // ContactLable
+            // 
+            this.ContactLable.AutoSize = true;
+            this.ContactLable.Location = new System.Drawing.Point(415, 626);
+            this.ContactLable.Name = "ContactLable";
+            this.ContactLable.Size = new System.Drawing.Size(92, 13);
+            this.ContactLable.TabIndex = 54;
+            this.ContactLable.Text = "Neem contact op:";
+            // 
+            // VerwijderLable
+            // 
+            this.VerwijderLable.AutoSize = true;
+            this.VerwijderLable.Location = new System.Drawing.Point(329, 626);
+            this.VerwijderLable.Name = "VerwijderLable";
+            this.VerwijderLable.Size = new System.Drawing.Size(62, 13);
+            this.VerwijderLable.TabIndex = 53;
+            this.VerwijderLable.Text = "Verwijderen";
+            // 
+            // WijzigLable
+            // 
+            this.WijzigLable.AutoSize = true;
+            this.WijzigLable.Location = new System.Drawing.Point(227, 626);
+            this.WijzigLable.Name = "WijzigLable";
+            this.WijzigLable.Size = new System.Drawing.Size(47, 13);
+            this.WijzigLable.TabIndex = 52;
+            this.WijzigLable.Text = "Wijzigen";
+            // 
+            // uitleenInleverLable
+            // 
+            this.uitleenInleverLable.AutoSize = true;
+            this.uitleenInleverLable.Location = new System.Drawing.Point(93, 626);
+            this.uitleenInleverLable.Name = "uitleenInleverLable";
+            this.uitleenInleverLable.Size = new System.Drawing.Size(93, 13);
+            this.uitleenInleverLable.TabIndex = 51;
+            this.uitleenInleverLable.Text = "Inleveren/uitlenen";
             // 
             // teamsLogo
             // 
@@ -515,48 +551,12 @@ namespace AUSfp
             this.RefreshBtn.TabStop = false;
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click_1);
             // 
-            // uitleenInleverLable
-            // 
-            this.uitleenInleverLable.AutoSize = true;
-            this.uitleenInleverLable.Location = new System.Drawing.Point(93, 626);
-            this.uitleenInleverLable.Name = "uitleenInleverLable";
-            this.uitleenInleverLable.Size = new System.Drawing.Size(93, 13);
-            this.uitleenInleverLable.TabIndex = 51;
-            this.uitleenInleverLable.Text = "Inleveren/uitlenen";
-            // 
-            // WijzigLable
-            // 
-            this.WijzigLable.AutoSize = true;
-            this.WijzigLable.Location = new System.Drawing.Point(227, 626);
-            this.WijzigLable.Name = "WijzigLable";
-            this.WijzigLable.Size = new System.Drawing.Size(47, 13);
-            this.WijzigLable.TabIndex = 52;
-            this.WijzigLable.Text = "Wijzigen";
-            // 
-            // VerwijderLable
-            // 
-            this.VerwijderLable.AutoSize = true;
-            this.VerwijderLable.Location = new System.Drawing.Point(329, 626);
-            this.VerwijderLable.Name = "VerwijderLable";
-            this.VerwijderLable.Size = new System.Drawing.Size(62, 13);
-            this.VerwijderLable.TabIndex = 53;
-            this.VerwijderLable.Text = "Verwijderen";
-            // 
-            // ContactLable
-            // 
-            this.ContactLable.AutoSize = true;
-            this.ContactLable.Location = new System.Drawing.Point(415, 626);
-            this.ContactLable.Name = "ContactLable";
-            this.ContactLable.Size = new System.Drawing.Size(92, 13);
-            this.ContactLable.TabIndex = 54;
-            this.ContactLable.Text = "Neem contact op:";
-            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1489, 816);
+            this.ClientSize = new System.Drawing.Size(1445, 827);
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.ItemDetailsPanel);
