@@ -39,6 +39,11 @@ namespace AUSfp
             this.LogoutBtn = new System.Windows.Forms.PictureBox();
             this.artikelToevoegen = new System.Windows.Forms.PictureBox();
             this.ItemDetailsPanel = new System.Windows.Forms.Panel();
+            this.ItemImgPictureBox = new System.Windows.Forms.PictureBox();
+            this.ContactLable = new System.Windows.Forms.Label();
+            this.VerwijderLable = new System.Windows.Forms.Label();
+            this.WijzigLable = new System.Windows.Forms.Label();
+            this.uitleenInleverLable = new System.Windows.Forms.Label();
             this.teamsLogo = new System.Windows.Forms.PictureBox();
             this.wijzigIcon = new System.Windows.Forms.PictureBox();
             this.DeleteBtn = new System.Windows.Forms.PictureBox();
@@ -54,7 +59,6 @@ namespace AUSfp
             this.statusLable = new System.Windows.Forms.Label();
             this.beschrijvingLable = new System.Windows.Forms.Label();
             this.naamLable = new System.Windows.Forms.Label();
-            this.ItemImage = new System.Windows.Forms.PictureBox();
             this.DataGrid = new System.Windows.Forms.DataGridView();
             this.nummerArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naamArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,31 +66,26 @@ namespace AUSfp
             this.statusArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inleverdatumArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefreshBtn = new System.Windows.Forms.PictureBox();
-            this.uitleenInleverLable = new System.Windows.Forms.Label();
-            this.WijzigLable = new System.Windows.Forms.Label();
-            this.VerwijderLable = new System.Windows.Forms.Label();
-            this.ContactLable = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RocLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikelToevoegen)).BeginInit();
             this.ItemDetailsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemImgPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamsLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wijzigIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // NameLabel
             // 
-            this.NameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(1850, 27);
+            this.NameLabel.Location = new System.Drawing.Point(1122, 46);
             this.NameLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(208, 18);
@@ -97,13 +96,11 @@ namespace AUSfp
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.panel1.Location = new System.Drawing.Point(16, 79);
+            this.panel1.Location = new System.Drawing.Point(16, 78);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2125, 1);
+            this.panel1.Size = new System.Drawing.Size(1403, 10);
             this.panel1.TabIndex = 2;
             // 
             // SearchBar
@@ -192,6 +189,7 @@ namespace AUSfp
             // 
             this.ItemDetailsPanel.AutoSize = true;
             this.ItemDetailsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.ItemDetailsPanel.Controls.Add(this.ItemImgPictureBox);
             this.ItemDetailsPanel.Controls.Add(this.ContactLable);
             this.ItemDetailsPanel.Controls.Add(this.VerwijderLable);
             this.ItemDetailsPanel.Controls.Add(this.WijzigLable);
@@ -203,12 +201,56 @@ namespace AUSfp
             this.ItemDetailsPanel.Controls.Add(this.panel2);
             this.ItemDetailsPanel.Controls.Add(this.beschrijvingLable);
             this.ItemDetailsPanel.Controls.Add(this.naamLable);
-            this.ItemDetailsPanel.Controls.Add(this.ItemImage);
-            this.ItemDetailsPanel.Location = new System.Drawing.Point(831, 104);
+            this.ItemDetailsPanel.Location = new System.Drawing.Point(832, 104);
             this.ItemDetailsPanel.Margin = new System.Windows.Forms.Padding(1);
             this.ItemDetailsPanel.Name = "ItemDetailsPanel";
             this.ItemDetailsPanel.Size = new System.Drawing.Size(587, 703);
             this.ItemDetailsPanel.TabIndex = 3;
+            // 
+            // ItemImgPictureBox
+            // 
+            this.ItemImgPictureBox.Location = new System.Drawing.Point(16, 0);
+            this.ItemImgPictureBox.Name = "ItemImgPictureBox";
+            this.ItemImgPictureBox.Size = new System.Drawing.Size(560, 249);
+            this.ItemImgPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ItemImgPictureBox.TabIndex = 44;
+            this.ItemImgPictureBox.TabStop = false;
+            // 
+            // ContactLable
+            // 
+            this.ContactLable.AutoSize = true;
+            this.ContactLable.Location = new System.Drawing.Point(415, 626);
+            this.ContactLable.Name = "ContactLable";
+            this.ContactLable.Size = new System.Drawing.Size(92, 13);
+            this.ContactLable.TabIndex = 54;
+            this.ContactLable.Text = "Neem contact op:";
+            // 
+            // VerwijderLable
+            // 
+            this.VerwijderLable.AutoSize = true;
+            this.VerwijderLable.Location = new System.Drawing.Point(329, 626);
+            this.VerwijderLable.Name = "VerwijderLable";
+            this.VerwijderLable.Size = new System.Drawing.Size(62, 13);
+            this.VerwijderLable.TabIndex = 53;
+            this.VerwijderLable.Text = "Verwijderen";
+            // 
+            // WijzigLable
+            // 
+            this.WijzigLable.AutoSize = true;
+            this.WijzigLable.Location = new System.Drawing.Point(227, 626);
+            this.WijzigLable.Name = "WijzigLable";
+            this.WijzigLable.Size = new System.Drawing.Size(47, 13);
+            this.WijzigLable.TabIndex = 52;
+            this.WijzigLable.Text = "Wijzigen";
+            // 
+            // uitleenInleverLable
+            // 
+            this.uitleenInleverLable.AutoSize = true;
+            this.uitleenInleverLable.Location = new System.Drawing.Point(93, 626);
+            this.uitleenInleverLable.Name = "uitleenInleverLable";
+            this.uitleenInleverLable.Size = new System.Drawing.Size(93, 13);
+            this.uitleenInleverLable.TabIndex = 51;
+            this.uitleenInleverLable.Text = "Inleveren/uitlenen";
             // 
             // teamsLogo
             // 
@@ -221,7 +263,7 @@ namespace AUSfp
             this.teamsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.teamsLogo.TabIndex = 50;
             this.teamsLogo.TabStop = false;
-            this.teamsLogo.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.teamsLogo.Click += new System.EventHandler(this.TeamsImg_Click);
             // 
             // wijzigIcon
             // 
@@ -413,19 +455,6 @@ namespace AUSfp
             this.naamLable.TabIndex = 42;
             this.naamLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ItemImage
-            // 
-            this.ItemImage.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ItemImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.ItemImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemImage.BackgroundImage")));
-            this.ItemImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ItemImage.Location = new System.Drawing.Point(16, 1);
-            this.ItemImage.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(560, 240);
-            this.ItemImage.TabIndex = 41;
-            this.ItemImage.TabStop = false;
-            // 
             // DataGrid
             // 
             this.DataGrid.AllowUserToAddRows = false;
@@ -515,48 +544,12 @@ namespace AUSfp
             this.RefreshBtn.TabStop = false;
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click_1);
             // 
-            // uitleenInleverLable
-            // 
-            this.uitleenInleverLable.AutoSize = true;
-            this.uitleenInleverLable.Location = new System.Drawing.Point(93, 626);
-            this.uitleenInleverLable.Name = "uitleenInleverLable";
-            this.uitleenInleverLable.Size = new System.Drawing.Size(93, 13);
-            this.uitleenInleverLable.TabIndex = 51;
-            this.uitleenInleverLable.Text = "Inleveren/uitlenen";
-            // 
-            // WijzigLable
-            // 
-            this.WijzigLable.AutoSize = true;
-            this.WijzigLable.Location = new System.Drawing.Point(227, 626);
-            this.WijzigLable.Name = "WijzigLable";
-            this.WijzigLable.Size = new System.Drawing.Size(47, 13);
-            this.WijzigLable.TabIndex = 52;
-            this.WijzigLable.Text = "Wijzigen";
-            // 
-            // VerwijderLable
-            // 
-            this.VerwijderLable.AutoSize = true;
-            this.VerwijderLable.Location = new System.Drawing.Point(329, 626);
-            this.VerwijderLable.Name = "VerwijderLable";
-            this.VerwijderLable.Size = new System.Drawing.Size(62, 13);
-            this.VerwijderLable.TabIndex = 53;
-            this.VerwijderLable.Text = "Verwijderen";
-            // 
-            // ContactLable
-            // 
-            this.ContactLable.AutoSize = true;
-            this.ContactLable.Location = new System.Drawing.Point(415, 626);
-            this.ContactLable.Name = "ContactLable";
-            this.ContactLable.Size = new System.Drawing.Size(92, 13);
-            this.ContactLable.TabIndex = 54;
-            this.ContactLable.Text = "Neem contact op:";
-            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1489, 816);
+            this.ClientSize = new System.Drawing.Size(1445, 827);
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.ItemDetailsPanel);
@@ -581,12 +574,12 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.artikelToevoegen)).EndInit();
             this.ItemDetailsPanel.ResumeLayout(false);
             this.ItemDetailsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemImgPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamsLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wijzigIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).EndInit();
             this.ResumeLayout(false);
@@ -604,7 +597,6 @@ namespace AUSfp
         private System.Windows.Forms.PictureBox LogoutBtn;
         private System.Windows.Forms.PictureBox artikelToevoegen;
         private System.Windows.Forms.Panel ItemDetailsPanel;
-        private System.Windows.Forms.PictureBox ItemImage;
         private System.Windows.Forms.Label naamLable;
         private System.Windows.Forms.Label beschrijvingLable;
         private System.Windows.Forms.Panel panel2;
@@ -631,6 +623,7 @@ namespace AUSfp
         private System.Windows.Forms.Label VerwijderLable;
         private System.Windows.Forms.Label WijzigLable;
         private System.Windows.Forms.Label uitleenInleverLable;
+        private System.Windows.Forms.PictureBox ItemImgPictureBox;
     }
 }
 
