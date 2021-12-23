@@ -83,5 +83,9 @@ namespace AUSfp
                 Close();
             }
         }
+        private void imgUrl_TextChanged_1(object sender, EventArgs e)
+        {
+            livePrevieuwImgPicturebox.ImageLocation = imgUrl.Text;
+        }
     }
 }

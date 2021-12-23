@@ -21,6 +21,7 @@ namespace AUSfp
         public ArtikelToevoegen()
         {
             InitializeComponent();
+            livePrevieuwImgPicturebox.ImageLocation = "https://www.ecpgr.cgiar.org/fileadmin/templates/ecpgr.org/Assets/images/No_Image_Available.jpg";
         }
         /// <summary>
         /// sluit het scherm wanneer er op de cancel knop word gedrukt
@@ -84,6 +85,11 @@ namespace AUSfp
         private void ImgurlTextbox_Enter(object sender, EventArgs e)
         {
             ImgurlTextbox.Text = "";
+        }
+
+        private void ImgurlTextbox_TextChanged(object sender, EventArgs e)
+        {
+            livePrevieuwImgPicturebox.ImageLocation = ImgurlTextbox.Text;
         }
     }
 }

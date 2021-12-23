@@ -37,18 +37,19 @@ namespace AUSfp
             this.wijzigTitleTextbox = new System.Windows.Forms.TextBox();
             this.categorieTextbox = new System.Windows.Forms.TextBox();
             this.imgUrl = new System.Windows.Forms.TextBox();
+            this.livePrevieuwImgPicturebox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.CancelBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WijzigItemBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livePrevieuwImgPicturebox)).BeginInit();
             this.SuspendLayout();
             // 
             // CancelBtn
             // 
-            this.CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CancelBtn.BackColor = System.Drawing.SystemColors.Control;
             this.CancelBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelBtn.BackgroundImage")));
             this.CancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CancelBtn.Location = new System.Drawing.Point(193, 337);
+            this.CancelBtn.Location = new System.Drawing.Point(133, 272);
             this.CancelBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(47, 45);
@@ -58,12 +59,11 @@ namespace AUSfp
             // 
             // WijzigItemBtn
             // 
-            this.WijzigItemBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.WijzigItemBtn.BackColor = System.Drawing.SystemColors.Control;
             this.WijzigItemBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WijzigItemBtn.BackgroundImage")));
             this.WijzigItemBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.WijzigItemBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.WijzigItemBtn.Location = new System.Drawing.Point(133, 337);
+            this.WijzigItemBtn.Location = new System.Drawing.Point(73, 272);
             this.WijzigItemBtn.Margin = new System.Windows.Forms.Padding(2);
             this.WijzigItemBtn.Name = "WijzigItemBtn";
             this.WijzigItemBtn.Size = new System.Drawing.Size(47, 45);
@@ -78,7 +78,7 @@ namespace AUSfp
             this.WijzigBeschrijvingTextbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WijzigBeschrijvingTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.WijzigBeschrijvingTextbox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.WijzigBeschrijvingTextbox.Location = new System.Drawing.Point(84, 240);
+            this.WijzigBeschrijvingTextbox.Location = new System.Drawing.Point(25, 160);
             this.WijzigBeschrijvingTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.WijzigBeschrijvingTextbox.Multiline = true;
             this.WijzigBeschrijvingTextbox.Name = "WijzigBeschrijvingTextbox";
@@ -90,10 +90,9 @@ namespace AUSfp
             // 
             // ImageName
             // 
-            this.ImageName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ImageName.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ImageName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ImageName.Location = new System.Drawing.Point(71, 122);
+            this.ImageName.Location = new System.Drawing.Point(6, 60);
             this.ImageName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ImageName.Name = "ImageName";
             this.ImageName.Size = new System.Drawing.Size(242, 18);
@@ -108,7 +107,7 @@ namespace AUSfp
             this.wijzigTitleTextbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wijzigTitleTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.wijzigTitleTextbox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.wijzigTitleTextbox.Location = new System.Drawing.Point(84, 190);
+            this.wijzigTitleTextbox.Location = new System.Drawing.Point(25, 110);
             this.wijzigTitleTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.wijzigTitleTextbox.Name = "wijzigTitleTextbox";
             this.wijzigTitleTextbox.Size = new System.Drawing.Size(201, 21);
@@ -124,7 +123,7 @@ namespace AUSfp
             this.categorieTextbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categorieTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.categorieTextbox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.categorieTextbox.Location = new System.Drawing.Point(85, 215);
+            this.categorieTextbox.Location = new System.Drawing.Point(26, 135);
             this.categorieTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.categorieTextbox.Name = "categorieTextbox";
             this.categorieTextbox.Size = new System.Drawing.Size(201, 21);
@@ -140,7 +139,7 @@ namespace AUSfp
             this.imgUrl.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imgUrl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.imgUrl.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.imgUrl.Location = new System.Drawing.Point(85, 142);
+            this.imgUrl.Location = new System.Drawing.Point(26, 83);
             this.imgUrl.Margin = new System.Windows.Forms.Padding(2);
             this.imgUrl.Name = "imgUrl";
             this.imgUrl.Size = new System.Drawing.Size(200, 21);
@@ -148,12 +147,23 @@ namespace AUSfp
             this.imgUrl.TabStop = false;
             this.imgUrl.Text = "Url...";
             this.imgUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.imgUrl.TextChanged += new System.EventHandler(this.imgUrl_TextChanged_1);
+            // 
+            // livePrevieuwImgPicturebox
+            // 
+            this.livePrevieuwImgPicturebox.Location = new System.Drawing.Point(269, 60);
+            this.livePrevieuwImgPicturebox.Name = "livePrevieuwImgPicturebox";
+            this.livePrevieuwImgPicturebox.Size = new System.Drawing.Size(219, 193);
+            this.livePrevieuwImgPicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.livePrevieuwImgPicturebox.TabIndex = 75;
+            this.livePrevieuwImgPicturebox.TabStop = false;
             // 
             // ArtikelWijzigen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 450);
+            this.ClientSize = new System.Drawing.Size(514, 337);
+            this.Controls.Add(this.livePrevieuwImgPicturebox);
             this.Controls.Add(this.imgUrl);
             this.Controls.Add(this.categorieTextbox);
             this.Controls.Add(this.CancelBtn);
@@ -165,6 +175,7 @@ namespace AUSfp
             this.Text = "ArtikelWijzigen";
             ((System.ComponentModel.ISupportInitialize)(this.CancelBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WijzigItemBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livePrevieuwImgPicturebox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +190,6 @@ namespace AUSfp
         private System.Windows.Forms.TextBox wijzigTitleTextbox;
         private System.Windows.Forms.TextBox categorieTextbox;
         private System.Windows.Forms.TextBox imgUrl;
+        private System.Windows.Forms.PictureBox livePrevieuwImgPicturebox;
     }
 }

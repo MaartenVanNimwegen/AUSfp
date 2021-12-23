@@ -39,11 +39,11 @@ namespace AUSfp
             this.CancelBtn = new System.Windows.Forms.PictureBox();
             this.ImgurlTextbox = new System.Windows.Forms.TextBox();
             this.ImgUrlLable = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.livePrevieuwImgPicturebox = new System.Windows.Forms.PictureBox();
             this.CategorieTextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.AddItemBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CancelBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livePrevieuwImgPicturebox)).BeginInit();
             this.SuspendLayout();
             // 
             // titleTextbox
@@ -161,6 +161,7 @@ namespace AUSfp
             this.ImgurlTextbox.TabStop = false;
             this.ImgurlTextbox.Text = "Url";
             this.ImgurlTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ImgurlTextbox.TextChanged += new System.EventHandler(this.ImgurlTextbox_TextChanged);
             this.ImgurlTextbox.Enter += new System.EventHandler(this.ImgurlTextbox_Enter);
             // 
             // ImgUrlLable
@@ -176,14 +177,14 @@ namespace AUSfp
             this.ImgUrlLable.Text = "Vul hier de url van de foto in:";
             this.ImgUrlLable.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1
+            // livePrevieuwImgPicturebox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(265, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 261);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 67;
-            this.pictureBox1.TabStop = false;
+            this.livePrevieuwImgPicturebox.Location = new System.Drawing.Point(265, 15);
+            this.livePrevieuwImgPicturebox.Name = "livePrevieuwImgPicturebox";
+            this.livePrevieuwImgPicturebox.Size = new System.Drawing.Size(210, 261);
+            this.livePrevieuwImgPicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.livePrevieuwImgPicturebox.TabIndex = 67;
+            this.livePrevieuwImgPicturebox.TabStop = false;
             // 
             // CategorieTextbox
             // 
@@ -208,7 +209,7 @@ namespace AUSfp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 337);
             this.Controls.Add(this.CategorieTextbox);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.livePrevieuwImgPicturebox);
             this.Controls.Add(this.ImgUrlLable);
             this.Controls.Add(this.ImgurlTextbox);
             this.Controls.Add(this.CancelBtn);
@@ -225,7 +226,7 @@ namespace AUSfp
             this.Text = "ArtikelToevoegen";
             ((System.ComponentModel.ISupportInitialize)(this.AddItemBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CancelBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livePrevieuwImgPicturebox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,7 +243,7 @@ namespace AUSfp
         private System.Windows.Forms.PictureBox CancelBtn;
         private System.Windows.Forms.TextBox ImgurlTextbox;
         private System.Windows.Forms.Label ImgUrlLable;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox livePrevieuwImgPicturebox;
         private System.Windows.Forms.TextBox CategorieTextbox;
     }
 }
