@@ -39,6 +39,7 @@ namespace AUSfp
             this.LogoutBtn = new System.Windows.Forms.PictureBox();
             this.artikelToevoegen = new System.Windows.Forms.PictureBox();
             this.ItemDetailsPanel = new System.Windows.Forms.Panel();
+            this.ItemImgPictureBox = new System.Windows.Forms.PictureBox();
             this.ContactLable = new System.Windows.Forms.Label();
             this.VerwijderLable = new System.Windows.Forms.Label();
             this.WijzigLable = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@ namespace AUSfp
             this.statusLable = new System.Windows.Forms.Label();
             this.beschrijvingLable = new System.Windows.Forms.Label();
             this.naamLable = new System.Windows.Forms.Label();
-            this.ItemImage = new System.Windows.Forms.PictureBox();
             this.DataGrid = new System.Windows.Forms.DataGridView();
             this.nummerArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naamArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,12 +72,12 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.LogoutBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikelToevoegen)).BeginInit();
             this.ItemDetailsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemImgPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamsLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wijzigIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).BeginInit();
             this.SuspendLayout();
@@ -189,6 +189,7 @@ namespace AUSfp
             // 
             this.ItemDetailsPanel.AutoSize = true;
             this.ItemDetailsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.ItemDetailsPanel.Controls.Add(this.ItemImgPictureBox);
             this.ItemDetailsPanel.Controls.Add(this.ContactLable);
             this.ItemDetailsPanel.Controls.Add(this.VerwijderLable);
             this.ItemDetailsPanel.Controls.Add(this.WijzigLable);
@@ -200,12 +201,20 @@ namespace AUSfp
             this.ItemDetailsPanel.Controls.Add(this.panel2);
             this.ItemDetailsPanel.Controls.Add(this.beschrijvingLable);
             this.ItemDetailsPanel.Controls.Add(this.naamLable);
-            this.ItemDetailsPanel.Controls.Add(this.ItemImage);
-            this.ItemDetailsPanel.Location = new System.Drawing.Point(831, 104);
+            this.ItemDetailsPanel.Location = new System.Drawing.Point(832, 104);
             this.ItemDetailsPanel.Margin = new System.Windows.Forms.Padding(1);
             this.ItemDetailsPanel.Name = "ItemDetailsPanel";
             this.ItemDetailsPanel.Size = new System.Drawing.Size(587, 703);
             this.ItemDetailsPanel.TabIndex = 3;
+            // 
+            // ItemImgPictureBox
+            // 
+            this.ItemImgPictureBox.Location = new System.Drawing.Point(16, 0);
+            this.ItemImgPictureBox.Name = "ItemImgPictureBox";
+            this.ItemImgPictureBox.Size = new System.Drawing.Size(560, 249);
+            this.ItemImgPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ItemImgPictureBox.TabIndex = 44;
+            this.ItemImgPictureBox.TabStop = false;
             // 
             // ContactLable
             // 
@@ -446,18 +455,6 @@ namespace AUSfp
             this.naamLable.TabIndex = 42;
             this.naamLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ItemImage
-            // 
-            this.ItemImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.ItemImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemImage.BackgroundImage")));
-            this.ItemImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ItemImage.Location = new System.Drawing.Point(16, 1);
-            this.ItemImage.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(560, 240);
-            this.ItemImage.TabIndex = 41;
-            this.ItemImage.TabStop = false;
-            // 
             // DataGrid
             // 
             this.DataGrid.AllowUserToAddRows = false;
@@ -577,12 +574,12 @@ namespace AUSfp
             ((System.ComponentModel.ISupportInitialize)(this.artikelToevoegen)).EndInit();
             this.ItemDetailsPanel.ResumeLayout(false);
             this.ItemDetailsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemImgPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamsLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wijzigIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).EndInit();
             this.ResumeLayout(false);
@@ -600,7 +597,6 @@ namespace AUSfp
         private System.Windows.Forms.PictureBox LogoutBtn;
         private System.Windows.Forms.PictureBox artikelToevoegen;
         private System.Windows.Forms.Panel ItemDetailsPanel;
-        private System.Windows.Forms.PictureBox ItemImage;
         private System.Windows.Forms.Label naamLable;
         private System.Windows.Forms.Label beschrijvingLable;
         private System.Windows.Forms.Panel panel2;
@@ -627,6 +623,7 @@ namespace AUSfp
         private System.Windows.Forms.Label VerwijderLable;
         private System.Windows.Forms.Label WijzigLable;
         private System.Windows.Forms.Label uitleenInleverLable;
+        private System.Windows.Forms.PictureBox ItemImgPictureBox;
     }
 }
 

@@ -23,8 +23,11 @@ namespace AUSfp
             InitializeComponent();
 
             showHeaderItems(false);
+            teamsLogo.Visible = false;
+            ContactLable.Visible = false;
 
             RefreshDataGrid();
+
         }
         /// <summary>
         /// bij klik van de login knop word gekeken of de gebruiker correct is ingelogd. Als er goed is ingelogd is DialogResult OK en anders niet. Als deze OK is word UserIsLoggedIn true.
@@ -193,7 +196,7 @@ namespace AUSfp
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        private Artikel GetArtikel(int id)
+        public Artikel GetArtikel(int id)
         {
 
             Artikel artikel = new Artikel();
@@ -225,6 +228,19 @@ namespace AUSfp
         /// <param name="artikel"></param>
         private void ShowDetails(Artikel artikel)
         {
+            string drone = "https://pngimg.com/uploads/drone/drone_PNG108.png";
+            string noImg = "https://www.ecpgr.cgiar.org/fileadmin/templates/ecpgr.org/Assets/images/No_Image_Available.jpg";
+            string superDrone = "https://www.pngall.com/wp-content/uploads/4/Drone-PNG.png";
+            string ultraDrone = "https://freepngimg.com/thumb/drone/21671-5-drone-transparent-background.png";
+            string camera = "https://www.pngall.com/wp-content/uploads/2016/05/Photo-Camera-PNG-Clipart.png";
+            string statief = "https://www.tonecontrol.nl/media/catalog/product/cache/b57d735e2b50efb81e39c28918fcdba9/d/r/drspc3nrrg.png";
+            string tas = "https://cdn.shopify.com/s/files/1/0056/5562/5810/products/21POUCH150S_001_1_1800x1800.png?v=1631270939";
+            string flitser = "https://cdn.nikoneurope.com/imported/images/web/EU/products/speedlights/sb-5000/nikon-speedlight-sb5000-front--original.png";
+            string lens = "https://purepng.com/public/uploads/large/camera-lens-oyr.png";
+            string imac = "https://assets.website-files.com/5e6ce0be3dea83d35332f32b/5f4e22f40095c5481beb7930_Apple%20iMac.png";
+            string server = "https://images.prismic.io/system76/819f0c46-ca90-4bf9-a5f6-479caa3b7e44_Jackal+Pro+1U.png";
+
+
             if (artikel.Status == 0)
             {
                 statusLable.Text = "Beschikbaarheid: Beschikbaar";
@@ -258,6 +274,52 @@ namespace AUSfp
                 ContactLable.Visible = true;
                 UserEmail = artikel.Leerlingnummer.ToString() + "@edu.rocfriesepoort.nl";
             }
+
+            if (artikel.Naam == "Drone")
+            {
+                ItemImgPictureBox.ImageLocation = drone;
+            }
+            else if (artikel.Naam == "Super drone")
+            {
+                ItemImgPictureBox.ImageLocation = superDrone;
+            }
+            else if (artikel.Naam == "Ultra drone")
+            {
+                ItemImgPictureBox.ImageLocation = ultraDrone;
+            }
+            else if (artikel.Naam == "Camera")
+            {
+                ItemImgPictureBox.ImageLocation = camera;
+            }
+            else if (artikel.Naam == "Statief")
+            {
+                ItemImgPictureBox.ImageLocation = statief;
+            }
+            else if (artikel.Naam == "Tas")
+            {
+                ItemImgPictureBox.ImageLocation = tas;
+            }
+            else if (artikel.Naam == "Flitser")
+            {
+                ItemImgPictureBox.ImageLocation = flitser;
+            }
+            else if (artikel.Naam == "Lens")
+            {
+                ItemImgPictureBox.ImageLocation = lens;
+            }
+            else if (artikel.Naam == "Imac")
+            {
+                ItemImgPictureBox.ImageLocation = imac;
+            }
+            else if (artikel.Naam == "Server")
+            {
+                ItemImgPictureBox.ImageLocation = server;
+            }
+            else
+            {
+                ItemImgPictureBox.ImageLocation = noImg;
+            }
+
         }
         /// <summary>
         /// opent het scherm waarin artikelen kunnen worden toegevoegd en refreshed de datagrid
