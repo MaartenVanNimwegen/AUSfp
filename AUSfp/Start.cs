@@ -83,6 +83,7 @@ namespace AUSfp
         {
             NameLabel.Text = Login.welkomNaam;
         }
+
         /// <summary>
         /// Deze functie converteerd alle artikelen van de database naar een list
         /// </summary>
