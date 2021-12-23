@@ -16,6 +16,7 @@ namespace AUSfp
         private string naam = "";
         private string beschrijving = "";
         private string categorie = "";
+        private string img = "";
 
         public ArtikelToevoegen()
         {
@@ -39,11 +40,12 @@ namespace AUSfp
         {
             naam = titleTextbox.Text;
             beschrijving = beschrijvingTextbox.Text;
-            categorie = CategorieDropdown.Text;
+            categorie = CategorieTextbox.Text;
+            img = ImgurlTextbox.Text;
             
             MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
             connection.Open();
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO `artikelen` (`naam`, `categorie`, `inleverdatum`, `beschrijving`, `toevoeger`, `toegevoegdOp`) VALUES ( '"+ naam +"', '"+ categorie +"', now(), '"+ beschrijving +"', '"+ Login.naam +"', now());", connection);
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO `artikelen` (`naam`, `categorie`, `inleverdatum`, `beschrijving`, `toevoeger`, `toegevoegdOp`, `img`) VALUES ( '"+ naam +"', '"+ categorie +"', now(), '"+ beschrijving +"', '"+ Login.naam +"', now(),'" + img + "');", connection);
             cmd.ExecuteReader();
             MessageBox.Show("Artikel toegevoegd");
         }
@@ -64,6 +66,24 @@ namespace AUSfp
         private void beschrijvingTextbox_Enter(object sender, EventArgs e)
         {
             beschrijvingTextbox.Text = "";
+        }
+        /// <summary>
+        /// leegt de categorie box wanneer je erin springt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CategorieTextbox_Enter(object sender, EventArgs e)
+        {
+            CategorieTextbox.Text = "";
+        }
+        /// <summary>
+        /// leegt de url box wanneer je erin springt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ImgurlTextbox_Enter(object sender, EventArgs e)
+        {
+            ImgurlTextbox.Text = "";
         }
     }
 }

@@ -17,6 +17,7 @@ namespace AUSfp
         private string beschrijving = "";
         private string categorie = "";
         private static string id = "";
+        private string HuidigeImg = "";
         /// <summary>
         /// deze functie bouwd het scherm en zet de huidige info in de velden.
         /// </summary>
@@ -37,10 +38,12 @@ namespace AUSfp
                 naam = (string)reader["naam"];
                 categorie = (string)reader["categorie"];
                 beschrijving = (string)reader["beschrijving"];
+                HuidigeImg = (string)reader["img"];
             }
             wijzigTitleTextbox.Text = naam;
-            WijzigCategorieDropdown.Text = categorie;
+            categorieTextbox.Text = categorie;
             WijzigBeschrijvingTextbox.Text = beschrijving;
+            imgUrl.Text = HuidigeImg;
         }
         /// <summary>
         /// sluit het scherm
@@ -60,7 +63,7 @@ namespace AUSfp
         {
             naam = wijzigTitleTextbox.Text;
             beschrijving = WijzigBeschrijvingTextbox.Text;
-            categorie = WijzigCategorieDropdown.Text;
+            categorie = categorieTextbox.Text;
             
             if (wijzigTitleTextbox.Text == "")
             {
@@ -74,29 +77,11 @@ namespace AUSfp
             {
                 MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
                 connection.Open();
-                MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET naam='" + naam + "', categorie='" + categorie + "', beschrijving='" + beschrijving + "' WHERE id='" + id + "'", connection);
+                MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET naam='" + naam + "', categorie='" + categorie + "', beschrijving='" + beschrijving + "', img='" + imgUrl.Text + "' WHERE id='" + id + "'", connection);
                 cmd.ExecuteReader();
                 MessageBox.Show("Artikel gewijzigd");
                 Close();
             }
-        }
-        /// <summary>
-        /// leegt de titel box wanneer je erin springt
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void wijzigTitleTextbox_Enter_1(object sender, EventArgs e)
-        {
-            wijzigTitleTextbox.Text = "";
-        }
-        /// <summary>
-        /// leegt de beschrijving box wanneer je erin springt
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void WijzigBeschrijvingTextbox_Enter_1(object sender, EventArgs e)
-        {
-            WijzigBeschrijvingTextbox.Text = "";
         }
     }
 }

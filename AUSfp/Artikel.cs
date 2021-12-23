@@ -30,7 +30,7 @@ namespace AUSfp
 
         public DateTime? ToegevoegdOp { get; set; }
 
-
+        public string img { get; set; }
 
     }
 }

@@ -116,6 +116,7 @@ namespace AUSfp
             this.SearchBar.Size = new System.Drawing.Size(333, 34);
             this.SearchBar.TabIndex = 6;
             this.SearchBar.TabStop = false;
+            this.SearchBar.TextChanged += new System.EventHandler(this.SearchBar_TextChanged);
             this.SearchBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchBar_KeyDown);
             // 
             // SearchIcon
