@@ -43,12 +43,19 @@ namespace AUSfp
             beschrijving = beschrijvingTextbox.Text;
             categorie = CategorieTextbox.Text;
             img = ImgurlTextbox.Text;
-            
-            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
-            connection.Open();
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO `artikelen` (`naam`, `categorie`, `inleverdatum`, `beschrijving`, `toevoeger`, `toegevoegdOp`, `img`) VALUES ( '"+ naam +"', '"+ categorie +"', now(), '"+ beschrijving +"', '"+ Login.naam +"', now(),'" + img + "');", connection);
-            cmd.ExecuteReader();
-            MessageBox.Show("Artikel toegevoegd");
+
+            if (titleTextbox.Text.Length > 0 && beschrijvingTextbox.Text.Length > 0 && CategorieTextbox.Text.Length > 0)
+            {
+                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO `artikelen` (`naam`, `categorie`, `inleverdatum`, `beschrijving`, `toevoeger`, `toegevoegdOp`, `img`) VALUES ( '" + naam + "', '" + categorie + "', now(), '" + beschrijving + "', '" + Login.naam + "', now(),'" + img + "');", connection);
+                cmd.ExecuteReader();
+                MessageBox.Show("Artikel toegevoegd");
+            }
+            else
+            {
+                MessageBox.Show("Niet alle velden zijn ingevuld!");
+            }
         }
         /// <summary>
         /// leegt de titel box wanneer je erin springt

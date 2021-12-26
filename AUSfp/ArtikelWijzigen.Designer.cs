@@ -63,7 +63,7 @@ namespace AUSfp
             this.WijzigItemBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WijzigItemBtn.BackgroundImage")));
             this.WijzigItemBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.WijzigItemBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.WijzigItemBtn.Location = new System.Drawing.Point(73, 272);
+            this.WijzigItemBtn.Location = new System.Drawing.Point(82, 272);
             this.WijzigItemBtn.Margin = new System.Windows.Forms.Padding(2);
             this.WijzigItemBtn.Name = "WijzigItemBtn";
             this.WijzigItemBtn.Size = new System.Drawing.Size(47, 45);
