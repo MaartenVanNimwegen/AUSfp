@@ -235,7 +235,7 @@ namespace AUSfp
                 statusLable.Text = "Beschikbaarheid: Beschikbaar";
                 inleverdatumLable.Text = "Inleverdatum: ";
                 lenerLable.Text = "Uitgeleend aan: ";
-                leerlingnummerLable.Text = "Leerlingnummer: ";
+                leerlingnummerLable.Text = "Leerlingnummer:";
             }
             else if (artikel.Status == 1)
             {
