@@ -25,18 +25,10 @@ namespace AUSfp
 
         private void inleverUitleenIcon_Click(object sender, EventArgs e)
         {
-            int leerlingnr = Int32.Parse(StudentId.Text);
+            string leerlingnr = StudentId.Text;
             string leerlingnaam = StudentName.Text;
 
-            if (leerlingnr <= 0)
-            {
-                MessageBox.Show("Student nummer is niet geldig.");
-            }
-            else if (leerlingnaam.Length <= 0)
-            {
-                MessageBox.Show("Student naam is niet geldig");
-            }
-            else
+            if (StudentId.Text.Length > 0 && StudentName.Text.Length > 0)
             {
                 string CorrectDateFormat = TurnInDateTime.Value.Year.ToString() + "-" + TurnInDateTime.Value.Month.ToString() + "-" + TurnInDateTime.Value.Day.ToString();
                 //string _optie2 = TurnInDateTime.Value.ToString("yyyy-MM-dd");
@@ -49,6 +41,10 @@ namespace AUSfp
                 MessageBox.Show("Artikel succesvol uitgeleend.");
 
                 Close();
+            }
+            else
+            {
+                MessageBox.Show("Vul alle velden in!");
             }
         }
 
