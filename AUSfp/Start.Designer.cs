@@ -30,6 +30,11 @@ namespace AUSfp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchBar = new System.Windows.Forms.TextBox();
@@ -60,12 +65,12 @@ namespace AUSfp
             this.beschrijvingLable = new System.Windows.Forms.Label();
             this.naamLable = new System.Windows.Forms.Label();
             this.DataGrid = new System.Windows.Forms.DataGridView();
+            this.RefreshBtn = new System.Windows.Forms.PictureBox();
             this.nummerArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naamArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caregorieArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inleverdatumArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RefreshBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RocLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBtn)).BeginInit();
@@ -249,9 +254,9 @@ namespace AUSfp
             this.uitleenInleverLable.AutoSize = true;
             this.uitleenInleverLable.Location = new System.Drawing.Point(93, 626);
             this.uitleenInleverLable.Name = "uitleenInleverLable";
-            this.uitleenInleverLable.Size = new System.Drawing.Size(93, 13);
+            this.uitleenInleverLable.Size = new System.Drawing.Size(95, 13);
             this.uitleenInleverLable.TabIndex = 51;
-            this.uitleenInleverLable.Text = "Inleveren/uitlenen";
+            this.uitleenInleverLable.Text = "Inleveren/Uitlenen";
             // 
             // teamsLogo
             // 
@@ -491,46 +496,6 @@ namespace AUSfp
             this.DataGrid.TabIndex = 42;
             this.DataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_RowEnter);
             // 
-            // nummerArtikel
-            // 
-            this.nummerArtikel.HeaderText = "Artikel nr";
-            this.nummerArtikel.MinimumWidth = 150;
-            this.nummerArtikel.Name = "nummerArtikel";
-            this.nummerArtikel.ReadOnly = true;
-            this.nummerArtikel.Width = 150;
-            // 
-            // naamArtikel
-            // 
-            this.naamArtikel.HeaderText = "Naam";
-            this.naamArtikel.MinimumWidth = 175;
-            this.naamArtikel.Name = "naamArtikel";
-            this.naamArtikel.ReadOnly = true;
-            this.naamArtikel.Width = 175;
-            // 
-            // caregorieArtikel
-            // 
-            this.caregorieArtikel.HeaderText = "Categorie";
-            this.caregorieArtikel.MinimumWidth = 150;
-            this.caregorieArtikel.Name = "caregorieArtikel";
-            this.caregorieArtikel.ReadOnly = true;
-            this.caregorieArtikel.Width = 150;
-            // 
-            // statusArtikel
-            // 
-            this.statusArtikel.HeaderText = "Status";
-            this.statusArtikel.MinimumWidth = 150;
-            this.statusArtikel.Name = "statusArtikel";
-            this.statusArtikel.ReadOnly = true;
-            this.statusArtikel.Width = 150;
-            // 
-            // inleverdatumArtikel
-            // 
-            this.inleverdatumArtikel.HeaderText = "Inleverdatum";
-            this.inleverdatumArtikel.MinimumWidth = 150;
-            this.inleverdatumArtikel.Name = "inleverdatumArtikel";
-            this.inleverdatumArtikel.ReadOnly = true;
-            this.inleverdatumArtikel.Width = 150;
-            // 
             // RefreshBtn
             // 
             this.RefreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -544,6 +509,61 @@ namespace AUSfp
             this.RefreshBtn.TabIndex = 43;
             this.RefreshBtn.TabStop = false;
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click_1);
+            // 
+            // nummerArtikel
+            // 
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            this.nummerArtikel.DefaultCellStyle = dataGridViewCellStyle11;
+            this.nummerArtikel.HeaderText = "Artikel nr";
+            this.nummerArtikel.MinimumWidth = 150;
+            this.nummerArtikel.Name = "nummerArtikel";
+            this.nummerArtikel.ReadOnly = true;
+            this.nummerArtikel.Width = 150;
+            // 
+            // naamArtikel
+            // 
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle12;
+            this.naamArtikel.HeaderText = "Naam";
+            this.naamArtikel.MinimumWidth = 175;
+            this.naamArtikel.Name = "naamArtikel";
+            this.naamArtikel.ReadOnly = true;
+            this.naamArtikel.Width = 175;
+            // 
+            // caregorieArtikel
+            // 
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle13;
+            this.caregorieArtikel.HeaderText = "Categorie";
+            this.caregorieArtikel.MinimumWidth = 150;
+            this.caregorieArtikel.Name = "caregorieArtikel";
+            this.caregorieArtikel.ReadOnly = true;
+            this.caregorieArtikel.Width = 150;
+            // 
+            // statusArtikel
+            // 
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle14;
+            this.statusArtikel.HeaderText = "Status";
+            this.statusArtikel.MinimumWidth = 150;
+            this.statusArtikel.Name = "statusArtikel";
+            this.statusArtikel.ReadOnly = true;
+            this.statusArtikel.Width = 150;
+            // 
+            // inleverdatumArtikel
+            // 
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle15;
+            this.inleverdatumArtikel.HeaderText = "Inleverdatum";
+            this.inleverdatumArtikel.MinimumWidth = 150;
+            this.inleverdatumArtikel.Name = "inleverdatumArtikel";
+            this.inleverdatumArtikel.ReadOnly = true;
+            this.inleverdatumArtikel.Width = 150;
             // 
             // Start
             // 
@@ -610,11 +630,6 @@ namespace AUSfp
         private System.Windows.Forms.PictureBox DeleteBtn;
         private System.Windows.Forms.PictureBox inleverUitleenIcon;
         private System.Windows.Forms.DataGridView DataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nummerArtikel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn naamArtikel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn caregorieArtikel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusArtikel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inleverdatumArtikel;
         private System.Windows.Forms.PictureBox RefreshBtn;
         private System.Windows.Forms.Label toegevoegddoorLable;
         private System.Windows.Forms.Label toegevoegdopLable;
@@ -625,6 +640,11 @@ namespace AUSfp
         private System.Windows.Forms.Label WijzigLable;
         private System.Windows.Forms.Label uitleenInleverLable;
         private System.Windows.Forms.PictureBox ItemImgPictureBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nummerArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn naamArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caregorieArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusArtikel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inleverdatumArtikel;
     }
 }
 
