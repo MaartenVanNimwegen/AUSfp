@@ -10,6 +10,8 @@ namespace AUSfp
     {
         public int Id { get; set; }
 
+        public string Artikelnummer { get; set; }
+
         public string Naam { get; set; }
 
         public string Categorie { get; set; }

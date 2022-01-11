@@ -17,6 +17,7 @@ namespace AUSfp
         private string beschrijving = "";
         private string categorie = "";
         private string img = "";
+        private string Artikelnummer = "";
 
         public ArtikelToevoegen()
         {
@@ -43,18 +44,23 @@ namespace AUSfp
             beschrijving = beschrijvingTextbox.Text;
             categorie = CategorieTextbox.Text;
             img = ImgurlTextbox.Text;
+            Artikelnummer = ArtikelnummerInput.Text;
 
-            if (titleTextbox.Text.Length > 0 && beschrijvingTextbox.Text.Length > 0 && CategorieTextbox.Text.Length > 0)
+            if (titleTextbox.Text.Length <= 0 && beschrijvingTextbox.Text.Length <= 0 && CategorieTextbox.Text.Length <= 0 && ArtikelnummerInput.Text.Length <= 0)
             {
-                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
-                connection.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO `artikelen` (`naam`, `categorie`, `inleverdatum`, `beschrijving`, `toevoeger`, `toegevoegdOp`, `img`) VALUES ( '" + naam + "', '" + categorie + "', now(), '" + beschrijving + "', '" + Login.naam + "', now(),'" + img + "');", connection);
-                cmd.ExecuteReader();
-                MessageBox.Show("Artikel toegevoegd");
+                MessageBox.Show("Niet alle velden zijn ingevuld!");
+            }
+            else if (titleTextbox.Text.Length > 50 || beschrijvingTextbox.Text.Length > 50 || CategorieTextbox.Text.Length > 50 || ArtikelnummerInput.Text.Length > 50)
+            {
+                MessageBox.Show("Het maximale aantal karakters te gebruiken in één of meer van de velden is 50!");
             }
             else
             {
-                MessageBox.Show("Niet alle velden zijn ingevuld!");
+                MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO `artikelen` (`Artikelnummer`, `naam`, `categorie`, `inleverdatum`, `beschrijving`, `toevoeger`, `toegevoegdOp`, `img`) VALUES ( '" + Artikelnummer + "', '" + naam + "', '" + categorie + "', now(), '" + beschrijving + "', '" + Login.naam + "', now(),'" + img + "');", connection);
+                cmd.ExecuteReader();
+                MessageBox.Show("Artikel toegevoegd");
             }
         }
         /// <summary>

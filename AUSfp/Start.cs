@@ -122,20 +122,21 @@ namespace AUSfp
                         {
                             Artikel myArtikel = new Artikel();
                             myArtikel.Id = reader.GetInt32(0);
-                            myArtikel.Naam = reader.GetString(1);
-                            myArtikel.Categorie = reader.GetString(2);
-                            myArtikel.Lener = reader.GetString(3);
-                            myArtikel.Inleverdatum = reader.GetDateTime(4);
-                            myArtikel.Leerlingnummer = reader.GetInt32(6);
-                            myArtikel.Beschrijving = reader.GetString(7);
-                            myArtikel.Toevoeger= reader.GetString(8);
-                            myArtikel.ToegevoegdOp = reader.GetDateTime(9);
+                            myArtikel.Artikelnummer = reader.GetString(1);
+                            myArtikel.Naam = reader.GetString(2);
+                            myArtikel.Categorie = reader.GetString(3);
+                            myArtikel.Lener = reader.GetString(4);
+                            myArtikel.Inleverdatum = reader.GetDateTime(5);
+                            myArtikel.Leerlingnummer = reader.GetInt32(7);
+                            myArtikel.Beschrijving = reader.GetString(8);
+                            myArtikel.Toevoeger= reader.GetString(9);
+                            myArtikel.ToegevoegdOp = reader.GetDateTime(10);
 
-                            if (reader.GetInt32(5)==0)
+                            if (reader.GetInt32(6)==0)
                             {
                                 myArtikel.StatusString = "Beschikbaar";
                             }
-                            else if (reader.GetInt32(5)==1)
+                            else if (reader.GetInt32(6)==1)
                             {
                                 myArtikel.StatusString = "Onbeschikbaar";
                             }
@@ -171,7 +172,7 @@ namespace AUSfp
 
                 if (Item != null)
                 {
-                    DataGrid.Rows.Add(Item.Id, Item.Naam, Item.Categorie, Item.StatusString, Item.Inleverdatum);
+                    DataGrid.Rows.Add(Item.Id, Item.Artikelnummer, Item.Naam, Item.Categorie, Item.StatusString, Item.Inleverdatum);
                 }
             }
         }
@@ -209,6 +210,7 @@ namespace AUSfp
             if (reader.Read())
             {
                 artikel.Id = (int)reader["id"];
+                artikel.Artikelnummer = (string)reader["Artikelnummer"];
                 artikel.Naam = (string)reader["naam"];
                 artikel.Categorie = (string)reader["categorie"];
                 artikel.Lener = (string)reader["lener"];
@@ -245,11 +247,11 @@ namespace AUSfp
                 leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
             }
 
-            naamLable.Text = artikel.Naam.ToString();
-            beschrijvingLable.Text = artikel.Beschrijving.ToString();
-            artikelnrLable.Text = "Artikelnummer: " + artikel.Id.ToString();
-            categorieLable.Text = "Categorie: " + artikel.Categorie.ToString();
-            toegevoegddoorLable.Text = "Toegevoegd door: " + artikel.Toevoeger.ToString();
+            naamLable.Text = artikel.Naam;
+            beschrijvingLable.Text = artikel.Beschrijving;
+            ArtikelnummerLable.Text = "Artikelnummer: " + artikel.Artikelnummer;
+            categorieLable.Text = "Categorie: " + artikel.Categorie;
+            toegevoegddoorLable.Text = "Toegevoegd door: " + artikel.Toevoeger;
             toegevoegdopLable.Text = "Toegevoegd op: " + artikel.ToegevoegdOp.ToString();
 
             if (artikel.Leerlingnummer.ToString() == "0")
@@ -379,6 +381,14 @@ namespace AUSfp
         private void SearchBar_TextChanged(object sender, EventArgs e)
         {
             SearchIcon_Click_1(this, new EventArgs());
+        }
+
+        private void DataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (userIsLoggedIn == true)
+            {
+                inleverUitleenIcon_Click(this, new EventArgs());
+            }
         }
     }
 }
