@@ -24,9 +24,35 @@ namespace AUSfp
 
         private void inleverUitleenIcon_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
-            connection.Open();
-            MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET status='0', leerlingnummer='0', lener='0' WHERE id='" + artikel.Id + "'", connection);
+            //string JsNotes = "";
+
+            //using (MySqlConnection connection = new MySqlConnection())
+            //{
+            //    connection.ConnectionString = "Data Source = localhost; convert zero datetime=True; Initial Catalog = AUSfp; User ID = root; Password = ";
+            //    using (MySqlCommand command = new MySqlCommand("SELECT * FROM artikelen", connection))
+            //    {
+            //
+            //        connection.Open();
+            //        MySqlDataReader reader = command.ExecuteReader();
+            //
+             //       if (reader.HasRows)
+              //      {
+               //         while (reader.Read())
+             //           {
+            //                Artikel myArtikel = new Artikel();
+            //                JsNotes = reader.GetString(11);
+           //             }
+           //             reader.Close();
+           //         }
+           //     }
+           // }
+
+            //Notes notes = JsonConvert.DeserializeOvject<Notes>(JsNotes);
+
+
+            MySqlConnection connection1 = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
+            connection1.Open();
+            MySqlCommand cmd = new MySqlCommand("UPDATE artikelen SET status='0', leerlingnummer='0', lener='0' WHERE id='" + artikel.Id + "'", connection1);
             cmd.ExecuteReader();
 
             MessageBox.Show("Artikel succesvol ingeleverd.");
