@@ -138,7 +138,7 @@ namespace AUSfp
                             }
                             else if (reader.GetInt32(6)==1)
                             {
-                                myArtikel.StatusString = "Onbeschikbaar";
+                                myArtikel.StatusString = "Uitgeleend";
                             }
 
                             Items.Add(myArtikel);
@@ -237,7 +237,12 @@ namespace AUSfp
                 statusLable.Text = "Beschikbaarheid: Beschikbaar";
                 inleverdatumLable.Text = "Inleverdatum: ";
                 lenerLable.Text = "Uitgeleend aan: ";
-                leerlingnummerLable.Text = "Leerlingnummer:";
+                if (userIsLoggedIn == true)
+                {
+                    VerwijderLable.Visible = true;
+                    DeleteBtn.Visible = true;
+                }
+                leerlingnummerLable.Text = "Leerlingnummer: ";
             }
             else if (artikel.Status == 1)
             {
@@ -245,6 +250,8 @@ namespace AUSfp
                 inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
                 lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
                 leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
+                DeleteBtn.Visible = false;
+                VerwijderLable.Visible = false;
             }
 
             naamLable.Text = artikel.Naam;
@@ -341,8 +348,16 @@ namespace AUSfp
 
             if (reader.Read())
             {
-                Inleveren InleverForm = new Inleveren(artikel);
-                InleverForm.ShowDialog();
+                MySqlConnection connection1 = new MySqlConnection("Data Source = localhost; Initial Catalog = AUSfp; User ID = root; Password = ");
+                connection1.Open();
+                MySqlCommand cmd1 = new MySqlCommand("UPDATE artikelen SET status='0', leerlingnummer='0', lener='0' WHERE id='" + artikel.Id + "'", connection1);
+                MySqlDataReader reader1 = cmd1.ExecuteReader();
+
+                reader1.Close();
+                cmd1.Dispose();
+                connection1.Close();
+
+                MessageBox.Show("Artikel succesvol ingeleverd.");
             }
             else
             {

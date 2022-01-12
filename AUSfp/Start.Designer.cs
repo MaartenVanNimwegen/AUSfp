@@ -30,17 +30,24 @@ namespace AUSfp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchBar = new System.Windows.Forms.TextBox();
             this.ItemDetailsPanel = new System.Windows.Forms.Panel();
+            this.ItemImgPictureBox = new System.Windows.Forms.PictureBox();
             this.ContactLable = new System.Windows.Forms.Label();
             this.VerwijderLable = new System.Windows.Forms.Label();
             this.WijzigLable = new System.Windows.Forms.Label();
             this.uitleenInleverLable = new System.Windows.Forms.Label();
+            this.teamsLogo = new System.Windows.Forms.PictureBox();
+            this.wijzigIcon = new System.Windows.Forms.PictureBox();
+            this.DeleteBtn = new System.Windows.Forms.PictureBox();
+            this.inleverUitleenIcon = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.toegevoegddoorLable = new System.Windows.Forms.Label();
-            this.toegevoegdopLable = new System.Windows.Forms.Label();
             this.leerlingnummerLable = new System.Windows.Forms.Label();
             this.inleverdatumLable = new System.Windows.Forms.Label();
             this.lenerLable = new System.Windows.Forms.Label();
@@ -57,25 +64,22 @@ namespace AUSfp
             this.statusArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inleverdatumArtikel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefreshBtn = new System.Windows.Forms.PictureBox();
-            this.ItemImgPictureBox = new System.Windows.Forms.PictureBox();
-            this.teamsLogo = new System.Windows.Forms.PictureBox();
-            this.wijzigIcon = new System.Windows.Forms.PictureBox();
-            this.DeleteBtn = new System.Windows.Forms.PictureBox();
-            this.inleverUitleenIcon = new System.Windows.Forms.PictureBox();
             this.artikelToevoegen = new System.Windows.Forms.PictureBox();
             this.LogoutBtn = new System.Windows.Forms.PictureBox();
             this.LoginBtn = new System.Windows.Forms.PictureBox();
             this.RocLogo = new System.Windows.Forms.PictureBox();
             this.SearchIcon = new System.Windows.Forms.PictureBox();
+            this.toegevoegddoorLable = new System.Windows.Forms.Label();
+            this.toegevoegdopLable = new System.Windows.Forms.Label();
             this.ItemDetailsPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImgPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamsLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wijzigIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikelToevoegen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBtn)).BeginInit();
@@ -142,6 +146,15 @@ namespace AUSfp
             this.ItemDetailsPanel.Size = new System.Drawing.Size(587, 703);
             this.ItemDetailsPanel.TabIndex = 3;
             // 
+            // ItemImgPictureBox
+            // 
+            this.ItemImgPictureBox.Location = new System.Drawing.Point(16, 0);
+            this.ItemImgPictureBox.Name = "ItemImgPictureBox";
+            this.ItemImgPictureBox.Size = new System.Drawing.Size(560, 249);
+            this.ItemImgPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ItemImgPictureBox.TabIndex = 44;
+            this.ItemImgPictureBox.TabStop = false;
+            // 
             // ContactLable
             // 
             this.ContactLable.AutoSize = true;
@@ -178,9 +191,66 @@ namespace AUSfp
             this.uitleenInleverLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uitleenInleverLable.Location = new System.Drawing.Point(89, 645);
             this.uitleenInleverLable.Name = "uitleenInleverLable";
-            this.uitleenInleverLable.Size = new System.Drawing.Size(93, 13);
+            this.uitleenInleverLable.Size = new System.Drawing.Size(95, 13);
             this.uitleenInleverLable.TabIndex = 51;
-            this.uitleenInleverLable.Text = "Inleveren/uitlenen";
+            this.uitleenInleverLable.Text = "Inleveren/Uitlenen";
+            // 
+            // teamsLogo
+            // 
+            this.teamsLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.teamsLogo.Image = global::AUSfp.Properties.Resources.Teams_24x24;
+            this.teamsLogo.Location = new System.Drawing.Point(442, 658);
+            this.teamsLogo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.teamsLogo.Name = "teamsLogo";
+            this.teamsLogo.Size = new System.Drawing.Size(34, 31);
+            this.teamsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.teamsLogo.TabIndex = 50;
+            this.teamsLogo.TabStop = false;
+            this.teamsLogo.Click += new System.EventHandler(this.TeamsImg_Click);
+            // 
+            // wijzigIcon
+            // 
+            this.wijzigIcon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.wijzigIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.wijzigIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wijzigIcon.BackgroundImage")));
+            this.wijzigIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.wijzigIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.wijzigIcon.Location = new System.Drawing.Point(228, 659);
+            this.wijzigIcon.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.wijzigIcon.Name = "wijzigIcon";
+            this.wijzigIcon.Size = new System.Drawing.Size(34, 31);
+            this.wijzigIcon.TabIndex = 49;
+            this.wijzigIcon.TabStop = false;
+            this.wijzigIcon.Click += new System.EventHandler(this.wijzigIcon_Click);
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.DeleteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.BackgroundImage")));
+            this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteBtn.Location = new System.Drawing.Point(336, 659);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(34, 31);
+            this.DeleteBtn.TabIndex = 48;
+            this.DeleteBtn.TabStop = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
+            // inleverUitleenIcon
+            // 
+            this.inleverUitleenIcon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.inleverUitleenIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.inleverUitleenIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("inleverUitleenIcon.BackgroundImage")));
+            this.inleverUitleenIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.inleverUitleenIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inleverUitleenIcon.Location = new System.Drawing.Point(120, 659);
+            this.inleverUitleenIcon.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.inleverUitleenIcon.Name = "inleverUitleenIcon";
+            this.inleverUitleenIcon.Size = new System.Drawing.Size(34, 31);
+            this.inleverUitleenIcon.TabIndex = 47;
+            this.inleverUitleenIcon.TabStop = false;
+            this.inleverUitleenIcon.Click += new System.EventHandler(this.inleverUitleenIcon_Click);
             // 
             // panel2
             // 
@@ -199,32 +269,6 @@ namespace AUSfp
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(560, 187);
             this.panel2.TabIndex = 45;
-            // 
-            // toegevoegddoorLable
-            // 
-            this.toegevoegddoorLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.toegevoegddoorLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toegevoegddoorLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.toegevoegddoorLable.Location = new System.Drawing.Point(2, 138);
-            this.toegevoegddoorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.toegevoegddoorLable.Name = "toegevoegddoorLable";
-            this.toegevoegddoorLable.Size = new System.Drawing.Size(553, 23);
-            this.toegevoegddoorLable.TabIndex = 51;
-            this.toegevoegddoorLable.Text = "Toegevoegd door:";
-            this.toegevoegddoorLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // toegevoegdopLable
-            // 
-            this.toegevoegdopLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.toegevoegdopLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toegevoegdopLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.toegevoegdopLable.Location = new System.Drawing.Point(2, 161);
-            this.toegevoegdopLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.toegevoegdopLable.Name = "toegevoegdopLable";
-            this.toegevoegdopLable.Size = new System.Drawing.Size(553, 23);
-            this.toegevoegdopLable.TabIndex = 50;
-            this.toegevoegdopLable.Text = "Toegevoegd op: ";
-            this.toegevoegdopLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // leerlingnummerLable
             // 
@@ -262,7 +306,7 @@ namespace AUSfp
             this.lenerLable.Name = "lenerLable";
             this.lenerLable.Size = new System.Drawing.Size(553, 23);
             this.lenerLable.TabIndex = 47;
-            this.lenerLable.Text = "Lener:  ";
+            this.lenerLable.Text = "Uitgeleend aan:  ";
             this.lenerLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // categorieLable
@@ -288,7 +332,7 @@ namespace AUSfp
             this.ArtikelnummerLable.Name = "ArtikelnummerLable";
             this.ArtikelnummerLable.Size = new System.Drawing.Size(557, 23);
             this.ArtikelnummerLable.TabIndex = 45;
-            this.ArtikelnummerLable.Text = "Artikel nr:  ";
+            this.ArtikelnummerLable.Text = "Artikelnummer:  ";
             this.ArtikelnummerLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // statusLable
@@ -382,6 +426,9 @@ namespace AUSfp
             // 
             // naamArtikel
             // 
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle1;
             this.naamArtikel.HeaderText = "Naam";
             this.naamArtikel.MinimumWidth = 175;
             this.naamArtikel.Name = "naamArtikel";
@@ -390,6 +437,9 @@ namespace AUSfp
             // 
             // caregorieArtikel
             // 
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle2;
             this.caregorieArtikel.HeaderText = "Categorie";
             this.caregorieArtikel.MinimumWidth = 150;
             this.caregorieArtikel.Name = "caregorieArtikel";
@@ -398,6 +448,9 @@ namespace AUSfp
             // 
             // statusArtikel
             // 
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle3;
             this.statusArtikel.HeaderText = "Status";
             this.statusArtikel.MinimumWidth = 150;
             this.statusArtikel.Name = "statusArtikel";
@@ -406,6 +459,9 @@ namespace AUSfp
             // 
             // inleverdatumArtikel
             // 
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle4;
             this.inleverdatumArtikel.HeaderText = "Inleverdatum";
             this.inleverdatumArtikel.MinimumWidth = 150;
             this.inleverdatumArtikel.Name = "inleverdatumArtikel";
@@ -425,72 +481,6 @@ namespace AUSfp
             this.RefreshBtn.TabIndex = 43;
             this.RefreshBtn.TabStop = false;
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click_1);
-            // 
-            // ItemImgPictureBox
-            // 
-            this.ItemImgPictureBox.Location = new System.Drawing.Point(16, 0);
-            this.ItemImgPictureBox.Name = "ItemImgPictureBox";
-            this.ItemImgPictureBox.Size = new System.Drawing.Size(560, 249);
-            this.ItemImgPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ItemImgPictureBox.TabIndex = 44;
-            this.ItemImgPictureBox.TabStop = false;
-            // 
-            // teamsLogo
-            // 
-            this.teamsLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.teamsLogo.Image = global::AUSfp.Properties.Resources.Teams_24x24;
-            this.teamsLogo.Location = new System.Drawing.Point(442, 658);
-            this.teamsLogo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.teamsLogo.Name = "teamsLogo";
-            this.teamsLogo.Size = new System.Drawing.Size(34, 31);
-            this.teamsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.teamsLogo.TabIndex = 50;
-            this.teamsLogo.TabStop = false;
-            this.teamsLogo.Click += new System.EventHandler(this.TeamsImg_Click);
-            // 
-            // wijzigIcon
-            // 
-            this.wijzigIcon.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.wijzigIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.wijzigIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wijzigIcon.BackgroundImage")));
-            this.wijzigIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.wijzigIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.wijzigIcon.Location = new System.Drawing.Point(228, 659);
-            this.wijzigIcon.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.wijzigIcon.Name = "wijzigIcon";
-            this.wijzigIcon.Size = new System.Drawing.Size(34, 31);
-            this.wijzigIcon.TabIndex = 49;
-            this.wijzigIcon.TabStop = false;
-            this.wijzigIcon.Click += new System.EventHandler(this.wijzigIcon_Click);
-            // 
-            // DeleteBtn
-            // 
-            this.DeleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.DeleteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.BackgroundImage")));
-            this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteBtn.Location = new System.Drawing.Point(336, 659);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(34, 31);
-            this.DeleteBtn.TabIndex = 48;
-            this.DeleteBtn.TabStop = false;
-            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
-            // 
-            // inleverUitleenIcon
-            // 
-            this.inleverUitleenIcon.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.inleverUitleenIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.inleverUitleenIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("inleverUitleenIcon.BackgroundImage")));
-            this.inleverUitleenIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.inleverUitleenIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.inleverUitleenIcon.Location = new System.Drawing.Point(120, 659);
-            this.inleverUitleenIcon.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.inleverUitleenIcon.Name = "inleverUitleenIcon";
-            this.inleverUitleenIcon.Size = new System.Drawing.Size(34, 31);
-            this.inleverUitleenIcon.TabIndex = 47;
-            this.inleverUitleenIcon.TabStop = false;
-            this.inleverUitleenIcon.Click += new System.EventHandler(this.inleverUitleenIcon_Click);
             // 
             // artikelToevoegen
             // 
@@ -559,6 +549,32 @@ namespace AUSfp
             this.SearchIcon.TabStop = false;
             this.SearchIcon.Click += new System.EventHandler(this.SearchIcon_Click_1);
             // 
+            // toegevoegddoorLable
+            // 
+            this.toegevoegddoorLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.toegevoegddoorLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toegevoegddoorLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.toegevoegddoorLable.Location = new System.Drawing.Point(2, 138);
+            this.toegevoegddoorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.toegevoegddoorLable.Name = "toegevoegddoorLable";
+            this.toegevoegddoorLable.Size = new System.Drawing.Size(553, 23);
+            this.toegevoegddoorLable.TabIndex = 51;
+            this.toegevoegddoorLable.Text = "Toegevoegd door:";
+            this.toegevoegddoorLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toegevoegdopLable
+            // 
+            this.toegevoegdopLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.toegevoegdopLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toegevoegdopLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.toegevoegdopLable.Location = new System.Drawing.Point(2, 161);
+            this.toegevoegdopLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.toegevoegdopLable.Name = "toegevoegdopLable";
+            this.toegevoegdopLable.Size = new System.Drawing.Size(553, 23);
+            this.toegevoegdopLable.TabIndex = 50;
+            this.toegevoegdopLable.Text = "Toegevoegd op: ";
+            this.toegevoegdopLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -584,14 +600,14 @@ namespace AUSfp
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ItemDetailsPanel.ResumeLayout(false);
             this.ItemDetailsPanel.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImgPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamsLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wijzigIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RefreshBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikelToevoegen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginBtn)).EndInit();
@@ -625,8 +641,6 @@ namespace AUSfp
         private System.Windows.Forms.PictureBox inleverUitleenIcon;
         private System.Windows.Forms.DataGridView DataGrid;
         private System.Windows.Forms.PictureBox RefreshBtn;
-        private System.Windows.Forms.Label toegevoegddoorLable;
-        private System.Windows.Forms.Label toegevoegdopLable;
         private System.Windows.Forms.Label leerlingnummerLable;
         private System.Windows.Forms.PictureBox teamsLogo;
         private System.Windows.Forms.Label ContactLable;
@@ -640,6 +654,8 @@ namespace AUSfp
         private System.Windows.Forms.DataGridViewTextBoxColumn caregorieArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusArtikel;
         private System.Windows.Forms.DataGridViewTextBoxColumn inleverdatumArtikel;
+        private System.Windows.Forms.Label toegevoegddoorLable;
+        private System.Windows.Forms.Label toegevoegdopLable;
     }
 }
 
