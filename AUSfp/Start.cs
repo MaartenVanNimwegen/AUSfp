@@ -235,21 +235,31 @@ namespace AUSfp
             if (artikel.Status == 0)
             {
                 statusLable.Text = "Beschikbaarheid: Beschikbaar";
-                inleverdatumLable.Text = "Inleverdatum: ";
-                lenerLable.Text = "Uitgeleend aan: ";
+                inleverdatumLable.Visible = false;
+                lenerLable.Visible = false;
                 if (userIsLoggedIn == true)
                 {
                     VerwijderLable.Visible = true;
                     DeleteBtn.Visible = true;
                 }
-                leerlingnummerLable.Text = "Leerlingnummer: ";
+                leerlingnummerLable.Visible = false;
             }
             else if (artikel.Status == 1)
             {
+                if (userIsLoggedIn == true)
+                {
+                    lenerLable.Visible = true;
+                    lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
+
+                    leerlingnummerLable.Visible = true;
+                    leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
+
+                    inleverdatumLable.Visible = true;
+                    inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
+
+                }
+
                 statusLable.Text = "Beschikbaarheid: Onbeschikbaar";
-                inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
-                lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
-                leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
                 DeleteBtn.Visible = false;
                 VerwijderLable.Visible = false;
             }
