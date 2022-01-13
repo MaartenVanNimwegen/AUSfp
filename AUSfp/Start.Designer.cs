@@ -30,10 +30,10 @@ namespace AUSfp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchBar = new System.Windows.Forms.TextBox();
@@ -454,9 +454,9 @@ namespace AUSfp
             // 
             // naamArtikel
             // 
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle13;
             this.naamArtikel.HeaderText = "Naam";
             this.naamArtikel.MinimumWidth = 175;
             this.naamArtikel.Name = "naamArtikel";
@@ -465,9 +465,9 @@ namespace AUSfp
             // 
             // caregorieArtikel
             // 
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle14;
             this.caregorieArtikel.HeaderText = "Categorie";
             this.caregorieArtikel.MinimumWidth = 150;
             this.caregorieArtikel.Name = "caregorieArtikel";
@@ -476,9 +476,9 @@ namespace AUSfp
             // 
             // statusArtikel
             // 
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle15;
             this.statusArtikel.HeaderText = "Status";
             this.statusArtikel.MinimumWidth = 150;
             this.statusArtikel.Name = "statusArtikel";
@@ -487,9 +487,9 @@ namespace AUSfp
             // 
             // inleverdatumArtikel
             // 
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle16;
             this.inleverdatumArtikel.HeaderText = "Inleverdatum";
             this.inleverdatumArtikel.MinimumWidth = 150;
             this.inleverdatumArtikel.Name = "inleverdatumArtikel";
@@ -512,6 +512,7 @@ namespace AUSfp
             // 
             // artikelToevoegen
             // 
+            this.artikelToevoegen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.artikelToevoegen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.artikelToevoegen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("artikelToevoegen.BackgroundImage")));
             this.artikelToevoegen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -526,6 +527,7 @@ namespace AUSfp
             // 
             // LogoutBtn
             // 
+            this.LogoutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LogoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
             this.LogoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -540,6 +542,7 @@ namespace AUSfp
             // 
             // LoginBtn
             // 
+            this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginBtn.BackgroundImage")));
             this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
