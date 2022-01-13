@@ -43,6 +43,8 @@ namespace AUSfp
             this.CategorieTextbox = new System.Windows.Forms.TextBox();
             this.titleLable = new System.Windows.Forms.Label();
             this.beschrijvingLable = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ArtikelnummerInput = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.AddItemBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CancelBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.livePrevieuwImgPicturebox)).BeginInit();
@@ -55,7 +57,7 @@ namespace AUSfp
             this.titleTextbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.titleTextbox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.titleTextbox.Location = new System.Drawing.Point(22, 121);
+            this.titleTextbox.Location = new System.Drawing.Point(23, 114);
             this.titleTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.titleTextbox.Name = "titleTextbox";
             this.titleTextbox.Size = new System.Drawing.Size(201, 21);
@@ -71,7 +73,7 @@ namespace AUSfp
             this.beschrijvingTextbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.beschrijvingTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.beschrijvingTextbox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.beschrijvingTextbox.Location = new System.Drawing.Point(22, 174);
+            this.beschrijvingTextbox.Location = new System.Drawing.Point(23, 157);
             this.beschrijvingTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.beschrijvingTextbox.Multiline = true;
             this.beschrijvingTextbox.Name = "beschrijvingTextbox";
@@ -83,8 +85,6 @@ namespace AUSfp
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.panel2.Location = new System.Drawing.Point(249, 21);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -94,8 +94,6 @@ namespace AUSfp
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.panel1.Location = new System.Drawing.Point(5, 90);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -105,10 +103,9 @@ namespace AUSfp
             // 
             // categorieLable
             // 
-            this.categorieLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.categorieLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categorieLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.categorieLable.Location = new System.Drawing.Point(19, 269);
+            this.categorieLable.Location = new System.Drawing.Point(19, 252);
             this.categorieLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.categorieLable.Name = "categorieLable";
             this.categorieLable.Size = new System.Drawing.Size(204, 18);
@@ -118,7 +115,6 @@ namespace AUSfp
             // 
             // AddItemBtn
             // 
-            this.AddItemBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.AddItemBtn.BackColor = System.Drawing.SystemColors.Control;
             this.AddItemBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddItemBtn.BackgroundImage")));
             this.AddItemBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -133,7 +129,6 @@ namespace AUSfp
             // 
             // CancelBtn
             // 
-            this.CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CancelBtn.BackColor = System.Drawing.SystemColors.Control;
             this.CancelBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelBtn.BackgroundImage")));
             this.CancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -165,7 +160,6 @@ namespace AUSfp
             // 
             // ImgUrlLable
             // 
-            this.ImgUrlLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ImgUrlLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ImgUrlLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ImgUrlLable.Location = new System.Drawing.Point(11, 34);
@@ -192,7 +186,7 @@ namespace AUSfp
             this.CategorieTextbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategorieTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.CategorieTextbox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.CategorieTextbox.Location = new System.Drawing.Point(22, 289);
+            this.CategorieTextbox.Location = new System.Drawing.Point(23, 272);
             this.CategorieTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.CategorieTextbox.Name = "CategorieTextbox";
             this.CategorieTextbox.Size = new System.Drawing.Size(201, 21);
@@ -203,10 +197,9 @@ namespace AUSfp
             // 
             // titleLable
             // 
-            this.titleLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.titleLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.titleLable.Location = new System.Drawing.Point(19, 101);
+            this.titleLable.Location = new System.Drawing.Point(19, 94);
             this.titleLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLable.Name = "titleLable";
             this.titleLable.Size = new System.Drawing.Size(204, 18);
@@ -216,10 +209,9 @@ namespace AUSfp
             // 
             // beschrijvingLable
             // 
-            this.beschrijvingLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.beschrijvingLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.beschrijvingLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.beschrijvingLable.Location = new System.Drawing.Point(19, 154);
+            this.beschrijvingLable.Location = new System.Drawing.Point(19, 137);
             this.beschrijvingLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.beschrijvingLable.Name = "beschrijvingLable";
             this.beschrijvingLable.Size = new System.Drawing.Size(204, 18);
@@ -227,11 +219,40 @@ namespace AUSfp
             this.beschrijvingLable.Text = "Vul hier de beschrijving in:";
             this.beschrijvingLable.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label1.Location = new System.Drawing.Point(20, 295);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 18);
+            this.label1.TabIndex = 71;
+            this.label1.Text = "Vul hier het artikel nummer in:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // ArtikelnummerInput
+            // 
+            this.ArtikelnummerInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.ArtikelnummerInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ArtikelnummerInput.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ArtikelnummerInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.ArtikelnummerInput.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.ArtikelnummerInput.Location = new System.Drawing.Point(24, 315);
+            this.ArtikelnummerInput.Margin = new System.Windows.Forms.Padding(2);
+            this.ArtikelnummerInput.Name = "ArtikelnummerInput";
+            this.ArtikelnummerInput.Size = new System.Drawing.Size(201, 21);
+            this.ArtikelnummerInput.TabIndex = 72;
+            this.ArtikelnummerInput.TabStop = false;
+            this.ArtikelnummerInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ArtikelToevoegen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 371);
+            this.Controls.Add(this.ArtikelnummerInput);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.beschrijvingLable);
             this.Controls.Add(this.titleLable);
             this.Controls.Add(this.CategorieTextbox);
@@ -249,6 +270,7 @@ namespace AUSfp
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ArtikelToevoegen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ArtikelToevoegen";
             ((System.ComponentModel.ISupportInitialize)(this.AddItemBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CancelBtn)).EndInit();
@@ -273,5 +295,7 @@ namespace AUSfp
         private System.Windows.Forms.TextBox CategorieTextbox;
         private System.Windows.Forms.Label titleLable;
         private System.Windows.Forms.Label beschrijvingLable;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox ArtikelnummerInput;
     }
 }
