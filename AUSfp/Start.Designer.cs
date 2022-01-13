@@ -30,10 +30,10 @@ namespace AUSfp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchBar = new System.Windows.Forms.TextBox();
@@ -162,7 +162,7 @@ namespace AUSfp
             // 
             // ContactLable
             // 
-            this.ContactLable.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ContactLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ContactLable.AutoSize = true;
             this.ContactLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContactLable.Location = new System.Drawing.Point(411, 645);
@@ -173,7 +173,7 @@ namespace AUSfp
             // 
             // VerwijderLable
             // 
-            this.VerwijderLable.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.VerwijderLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.VerwijderLable.AutoSize = true;
             this.VerwijderLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VerwijderLable.Location = new System.Drawing.Point(325, 645);
@@ -184,7 +184,7 @@ namespace AUSfp
             // 
             // WijzigLable
             // 
-            this.WijzigLable.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.WijzigLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.WijzigLable.AutoSize = true;
             this.WijzigLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WijzigLable.Location = new System.Drawing.Point(223, 645);
@@ -195,7 +195,7 @@ namespace AUSfp
             // 
             // uitleenInleverLable
             // 
-            this.uitleenInleverLable.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.uitleenInleverLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.uitleenInleverLable.AutoSize = true;
             this.uitleenInleverLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uitleenInleverLable.Location = new System.Drawing.Point(116, 645);
@@ -205,7 +205,7 @@ namespace AUSfp
             // 
             // teamsLogo
             // 
-            this.teamsLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.teamsLogo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.teamsLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.teamsLogo.Image = global::AUSfp.Properties.Resources.Teams_24x24;
             this.teamsLogo.Location = new System.Drawing.Point(442, 658);
@@ -219,7 +219,7 @@ namespace AUSfp
             // 
             // wijzigIcon
             // 
-            this.wijzigIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.wijzigIcon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.wijzigIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.wijzigIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wijzigIcon.BackgroundImage")));
             this.wijzigIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -234,7 +234,7 @@ namespace AUSfp
             // 
             // DeleteBtn
             // 
-            this.DeleteBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DeleteBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.DeleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.DeleteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.BackgroundImage")));
             this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -249,7 +249,7 @@ namespace AUSfp
             // 
             // inleverUitleenIcon
             // 
-            this.inleverUitleenIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inleverUitleenIcon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.inleverUitleenIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.inleverUitleenIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("inleverUitleenIcon.BackgroundImage")));
             this.inleverUitleenIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -465,9 +465,9 @@ namespace AUSfp
             // 
             // naamArtikel
             // 
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
-            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle1;
             this.naamArtikel.HeaderText = "Naam";
             this.naamArtikel.MinimumWidth = 175;
             this.naamArtikel.Name = "naamArtikel";
@@ -476,9 +476,9 @@ namespace AUSfp
             // 
             // caregorieArtikel
             // 
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle2;
             this.caregorieArtikel.HeaderText = "Categorie";
             this.caregorieArtikel.MinimumWidth = 150;
             this.caregorieArtikel.Name = "caregorieArtikel";
@@ -487,9 +487,9 @@ namespace AUSfp
             // 
             // statusArtikel
             // 
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle3;
             this.statusArtikel.HeaderText = "Status";
             this.statusArtikel.MinimumWidth = 150;
             this.statusArtikel.Name = "statusArtikel";
@@ -498,9 +498,9 @@ namespace AUSfp
             // 
             // inleverdatumArtikel
             // 
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle4;
             this.inleverdatumArtikel.HeaderText = "Inleverdatum";
             this.inleverdatumArtikel.MinimumWidth = 150;
             this.inleverdatumArtikel.Name = "inleverdatumArtikel";
