@@ -30,11 +30,11 @@ namespace AUSfp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchBar = new System.Windows.Forms.TextBox();
@@ -512,57 +512,62 @@ namespace AUSfp
             // 
             // nummerArtikel
             // 
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            this.nummerArtikel.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.nummerArtikel.DefaultCellStyle = dataGridViewCellStyle1;
             this.nummerArtikel.HeaderText = "Artikel nr";
             this.nummerArtikel.MinimumWidth = 150;
             this.nummerArtikel.Name = "nummerArtikel";
             this.nummerArtikel.ReadOnly = true;
+            this.nummerArtikel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.nummerArtikel.Width = 150;
             // 
             // naamArtikel
             // 
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle2;
             this.naamArtikel.HeaderText = "Naam";
             this.naamArtikel.MinimumWidth = 175;
             this.naamArtikel.Name = "naamArtikel";
             this.naamArtikel.ReadOnly = true;
+            this.naamArtikel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.naamArtikel.Width = 175;
             // 
             // caregorieArtikel
             // 
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle3;
             this.caregorieArtikel.HeaderText = "Categorie";
             this.caregorieArtikel.MinimumWidth = 150;
             this.caregorieArtikel.Name = "caregorieArtikel";
             this.caregorieArtikel.ReadOnly = true;
+            this.caregorieArtikel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.caregorieArtikel.Width = 150;
             // 
             // statusArtikel
             // 
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle4;
             this.statusArtikel.HeaderText = "Status";
             this.statusArtikel.MinimumWidth = 150;
             this.statusArtikel.Name = "statusArtikel";
             this.statusArtikel.ReadOnly = true;
+            this.statusArtikel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.statusArtikel.Width = 150;
             // 
             // inleverdatumArtikel
             // 
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle5;
             this.inleverdatumArtikel.HeaderText = "Inleverdatum";
             this.inleverdatumArtikel.MinimumWidth = 150;
             this.inleverdatumArtikel.Name = "inleverdatumArtikel";
             this.inleverdatumArtikel.ReadOnly = true;
+            this.inleverdatumArtikel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.inleverdatumArtikel.Width = 150;
             // 
             // Start

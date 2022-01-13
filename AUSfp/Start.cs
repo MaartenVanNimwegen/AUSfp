@@ -76,6 +76,7 @@ namespace AUSfp
         {
             userIsLoggedIn = false;
             showHeaderItems(userIsLoggedIn);
+
         }
         /// <summary>
         /// update naam wanneer label weergave word geupdate
@@ -235,12 +236,13 @@ namespace AUSfp
                 statusLable.Text = "Beschikbaarheid: Beschikbaar";
                 inleverdatumLable.Text = "Inleverdatum: ";
                 lenerLable.Text = "Uitgeleend aan: ";
+                leerlingnummerLable.Text = "Leerlingnummer: ";
+
                 if (userIsLoggedIn == true)
                 {
                     VerwijderLable.Visible = true;
                     DeleteBtn.Visible = true;
                 }
-                leerlingnummerLable.Text = "Leerlingnummer: ";
             }
             else if (artikel.Status == 1)
             {
