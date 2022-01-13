@@ -30,10 +30,10 @@ namespace AUSfp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchBar = new System.Windows.Forms.TextBox();
@@ -48,6 +48,8 @@ namespace AUSfp
             this.DeleteBtn = new System.Windows.Forms.PictureBox();
             this.inleverUitleenIcon = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.toegevoegddoorLable = new System.Windows.Forms.Label();
+            this.toegevoegdopLable = new System.Windows.Forms.Label();
             this.leerlingnummerLable = new System.Windows.Forms.Label();
             this.inleverdatumLable = new System.Windows.Forms.Label();
             this.lenerLable = new System.Windows.Forms.Label();
@@ -69,8 +71,6 @@ namespace AUSfp
             this.LoginBtn = new System.Windows.Forms.PictureBox();
             this.RocLogo = new System.Windows.Forms.PictureBox();
             this.SearchIcon = new System.Windows.Forms.PictureBox();
-            this.toegevoegddoorLable = new System.Windows.Forms.Label();
-            this.toegevoegdopLable = new System.Windows.Forms.Label();
             this.ItemDetailsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImgPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamsLogo)).BeginInit();
@@ -189,11 +189,10 @@ namespace AUSfp
             // 
             this.uitleenInleverLable.AutoSize = true;
             this.uitleenInleverLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uitleenInleverLable.Location = new System.Drawing.Point(89, 645);
+            this.uitleenInleverLable.Location = new System.Drawing.Point(116, 645);
             this.uitleenInleverLable.Name = "uitleenInleverLable";
-            this.uitleenInleverLable.Size = new System.Drawing.Size(95, 13);
+            this.uitleenInleverLable.Size = new System.Drawing.Size(0, 13);
             this.uitleenInleverLable.TabIndex = 51;
-            this.uitleenInleverLable.Text = "Inleveren/Uitlenen";
             // 
             // teamsLogo
             // 
@@ -269,6 +268,32 @@ namespace AUSfp
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(560, 187);
             this.panel2.TabIndex = 45;
+            // 
+            // toegevoegddoorLable
+            // 
+            this.toegevoegddoorLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.toegevoegddoorLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toegevoegddoorLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.toegevoegddoorLable.Location = new System.Drawing.Point(2, 138);
+            this.toegevoegddoorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.toegevoegddoorLable.Name = "toegevoegddoorLable";
+            this.toegevoegddoorLable.Size = new System.Drawing.Size(553, 23);
+            this.toegevoegddoorLable.TabIndex = 51;
+            this.toegevoegddoorLable.Text = "Toegevoegd door:";
+            this.toegevoegddoorLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toegevoegdopLable
+            // 
+            this.toegevoegdopLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.toegevoegdopLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toegevoegdopLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.toegevoegdopLable.Location = new System.Drawing.Point(2, 161);
+            this.toegevoegdopLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.toegevoegdopLable.Name = "toegevoegdopLable";
+            this.toegevoegdopLable.Size = new System.Drawing.Size(553, 23);
+            this.toegevoegdopLable.TabIndex = 50;
+            this.toegevoegdopLable.Text = "Toegevoegd op: ";
+            this.toegevoegdopLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // leerlingnummerLable
             // 
@@ -426,9 +451,9 @@ namespace AUSfp
             // 
             // naamArtikel
             // 
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle9;
             this.naamArtikel.HeaderText = "Naam";
             this.naamArtikel.MinimumWidth = 175;
             this.naamArtikel.Name = "naamArtikel";
@@ -437,9 +462,9 @@ namespace AUSfp
             // 
             // caregorieArtikel
             // 
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle10;
             this.caregorieArtikel.HeaderText = "Categorie";
             this.caregorieArtikel.MinimumWidth = 150;
             this.caregorieArtikel.Name = "caregorieArtikel";
@@ -448,9 +473,9 @@ namespace AUSfp
             // 
             // statusArtikel
             // 
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle11;
             this.statusArtikel.HeaderText = "Status";
             this.statusArtikel.MinimumWidth = 150;
             this.statusArtikel.Name = "statusArtikel";
@@ -459,9 +484,9 @@ namespace AUSfp
             // 
             // inleverdatumArtikel
             // 
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle12;
             this.inleverdatumArtikel.HeaderText = "Inleverdatum";
             this.inleverdatumArtikel.MinimumWidth = 150;
             this.inleverdatumArtikel.Name = "inleverdatumArtikel";
@@ -548,32 +573,6 @@ namespace AUSfp
             this.SearchIcon.TabIndex = 34;
             this.SearchIcon.TabStop = false;
             this.SearchIcon.Click += new System.EventHandler(this.SearchIcon_Click_1);
-            // 
-            // toegevoegddoorLable
-            // 
-            this.toegevoegddoorLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.toegevoegddoorLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toegevoegddoorLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.toegevoegddoorLable.Location = new System.Drawing.Point(2, 138);
-            this.toegevoegddoorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.toegevoegddoorLable.Name = "toegevoegddoorLable";
-            this.toegevoegddoorLable.Size = new System.Drawing.Size(553, 23);
-            this.toegevoegddoorLable.TabIndex = 51;
-            this.toegevoegddoorLable.Text = "Toegevoegd door:";
-            this.toegevoegddoorLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // toegevoegdopLable
-            // 
-            this.toegevoegdopLable.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.toegevoegdopLable.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toegevoegdopLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.toegevoegdopLable.Location = new System.Drawing.Point(2, 161);
-            this.toegevoegdopLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.toegevoegdopLable.Name = "toegevoegdopLable";
-            this.toegevoegdopLable.Size = new System.Drawing.Size(553, 23);
-            this.toegevoegdopLable.TabIndex = 50;
-            this.toegevoegdopLable.Text = "Toegevoegd op: ";
-            this.toegevoegdopLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Start
             // 

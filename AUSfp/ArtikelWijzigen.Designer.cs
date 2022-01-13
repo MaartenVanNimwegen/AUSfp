@@ -172,6 +172,7 @@ namespace AUSfp
             this.Controls.Add(this.ImageName);
             this.Controls.Add(this.wijzigTitleTextbox);
             this.Name = "ArtikelWijzigen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ArtikelWijzigen";
             ((System.ComponentModel.ISupportInitialize)(this.CancelBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WijzigItemBtn)).EndInit();
