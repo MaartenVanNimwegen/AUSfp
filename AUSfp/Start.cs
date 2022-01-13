@@ -76,7 +76,6 @@ namespace AUSfp
         {
             userIsLoggedIn = false;
             showHeaderItems(userIsLoggedIn);
-
         }
         /// <summary>
         /// update naam wanneer label weergave word geupdate
@@ -99,7 +98,7 @@ namespace AUSfp
             valueToSearch = SearchBar.Text;
             if (SearchBar.Text.Length > 0)
             {
-                query = "SELECT * FROM artikelen WHERE CONCAT (id, naam, categorie, inleverdatum) LIKE '%" + valueToSearch + "%'";
+                query = "SELECT * FROM artikelen WHERE CONCAT (id, naam, categorie, inleverdatum, leerlingnummer, lener) LIKE '%" + valueToSearch + "%'";
             }
             else if (SearchBar.Text.Length == 0)
             {
@@ -238,6 +237,7 @@ namespace AUSfp
                 statusLable.Text = "Beschikbaarheid: Beschikbaar";
                 inleverdatumLable.Text = "Inleverdatum: ";
                 lenerLable.Text = "Uitgeleend aan: ";
+                uitleenInleverLable.Text = "Uitlenen";
                 if (userIsLoggedIn == true)
                 {
                     VerwijderLable.Visible = true;
@@ -247,20 +247,11 @@ namespace AUSfp
             }
             else if (artikel.Status == 1)
             {
-                if (userIsLoggedIn == true)
-                {
-                    lenerLable.Visible = true;
-                    lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
-
-                    leerlingnummerLable.Visible = true;
-                    leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
-
-                    inleverdatumLable.Visible = true;
-                    inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
-
-                }
-
                 statusLable.Text = "Beschikbaarheid: Onbeschikbaar";
+                inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
+                lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
+                leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
+                uitleenInleverLable.Text = "Inleveren";
                 DeleteBtn.Visible = false;
                 VerwijderLable.Visible = false;
             }

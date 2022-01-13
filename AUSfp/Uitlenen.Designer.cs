@@ -51,7 +51,7 @@ namespace AUSfp
             this.StudentId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.StudentId.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.StudentId.Location = new System.Drawing.Point(44, 36);
-            this.StudentId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StudentId.Margin = new System.Windows.Forms.Padding(2);
             this.StudentId.Name = "StudentId";
             this.StudentId.Size = new System.Drawing.Size(224, 21);
             this.StudentId.TabIndex = 50;
@@ -68,7 +68,7 @@ namespace AUSfp
             this.StudentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.StudentName.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.StudentName.Location = new System.Drawing.Point(44, 83);
-            this.StudentName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StudentName.Margin = new System.Windows.Forms.Padding(2);
             this.StudentName.Name = "StudentName";
             this.StudentName.Size = new System.Drawing.Size(224, 21);
             this.StudentName.TabIndex = 51;
@@ -82,7 +82,7 @@ namespace AUSfp
             this.TurnInDateTime.CustomFormat = "yyyy-MM-dd";
             this.TurnInDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.TurnInDateTime.Location = new System.Drawing.Point(43, 125);
-            this.TurnInDateTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TurnInDateTime.Margin = new System.Windows.Forms.Padding(2);
             this.TurnInDateTime.Name = "TurnInDateTime";
             this.TurnInDateTime.Size = new System.Drawing.Size(226, 20);
             this.TurnInDateTime.TabIndex = 52;
@@ -108,7 +108,7 @@ namespace AUSfp
             this.inleverUitleenIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inleverUitleenIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.inleverUitleenIcon.Location = new System.Drawing.Point(82, 174);
-            this.inleverUitleenIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.inleverUitleenIcon.Margin = new System.Windows.Forms.Padding(2);
             this.inleverUitleenIcon.Name = "inleverUitleenIcon";
             this.inleverUitleenIcon.Size = new System.Drawing.Size(50, 50);
             this.inleverUitleenIcon.TabIndex = 55;
@@ -123,7 +123,7 @@ namespace AUSfp
             this.CancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CancelBtn.Location = new System.Drawing.Point(150, 174);
-            this.CancelBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CancelBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(47, 44);
             this.CancelBtn.TabIndex = 65;
@@ -169,9 +169,11 @@ namespace AUSfp
             this.Controls.Add(this.TurnInDateTime);
             this.Controls.Add(this.StudentName);
             this.Controls.Add(this.StudentId);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Uitlenen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uitlenen";
             ((System.ComponentModel.ISupportInitialize)(this.inleverUitleenIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CancelBtn)).EndInit();
