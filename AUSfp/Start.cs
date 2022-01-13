@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AUSfp
@@ -17,6 +11,8 @@ namespace AUSfp
         public string rowIndex = "";
         List<Artikel> Items = new List<Artikel>();
         string UserEmail = "";
+
+        
 
         public Start()
         {
@@ -43,6 +39,10 @@ namespace AUSfp
             {
                 userIsLoggedIn = true;
                 showHeaderItems(userIsLoggedIn);
+
+                inleverdatumLable.Visible = false;
+                lenerLable.Visible = false;
+                leerlingnummerLable.Visible = false;
             }
         }
         /// <summary>
@@ -54,7 +54,7 @@ namespace AUSfp
             LoginBtn.Visible = !weergeven;
             LogoutBtn.Visible = weergeven;
             LogoutBtn.Visible = weergeven;
-            artikelToevoegen.Visible = weergeven;            
+            artikelToevoegen.Visible = weergeven;
             inleverUitleenIcon.Visible = weergeven;
             wijzigIcon.Visible = weergeven;
             DeleteBtn.Visible = weergeven;
@@ -129,14 +129,14 @@ namespace AUSfp
                             myArtikel.Inleverdatum = reader.GetDateTime(5);
                             myArtikel.Leerlingnummer = reader.GetInt32(7);
                             myArtikel.Beschrijving = reader.GetString(8);
-                            myArtikel.Toevoeger= reader.GetString(9);
+                            myArtikel.Toevoeger = reader.GetString(9);
                             myArtikel.ToegevoegdOp = reader.GetDateTime(10);
 
-                            if (reader.GetInt32(6)==0)
+                            if (reader.GetInt32(6) == 0)
                             {
                                 myArtikel.StatusString = "Beschikbaar";
                             }
-                            else if (reader.GetInt32(6)==1)
+                            else if (reader.GetInt32(6) == 1)
                             {
                                 myArtikel.StatusString = "Uitgeleend";
                             }
@@ -166,7 +166,7 @@ namespace AUSfp
 
             ArtikelenList();
 
-            for (int i = 1;    i <= Items.Count; i++)
+            for (int i = 1; i <= Items.Count; i++)
             {
                 var Item = Items[i - 1];
 
@@ -188,7 +188,7 @@ namespace AUSfp
                 rowIndex = DataGrid.SelectedCells[0].Value.ToString();
 
                 Artikel artikel = GetArtikel(int.Parse(rowIndex));
-                
+
                 ShowDetails(artikel);
             }
         }
@@ -232,25 +232,33 @@ namespace AUSfp
         /// <param name="artikel"></param>
         private void ShowDetails(Artikel artikel)
         {
+
             if (artikel.Status == 0)
             {
                 statusLable.Text = "Beschikbaarheid: Beschikbaar";
-                inleverdatumLable.Text = "Inleverdatum: ";
-                lenerLable.Text = "Uitgeleend aan: ";
                 uitleenInleverLable.Text = "Uitlenen";
                 if (userIsLoggedIn == true)
                 {
                     VerwijderLable.Visible = true;
                     DeleteBtn.Visible = true;
                 }
-                leerlingnummerLable.Text = "Leerlingnummer: ";
             }
             else if (artikel.Status == 1)
             {
-                statusLable.Text = "Beschikbaarheid: Onbeschikbaar";
-                inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
-                lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
-                leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
+
+                if (userIsLoggedIn == true)
+                {
+                    lenerLable.Visible = true;
+                    lenerLable.Text = "Uitgeleend aan: " + artikel.Lener.ToString();
+
+                    leerlingnummerLable.Visible = true;
+                    leerlingnummerLable.Text = "Leerlingnummer: " + artikel.Leerlingnummer.ToString();
+
+                    inleverdatumLable.Visible = true;
+                    inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
+
+                }
+                statusLable.Text = "Beschikbaarheid: Uitgeleend";
                 uitleenInleverLable.Text = "Inleveren";
                 DeleteBtn.Visible = false;
                 VerwijderLable.Visible = false;
@@ -268,7 +276,7 @@ namespace AUSfp
                 teamsLogo.Visible = false;
                 ContactLable.Visible = false;
             }
-            else if(artikel.Leerlingnummer.ToString() != "0" && userIsLoggedIn == true)
+            else if (artikel.Leerlingnummer.ToString() != "0" && userIsLoggedIn == true)
             {
                 teamsLogo.Visible = true;
                 ContactLable.Visible = true;
@@ -321,7 +329,7 @@ namespace AUSfp
             }
             else if (dialogResult == DialogResult.No)
             {
-                
+
             }
         }
         /// <summary>
