@@ -165,7 +165,7 @@ namespace AUSfp
             this.ContactLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ContactLable.AutoSize = true;
             this.ContactLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactLable.Location = new System.Drawing.Point(411, 645);
+            this.ContactLable.Location = new System.Drawing.Point(409, 596);
             this.ContactLable.Name = "ContactLable";
             this.ContactLable.Size = new System.Drawing.Size(92, 13);
             this.ContactLable.TabIndex = 54;
@@ -176,7 +176,7 @@ namespace AUSfp
             this.VerwijderLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.VerwijderLable.AutoSize = true;
             this.VerwijderLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VerwijderLable.Location = new System.Drawing.Point(325, 645);
+            this.VerwijderLable.Location = new System.Drawing.Point(323, 596);
             this.VerwijderLable.Name = "VerwijderLable";
             this.VerwijderLable.Size = new System.Drawing.Size(62, 13);
             this.VerwijderLable.TabIndex = 53;
@@ -187,7 +187,7 @@ namespace AUSfp
             this.WijzigLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.WijzigLable.AutoSize = true;
             this.WijzigLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WijzigLable.Location = new System.Drawing.Point(223, 645);
+            this.WijzigLable.Location = new System.Drawing.Point(221, 596);
             this.WijzigLable.Name = "WijzigLable";
             this.WijzigLable.Size = new System.Drawing.Size(47, 13);
             this.WijzigLable.TabIndex = 52;
@@ -198,7 +198,7 @@ namespace AUSfp
             this.uitleenInleverLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.uitleenInleverLable.AutoSize = true;
             this.uitleenInleverLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uitleenInleverLable.Location = new System.Drawing.Point(116, 645);
+            this.uitleenInleverLable.Location = new System.Drawing.Point(114, 596);
             this.uitleenInleverLable.Name = "uitleenInleverLable";
             this.uitleenInleverLable.Size = new System.Drawing.Size(0, 13);
             this.uitleenInleverLable.TabIndex = 51;
@@ -208,7 +208,7 @@ namespace AUSfp
             this.teamsLogo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.teamsLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.teamsLogo.Image = global::AUSfp.Properties.Resources.Teams_24x24;
-            this.teamsLogo.Location = new System.Drawing.Point(442, 658);
+            this.teamsLogo.Location = new System.Drawing.Point(440, 609);
             this.teamsLogo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.teamsLogo.Name = "teamsLogo";
             this.teamsLogo.Size = new System.Drawing.Size(34, 31);
@@ -224,7 +224,7 @@ namespace AUSfp
             this.wijzigIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wijzigIcon.BackgroundImage")));
             this.wijzigIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.wijzigIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.wijzigIcon.Location = new System.Drawing.Point(228, 659);
+            this.wijzigIcon.Location = new System.Drawing.Point(226, 610);
             this.wijzigIcon.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.wijzigIcon.Name = "wijzigIcon";
             this.wijzigIcon.Size = new System.Drawing.Size(34, 31);
@@ -239,7 +239,7 @@ namespace AUSfp
             this.DeleteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.BackgroundImage")));
             this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteBtn.Location = new System.Drawing.Point(336, 659);
+            this.DeleteBtn.Location = new System.Drawing.Point(334, 610);
             this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(34, 31);
@@ -254,7 +254,7 @@ namespace AUSfp
             this.inleverUitleenIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("inleverUitleenIcon.BackgroundImage")));
             this.inleverUitleenIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inleverUitleenIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.inleverUitleenIcon.Location = new System.Drawing.Point(120, 659);
+            this.inleverUitleenIcon.Location = new System.Drawing.Point(118, 610);
             this.inleverUitleenIcon.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.inleverUitleenIcon.Name = "inleverUitleenIcon";
             this.inleverUitleenIcon.Size = new System.Drawing.Size(34, 31);
