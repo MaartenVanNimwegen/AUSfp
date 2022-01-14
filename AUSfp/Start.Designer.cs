@@ -30,10 +30,10 @@ namespace AUSfp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchBar = new System.Windows.Forms.TextBox();
@@ -101,6 +101,8 @@ namespace AUSfp
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.panel1.Location = new System.Drawing.Point(16, 78);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -126,6 +128,8 @@ namespace AUSfp
             // 
             // ItemDetailsPanel
             // 
+            this.ItemDetailsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ItemDetailsPanel.AutoSize = true;
             this.ItemDetailsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.ItemDetailsPanel.Controls.Add(this.ItemImgPictureBox);
@@ -148,6 +152,7 @@ namespace AUSfp
             // 
             // ItemImgPictureBox
             // 
+            this.ItemImgPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ItemImgPictureBox.Location = new System.Drawing.Point(16, 0);
             this.ItemImgPictureBox.Name = "ItemImgPictureBox";
             this.ItemImgPictureBox.Size = new System.Drawing.Size(560, 249);
@@ -157,9 +162,10 @@ namespace AUSfp
             // 
             // ContactLable
             // 
+            this.ContactLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ContactLable.AutoSize = true;
             this.ContactLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactLable.Location = new System.Drawing.Point(411, 645);
+            this.ContactLable.Location = new System.Drawing.Point(409, 596);
             this.ContactLable.Name = "ContactLable";
             this.ContactLable.Size = new System.Drawing.Size(92, 13);
             this.ContactLable.TabIndex = 54;
@@ -167,9 +173,10 @@ namespace AUSfp
             // 
             // VerwijderLable
             // 
+            this.VerwijderLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.VerwijderLable.AutoSize = true;
             this.VerwijderLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VerwijderLable.Location = new System.Drawing.Point(325, 645);
+            this.VerwijderLable.Location = new System.Drawing.Point(323, 596);
             this.VerwijderLable.Name = "VerwijderLable";
             this.VerwijderLable.Size = new System.Drawing.Size(62, 13);
             this.VerwijderLable.TabIndex = 53;
@@ -177,9 +184,10 @@ namespace AUSfp
             // 
             // WijzigLable
             // 
+            this.WijzigLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.WijzigLable.AutoSize = true;
             this.WijzigLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WijzigLable.Location = new System.Drawing.Point(223, 645);
+            this.WijzigLable.Location = new System.Drawing.Point(221, 596);
             this.WijzigLable.Name = "WijzigLable";
             this.WijzigLable.Size = new System.Drawing.Size(47, 13);
             this.WijzigLable.TabIndex = 52;
@@ -187,18 +195,20 @@ namespace AUSfp
             // 
             // uitleenInleverLable
             // 
+            this.uitleenInleverLable.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.uitleenInleverLable.AutoSize = true;
             this.uitleenInleverLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uitleenInleverLable.Location = new System.Drawing.Point(116, 645);
+            this.uitleenInleverLable.Location = new System.Drawing.Point(114, 596);
             this.uitleenInleverLable.Name = "uitleenInleverLable";
             this.uitleenInleverLable.Size = new System.Drawing.Size(0, 13);
             this.uitleenInleverLable.TabIndex = 51;
             // 
             // teamsLogo
             // 
+            this.teamsLogo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.teamsLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.teamsLogo.Image = global::AUSfp.Properties.Resources.Teams_24x24;
-            this.teamsLogo.Location = new System.Drawing.Point(442, 658);
+            this.teamsLogo.Location = new System.Drawing.Point(440, 609);
             this.teamsLogo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.teamsLogo.Name = "teamsLogo";
             this.teamsLogo.Size = new System.Drawing.Size(34, 31);
@@ -209,12 +219,12 @@ namespace AUSfp
             // 
             // wijzigIcon
             // 
-            this.wijzigIcon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.wijzigIcon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.wijzigIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.wijzigIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wijzigIcon.BackgroundImage")));
             this.wijzigIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.wijzigIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.wijzigIcon.Location = new System.Drawing.Point(228, 659);
+            this.wijzigIcon.Location = new System.Drawing.Point(226, 610);
             this.wijzigIcon.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.wijzigIcon.Name = "wijzigIcon";
             this.wijzigIcon.Size = new System.Drawing.Size(34, 31);
@@ -224,11 +234,12 @@ namespace AUSfp
             // 
             // DeleteBtn
             // 
+            this.DeleteBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.DeleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.DeleteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.BackgroundImage")));
             this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteBtn.Location = new System.Drawing.Point(336, 659);
+            this.DeleteBtn.Location = new System.Drawing.Point(334, 610);
             this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(34, 31);
@@ -238,12 +249,12 @@ namespace AUSfp
             // 
             // inleverUitleenIcon
             // 
-            this.inleverUitleenIcon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.inleverUitleenIcon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.inleverUitleenIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.inleverUitleenIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("inleverUitleenIcon.BackgroundImage")));
             this.inleverUitleenIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inleverUitleenIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.inleverUitleenIcon.Location = new System.Drawing.Point(120, 659);
+            this.inleverUitleenIcon.Location = new System.Drawing.Point(118, 610);
             this.inleverUitleenIcon.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.inleverUitleenIcon.Name = "inleverUitleenIcon";
             this.inleverUitleenIcon.Size = new System.Drawing.Size(34, 31);
@@ -253,7 +264,7 @@ namespace AUSfp
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(205)))), ((int)(((byte)(205)))));
             this.panel2.Controls.Add(this.toegevoegddoorLable);
             this.panel2.Controls.Add(this.toegevoegdopLable);
@@ -404,6 +415,9 @@ namespace AUSfp
             this.DataGrid.AllowUserToOrderColumns = true;
             this.DataGrid.AllowUserToResizeColumns = false;
             this.DataGrid.AllowUserToResizeRows = false;
+            this.DataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -451,9 +465,9 @@ namespace AUSfp
             // 
             // naamArtikel
             // 
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.naamArtikel.DefaultCellStyle = dataGridViewCellStyle1;
             this.naamArtikel.HeaderText = "Naam";
             this.naamArtikel.MinimumWidth = 175;
             this.naamArtikel.Name = "naamArtikel";
@@ -462,9 +476,9 @@ namespace AUSfp
             // 
             // caregorieArtikel
             // 
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.caregorieArtikel.DefaultCellStyle = dataGridViewCellStyle2;
             this.caregorieArtikel.HeaderText = "Categorie";
             this.caregorieArtikel.MinimumWidth = 150;
             this.caregorieArtikel.Name = "caregorieArtikel";
@@ -473,9 +487,9 @@ namespace AUSfp
             // 
             // statusArtikel
             // 
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.statusArtikel.DefaultCellStyle = dataGridViewCellStyle3;
             this.statusArtikel.HeaderText = "Status";
             this.statusArtikel.MinimumWidth = 150;
             this.statusArtikel.Name = "statusArtikel";
@@ -484,9 +498,9 @@ namespace AUSfp
             // 
             // inleverdatumArtikel
             // 
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.inleverdatumArtikel.DefaultCellStyle = dataGridViewCellStyle4;
             this.inleverdatumArtikel.HeaderText = "Inleverdatum";
             this.inleverdatumArtikel.MinimumWidth = 150;
             this.inleverdatumArtikel.Name = "inleverdatumArtikel";
@@ -509,6 +523,7 @@ namespace AUSfp
             // 
             // artikelToevoegen
             // 
+            this.artikelToevoegen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.artikelToevoegen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.artikelToevoegen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("artikelToevoegen.BackgroundImage")));
             this.artikelToevoegen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -523,6 +538,7 @@ namespace AUSfp
             // 
             // LogoutBtn
             // 
+            this.LogoutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LogoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.LogoutBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.BackgroundImage")));
             this.LogoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -537,6 +553,7 @@ namespace AUSfp
             // 
             // LoginBtn
             // 
+            this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginBtn.BackgroundImage")));
             this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
