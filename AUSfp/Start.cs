@@ -241,6 +241,9 @@ namespace AUSfp
                 {
                     VerwijderLable.Visible = true;
                     DeleteBtn.Visible = true;
+                    lenerLable.Visible = false;
+                    leerlingnummerLable.Visible = false;
+                    inleverdatumLable.Visible = false;
                 }
             }
             else if (artikel.Status == 1)
@@ -257,6 +260,12 @@ namespace AUSfp
                     inleverdatumLable.Visible = true;
                     inleverdatumLable.Text = "Inleverdatum: " + artikel.Inleverdatum.ToString();
 
+                }
+                else if (userIsLoggedIn == false)
+                {
+                    lenerLable.Visible = false;
+                    leerlingnummerLable.Visible = false;
+                    inleverdatumLable.Visible = false;
                 }
                 statusLable.Text = "Beschikbaarheid: Uitgeleend";
                 uitleenInleverLable.Text = "Inleveren";
