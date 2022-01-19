@@ -96,6 +96,7 @@ namespace AUSfp
             string query = "";
             string valueToSearch = "";
             valueToSearch = SearchBar.Text;
+            /// Search engine
             if (SearchBar.Text.Length > 0)
             {
                 query = "SELECT * FROM artikelen WHERE CONCAT (id, naam, categorie, inleverdatum, leerlingnummer, lener) LIKE '%" + valueToSearch + "%'";
